@@ -58,7 +58,7 @@ export default function FeaturedServices() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Services We Can <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Help</span> With
+            Our <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Expertise</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground">
             Comprehensive digital solutions tailored to elevate your business presence and drive growth.
