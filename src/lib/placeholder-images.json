@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "case-study-1",
+      "description": "An ecommerce website for a fashion brand.",
+      "imageUrl": "https://picsum.photos/seed/cs1/600/400",
+      "imageHint": "ecommerce website"
+    },
+    {
+      "id": "case-study-2",
+      "description": "A mobile application for a fitness company.",
+      "imageUrl": "https://picsum.photos/seed/cs2/600/400",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "case-study-3",
+      "description": "A complete branding identity for a tech startup.",
+      "imageUrl": "https://picsum.photos/seed/cs3/600/400",
+      "imageHint": "branding identity"
+    },
+    {
+      "id": "case-study-4",
+      "description": "A SaaS platform for project management.",
+      "imageUrl": "https://picsum.photos/seed/cs4/600/400",
+      "imageHint": "saas platform"
+    }
+  ]
 }
