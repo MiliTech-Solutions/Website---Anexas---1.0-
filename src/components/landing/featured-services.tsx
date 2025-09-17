@@ -1,4 +1,4 @@
-import { PenTool, BarChart3, Award, ShoppingCart } from 'lucide-react';
+import { PenTool, BarChart3, Award, ShoppingCart, Code, Briefcase } from 'lucide-react';
 
 const services = [
     {
@@ -25,6 +25,18 @@ const services = [
       description: 'Building robust, scalable eCommerce solutions that drive sales.',
       position: 'md:col-start-3 md:row-start-2 justify-self-start text-left items-start',
     },
+    {
+      icon: Code,
+      title: 'Development',
+      description: 'Custom web and application development to bring your ideas to life.',
+      position: 'md:col-start-1 md:row-start-3 justify-self-end text-right items-end',
+    },
+    {
+      icon: Briefcase,
+      title: 'Management Services',
+      description: 'Expert project management to ensure your projects are delivered on time.',
+      position: 'md:col-start-3 md:row-start-3 justify-self-start text-left items-start',
+    },
   ];
 
 const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => (
@@ -50,12 +62,12 @@ export default function FeaturedServices() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 gap-x-12 gap-y-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:grid-rows-3 gap-x-12 gap-y-16 items-center">
             {services.map((service, index) => (
                 <ServiceCard key={index} service={service} index={index} />
             ))}
 
-            <div className="md:col-start-2 md:row-start-1 md:row-span-2 flex items-center justify-center relative my-8 md:my-0">
+            <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0">
                 <div className="absolute w-72 h-72 rounded-full bg-card/50 border border-border/50 -z-10"></div>
                 <div className="absolute w-56 h-56 rounded-full bg-card/70 border border-border/80 -z-10"></div>
                 <div className="w-48 h-48 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
