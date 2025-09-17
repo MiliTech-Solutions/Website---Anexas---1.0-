@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Search, Paintbrush } from 'lucide-react';
+import { Code, Search, Paintbrush, Monitor, Smartphone, BarChart3 } from 'lucide-react';
 
 const services = [
   {
@@ -16,6 +16,21 @@ const services = [
     icon: Search,
     title: 'Online Marketing',
     description: 'Comprehensive digital marketing strategies to boost your online presence and drive conversions.',
+  },
+  {
+    icon: Monitor,
+    title: 'Web Design',
+    description: 'Crafting beautiful, user-friendly websites that deliver exceptional user experiences across all devices.',
+  },
+  {
+    icon: Smartphone,
+    title: 'App Design',
+    description: 'Designing intuitive mobile applications that engage users and drive business growth.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Data Analytics',
+    description: 'Transforming your data into actionable insights to make informed business decisions.',
   },
 ];
 
