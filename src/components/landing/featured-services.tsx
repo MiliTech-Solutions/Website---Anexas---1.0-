@@ -57,9 +57,12 @@ export default function FeaturedServices() {
       </div>
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-xl md:text-2xl text-foreground">
-            Comprehensive digital solutions tailored to elevate your business presence and drive growth.
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            Services We Can <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Help</span> With
           </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground">
+            Comprehensive digital solutions tailored to elevate your business presence and drive growth.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:grid-rows-3 gap-x-12 gap-y-16 items-center">
