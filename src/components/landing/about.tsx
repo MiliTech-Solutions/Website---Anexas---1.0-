@@ -46,8 +46,8 @@ export default function About() {
             <div className="grid grid-cols-2 gap-6">
               {features.map((feature) => (
                 <div key={feature.title} className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-card flex items-center justify-center border border-border">
-                        <feature.icon className="w-6 h-6 text-accent" />
+                    <div className="w-12 h-12 flex items-center justify-center">
+                        <feature.icon className="w-8 h-8 text-accent" />
                     </div>
                   <div>
                     <h3 className="font-semibold text-lg">{feature.title}</h3>
