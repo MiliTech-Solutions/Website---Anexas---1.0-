@@ -2,6 +2,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/landing/hero';
 import ServiceCatalog from '@/components/landing/service-catalog';
+import FeaturedServices from '@/components/landing/featured-services';
 import ProjectStats from '@/components/landing/project-stats';
 import CaseStudyShowcase from '@/components/landing/case-study-showcase';
 import ContactForm from '@/components/landing/contact-form';
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <ServiceCatalog />
+        <FeaturedServices />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
         {/* <ProjectStats /> */}
