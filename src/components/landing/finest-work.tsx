@@ -31,6 +31,33 @@ const finestWork = [
       hint: 'enterprise solution'
     }
   },
+  {
+    title: 'Mobile Banking App',
+    category: 'Mobile App',
+    image: {
+      src: 'https://picsum.photos/seed/work4/600/400',
+      alt: 'A smartphone displaying a mobile banking application interface.',
+      hint: 'mobile banking'
+    }
+  },
+  {
+    title: 'E-commerce Store for Fashion',
+    category: 'E-commerce',
+    image: {
+      src: 'https://picsum.photos/seed/work5/600/400',
+      alt: 'A stylish layout of clothing and accessories for an online store.',
+      hint: 'fashion ecommerce'
+    }
+  },
+  {
+    title: 'SaaS Platform for HR',
+    category: 'SaaS',
+    image: {
+      src: 'https://picsum.photos/seed/work6/600/400',
+      alt: 'An HR management software dashboard on a laptop screen.',
+      hint: 'hr saas'
+    }
+  }
 ]
 
 export default function FinestWork() {
