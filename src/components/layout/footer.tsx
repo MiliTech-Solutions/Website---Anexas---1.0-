@@ -47,6 +47,7 @@ const Logo = () => (
             <path d="M12 12V22" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round"/>
         </svg>
       <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Anexas</span>
+      <span>Digital</span>
     </Link>
   );
 
