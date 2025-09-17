@@ -23,9 +23,15 @@ const navLinks = [
 const Logo = () => (
     <Link href="/" className="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-foreground">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M2 7L12 12L22 7" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M12 12V22" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinejoin="round"/>
+            <defs>
+                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{stopColor: 'hsl(var(--accent))'}} />
+                    <stop offset="100%" style={{stopColor: 'hsl(var(--primary))'}} />
+                </linearGradient>
+            </defs>
+            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradient)" strokeWidth="2" strokeLinejoin="round"/>
+            <path d="M2 7L12 12L22 7" stroke="url(#logoGradient)" strokeWidth="2" strokeLinejoin="round"/>
+            <path d="M12 12V22" stroke="url(#logoGradient)" strokeWidth="2" strokeLinejoin="round"/>
         </svg>
       Anexas
     </Link>

@@ -26,13 +26,13 @@ export default function Hero() {
 
           <div className="md:col-span-8 text-center">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
+              <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Digital</span> Agency
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
               We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-primary-foreground">
                 <Link href="#contact">
                   Get Started
                 </Link>
@@ -54,7 +54,7 @@ export default function Hero() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat) => (
                     <div key={stat.label}>
-                    <p className="text-4xl font-bold text-primary">{stat.value}</p>
+                    <p className="text-4xl font-bold bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">{stat.value}</p>
                     <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
                     </div>
                 ))}
