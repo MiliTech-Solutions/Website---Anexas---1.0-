@@ -39,7 +39,7 @@ const services = [
     },
   ];
 
-const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => (
+const ServiceCard = ({ service }: { service: typeof services[0] }) => (
     <div className={`flex flex-col gap-4 max-w-sm ${service.position}`}>
         <div className="w-16 h-16 rounded-full bg-card flex items-center justify-center border border-border">
             <service.icon className="w-8 h-8 text-accent" />
@@ -64,7 +64,7 @@ export default function FeaturedServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:grid-rows-3 gap-x-12 gap-y-16 items-center">
             {services.map((service, index) => (
-                <ServiceCard key={index} service={service} index={index} />
+                <ServiceCard key={index} service={service} />
             ))}
 
             <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0">
