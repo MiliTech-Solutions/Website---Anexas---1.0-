@@ -55,7 +55,7 @@ export default function Hero() {
                 {stats.map((stat) => (
                     <div key={stat.label}>
                     <p className="text-4xl font-bold bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">{stat.value}</p>
-                    <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                    <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
                     </div>
                 ))}
                 </div>
