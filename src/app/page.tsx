@@ -12,9 +12,9 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <ServiceCatalog />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
-        {/* <ServiceCatalog /> */}
         {/* <ProjectStats /> */}
         {/* <CaseStudyShowcase /> */}
         {/* <ContactForm /> */}
