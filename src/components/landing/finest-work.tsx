@@ -1,0 +1,71 @@
+import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const finestWork = [
+  {
+    title: 'Corporate Analytics Dashboard',
+    category: 'Business Intelligence',
+    image: {
+      src: 'https://picsum.photos/seed/work1/600/400',
+      alt: 'A corporate analytics dashboard showing charts and graphs.',
+      hint: 'analytics dashboard'
+    }
+  },
+  {
+    title: 'Financial Services Platform',
+    category: 'Fintech',
+    image: {
+      src: 'https://picsum.photos/seed/work2/600/400',
+      alt: 'A desk with financial documents, a calculator, and a smartphone.',
+      hint: 'financial platform'
+    }
+  },
+  {
+    title: 'Enterprise Resource',
+    category: 'Business Solutions',
+    image: {
+      src: 'https://picsum.photos/seed/work3/600/400',
+      alt: 'Two people collaborating in a modern office with laptops.',
+      hint: 'enterprise solution'
+    }
+  },
+]
+
+export default function FinestWork() {
+  return (
+    <section id="portfolio" className="py-20 md:py-28 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Some of Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Finest Work</span>
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Explore our portfolio of successful projects that showcase our expertise and creativity.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {finestWork.map((work) => (
+            <Card key={work.title} className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
+               <div className="aspect-[4/3] overflow-hidden">
+                <Image
+                  src={work.image.src}
+                  alt={work.image.alt}
+                  width={600}
+                  height={400}
+                  data-ai-hint={work.image.hint}
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+              </div>
+              <CardContent className="p-6">
+                <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
+                <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

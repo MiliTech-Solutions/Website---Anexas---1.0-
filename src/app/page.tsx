@@ -9,6 +9,7 @@ import ProjectStats from '@/components/landing/project-stats';
 import CaseStudyShowcase from '@/components/landing/case-study-showcase';
 import ContactForm from '@/components/landing/contact-form';
 import BrandingPackages from '@/components/landing/branding-packages';
+import FinestWork from '@/components/landing/finest-work';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Pricing />
         <About />
         <BrandingPackages />
+        <FinestWork />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
         {/* <ProjectStats /> */}
