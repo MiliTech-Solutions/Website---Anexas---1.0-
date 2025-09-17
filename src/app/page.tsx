@@ -4,6 +4,7 @@ import Hero from '@/components/landing/hero';
 import ServiceCatalog from '@/components/landing/service-catalog';
 import FeaturedServices from '@/components/landing/featured-services';
 import Pricing from '@/components/landing/pricing';
+import About from '@/components/landing/about';
 import ProjectStats from '@/components/landing/project-stats';
 import CaseStudyShowcase from '@/components/landing/case-study-showcase';
 import ContactForm from '@/components/landing/contact-form';
@@ -17,6 +18,7 @@ export default function Home() {
         <ServiceCatalog />
         <FeaturedServices />
         <Pricing />
+        <About />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
         {/* <ProjectStats /> */}
