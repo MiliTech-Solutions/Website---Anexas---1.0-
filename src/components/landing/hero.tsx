@@ -1,32 +1,70 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import HeroServices from './hero-services';
+import SocialLinks from './social-links';
+
+const stats = [
+    { value: '200+', label: 'Projects Completed' },
+    { value: '150+', label: 'Happy Clients' },
+    { value: '5+', label: 'Years Experience' },
+    { value: '24/7', label: 'Support' },
+];
 
 export default function Hero() {
   return (
-    <section className="relative py-24 md:py-32 lg:py-48 text-center">
+    <section className="relative min-h-[90vh] flex flex-col justify-center py-20 md:py-32">
         <div 
-            className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#374d60_1px,transparent_1px)] [background-size:32px_32px]">
+            className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,255,255,0.1),rgba(255,255,255,0))]">
         </div>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter text-foreground">
-            Crafting Digital Excellence
-          </h1>
-          <p className="mt-4 max-w-xl mx-auto text-lg md:text-xl text-muted-foreground">
-            We are a digital agency that builds beautiful, effective, and user-friendly websites and applications. Let's create something amazing together.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="#contact">
-                Get a Quote
-                <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
-            <Button asChild variant="secondary" size="lg">
-              <Link href="#work">See Our Work</Link>
-            </Button>
+      <div className="container mx-auto px-4 md:px-6 h-full">
+        <div className="grid md:grid-cols-12 gap-8 items-center h-full">
+          
+          <div className="md:col-span-2">
+            <HeroServices />
           </div>
+
+          <div className="md:col-span-8 text-center">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground">
+              <span className="text-primary">Digital</span> Agency
+            </h1>
+            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+              We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <Button asChild size="lg">
+                <Link href="#contact">
+                  Get Started
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="#work">View Our Work</Link>
+              </Button>
+            </div>
+          </div>
+          
+          <div className="md:col-span-1">
+             <SocialLinks />
+          </div>
+
+        </div>
+
+        <div className="absolute bottom-12 left-0 right-0">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+                {stats.map((stat) => (
+                    <div key={stat.label}>
+                    <p className="text-4xl font-bold text-primary">{stat.value}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                    </div>
+                ))}
+                </div>
+            </div>
+            <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
+                <div className="w-8 h-8 border-2 border-primary rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                </div>
+            </div>
         </div>
       </div>
     </section>

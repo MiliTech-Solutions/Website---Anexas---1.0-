@@ -8,16 +8,18 @@ import ContactForm from '@/components/landing/contact-form';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow">
         <Hero />
-        <ServiceCatalog />
-        <ProjectStats />
-        <CaseStudyShowcase />
-        <ContactForm />
+        {/* The sections below are currently not visible in the new design.
+            You can uncomment them if you wish to bring them back. */}
+        {/* <ServiceCatalog /> */}
+        {/* <ProjectStats /> */}
+        {/* <CaseStudyShowcase /> */}
+        {/* <ContactForm /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
