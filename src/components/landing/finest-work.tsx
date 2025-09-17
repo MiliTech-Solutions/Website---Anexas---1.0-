@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
 
 const finestWork = [
   {
@@ -57,6 +58,33 @@ const finestWork = [
       alt: 'An HR management software dashboard on a laptop screen.',
       hint: 'hr saas'
     }
+  },
+    {
+    title: 'Healthcare Management System',
+    category: 'Healthcare',
+    image: {
+      src: 'https://picsum.photos/seed/work7/600/400',
+      alt: 'A doctor reviewing patient data on a tablet.',
+      hint: 'healthcare system'
+    }
+  },
+  {
+    title: 'Real Estate Portal',
+    category: 'Real Estate',
+    image: {
+      src: 'https://picsum.photos/seed/work8/600/400',
+      alt: 'A modern house with a for sale sign.',
+      hint: 'real estate'
+    }
+  },
+  {
+    title: 'Travel & Booking Website',
+    category: 'Travel',
+    image: {
+      src: 'https://picsum.photos/seed/work9/600/400',
+      alt: 'A scenic travel destination with booking options on a screen.',
+      hint: 'travel website'
+    }
   }
 ]
 
@@ -91,6 +119,11 @@ export default function FinestWork() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-16 text-center">
+            <Button asChild size="lg" variant="outline">
+                <Link href="#work">View All Projects</Link>
+            </Button>
         </div>
       </div>
     </section>
