@@ -39,7 +39,7 @@ export default function GetAQuote() {
                 {contactDetails.map((detail) => (
                     <div key={detail.title} className="flex items-start gap-4">
                         <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-card">
-                            <detail.icon className="w-6 h-6 text-accent" />
+                            <detail.icon className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500" />
                         </div>
                         <div>
                             <h3 className="font-semibold text-lg">{detail.title}</h3>
