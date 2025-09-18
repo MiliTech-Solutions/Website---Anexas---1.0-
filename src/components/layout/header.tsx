@@ -33,7 +33,7 @@ const Logo = () => (
             <path d="M2 7L12 12L22 7" stroke="url(#logoGradient)" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M12 12V22" stroke="url(#logoGradient)" strokeWidth="2" strokeLinejoin="round"/>
         </svg>
-      <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Anexas</span>
+      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Anexas</span>
     </Link>
   );
 
