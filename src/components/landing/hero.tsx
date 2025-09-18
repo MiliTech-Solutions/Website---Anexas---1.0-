@@ -61,8 +61,10 @@ export default function Hero() {
                 </div>
             </div>
             <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
-                <div className="w-6 h-12 border-2 border-primary rounded-full flex items-center justify-center p-1">
+                <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500">
+                  <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
                     <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
+                  </div>
                 </div>
             </div>
         </div>
