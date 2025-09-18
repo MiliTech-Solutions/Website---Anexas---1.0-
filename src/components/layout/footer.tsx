@@ -38,8 +38,8 @@ const Logo = () => (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: 'hsl(var(--accent))'}} />
-                    <stop offset="100%" style={{stopColor: 'hsl(var(--primary))'}} />
+                    <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
+                    <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
                 </linearGradient>
             </defs>
             <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round"/>
