@@ -26,7 +26,7 @@ export default function Hero() {
 
           <div className="md:col-span-8 text-center">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground">
-              <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Digital</span> Agency
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
               We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
@@ -61,8 +61,8 @@ export default function Hero() {
                 </div>
             </div>
             <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
-                <div className="w-8 h-8 border-2 border-primary rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                <div className="w-6 h-12 border-2 border-primary rounded-full flex items-center justify-center p-1">
+                    <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
                 </div>
             </div>
         </div>
