@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
 
         <div className="absolute bottom-12 left-0 right-0">
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="container mx-auto px-4 md:px-6 mt-20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat) => (
                     <div key={stat.label}>
