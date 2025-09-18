@@ -54,7 +54,7 @@ export default function Hero() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat) => (
                     <div key={stat.label}>
-                    <p className="text-4xl font-bold bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">{stat.value}</p>
+                    <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">{stat.value}</p>
                     <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
                     </div>
                 ))}
