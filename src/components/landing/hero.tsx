@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 md:col-start-12">
              <SocialLinks />
           </div>
 
