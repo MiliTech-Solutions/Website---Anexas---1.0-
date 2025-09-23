@@ -13,7 +13,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center pt-10 md:pt-16 pb-28 md:pb-40">
+    <section className="relative min-h-[90vh] flex flex-col justify-center pt-10 pb-28 md:pb-40">
         <div 
             className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.1),rgba(255,255,255,0))]">
         </div>
@@ -60,7 +60,7 @@ export default function Hero() {
                 ))}
                 </div>
             </div>
-            <div className="absolute bottom-[-110px] left-1/2 -translate-x-1/2 mt-24">
+            <div className="absolute bottom-[-110px] left-1/2 -translate-x-1/2 mt-28">
                 <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500">
                   <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
                     <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
