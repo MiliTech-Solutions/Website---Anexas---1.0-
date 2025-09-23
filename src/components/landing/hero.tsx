@@ -13,11 +13,11 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center pb-20">
+    <section className="relative min-h-[90vh] flex flex-col pt-0 pb-20">
         <div 
             className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.1),rgba(255,255,255,0))]">
         </div>
-      <div className="container mx-auto px-4 md:px-6 h-full">
+      <div className="container mx-auto px-4 md:px-6 h-full flex-grow flex flex-col justify-center">
         <div className="grid md:grid-cols-12 gap-8 items-center h-full pt-16">
           
           <div className="md:col-span-2">
@@ -48,10 +48,11 @@ export default function Hero() {
           </div>
 
         </div>
+      </div>
 
-        <div className="absolute bottom-12 left-0 right-0">
+        <div className="mt-auto pt-12">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat) => (
                     <div key={stat.label}>
                     <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">{stat.value}</p>
@@ -60,15 +61,16 @@ export default function Hero() {
                 ))}
                 </div>
             </div>
-            <div className="absolute bottom-[-110px] left-1/2 -translate-x-1/2 mt-28">
-                <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500">
-                  <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
+            <div className="relative mt-20">
+              <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
+                  <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500">
+                    <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
+                    </div>
                   </div>
-                </div>
+              </div>
             </div>
         </div>
-      </div>
     </section>
   );
 }
