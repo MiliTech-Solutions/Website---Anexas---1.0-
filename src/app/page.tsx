@@ -14,6 +14,7 @@ import Testimonials from '@/components/landing/testimonials';
 import GetAQuote from '@/components/landing/get-a-quote';
 import ByTheNumbers from '@/components/landing/by-the-numbers';
 import InnovationForte from '@/components/landing/innovation-forte';
+import NexoraAdvantage from '@/components/landing/nexora-advantage';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <About />
         <BrandingPackages />
         <FinestWork />
+        <NexoraAdvantage />
         <Testimonials />
         <InnovationForte />
         <ByTheNumbers />
