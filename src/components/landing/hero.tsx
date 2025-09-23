@@ -15,6 +15,9 @@ export default function Hero() {
   return (
     <section className="relative flex flex-col py-12">
         <div 
+            className="absolute top-0 left-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:36px_36px]">
+        </div>
+        <div 
             className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.1),rgba(255,255,255,0))]">
         </div>
       <div className="container mx-auto px-4 md:px-6 h-full flex-grow flex flex-col">
