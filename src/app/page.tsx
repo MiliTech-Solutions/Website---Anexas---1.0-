@@ -12,6 +12,7 @@ import BrandingPackages from '@/components/landing/branding-packages';
 import FinestWork from '@/components/landing/finest-work';
 import Testimonials from '@/components/landing/testimonials';
 import GetAQuote from '@/components/landing/get-a-quote';
+import ByTheNumbers from '@/components/landing/by-the-numbers';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <BrandingPackages />
         <FinestWork />
         <Testimonials />
+        <ByTheNumbers />
         <GetAQuote />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
