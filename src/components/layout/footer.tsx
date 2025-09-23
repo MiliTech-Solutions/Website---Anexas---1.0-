@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:pl-16 pr-8">
+          <div className="lg:pl-20">
             <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
@@ -96,7 +96,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="lg:-ml-12">
+          <div className="lg:-ml-16">
             <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
             <ul className="space-y-3">
               {contactDetails.map((detail) => (
