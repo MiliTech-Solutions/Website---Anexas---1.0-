@@ -101,7 +101,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {contactDetails.map((detail) => (
                 <li key={detail.value} className="flex items-start gap-3">
-                    <detail.icon className="w-5 h-5 text-cyan-400 mt-1" />
+                    <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
                     <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
                         {detail.value}
                     </a>
