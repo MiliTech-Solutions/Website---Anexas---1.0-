@@ -13,7 +13,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center pt-20 md:pt-28 pb-28 md:pb-40">
+    <section className="relative min-h-[90vh] flex flex-col justify-center pt-10 md:pt-16 pb-28 md:pb-40">
         <div 
             className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.1),rgba(255,255,255,0))]">
         </div>
