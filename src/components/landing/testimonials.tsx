@@ -52,7 +52,7 @@ export default function Testimonials() {
                   <div className="flex items-center gap-0.5">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
                   </div>
-                  <blockquote className="text-muted-foreground italic">"{testimonial.quote}"</blockquote>
+                  <blockquote className="text-muted-foreground italic text-justify">"{testimonial.quote}"</blockquote>
                 </CardContent>
                 <div className="mt-6 flex items-center gap-4">
                   <Image
