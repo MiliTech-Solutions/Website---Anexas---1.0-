@@ -4,7 +4,7 @@ import { Code, Rocket } from 'lucide-react';
 const features = [
   {
     icon: Code,
-    title: 'Clean Code',
+    title: 'Clean Work',
     description: 'We write clean, efficient, and scalable code that stands the test of time.',
   },
   {
