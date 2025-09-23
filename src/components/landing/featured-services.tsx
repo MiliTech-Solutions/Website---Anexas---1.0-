@@ -90,10 +90,10 @@ export default function FeaturedServices() {
             ))}
 
             <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0">
-                <div className="absolute w-72 h-72 rounded-full bg-card/50 border border-border/50 -z-10"></div>
-                <div className="absolute w-56 h-56 rounded-full bg-card/70 border border-border/80 -z-10"></div>
-                <div className="w-48 h-48 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="absolute w-64 h-64 rounded-full bg-card/50 border border-border/50 -z-10"></div>
+                <div className="absolute w-48 h-48 rounded-full bg-card/70 border border-border/80 -z-10"></div>
+                <div className="w-40 h-40 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="logoGradientHero" x1="0%" y1="0%" x2="100%" y2="0%">
                                 <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
