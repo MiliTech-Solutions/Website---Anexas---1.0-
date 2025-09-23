@@ -17,8 +17,8 @@ export default function Hero() {
         <div 
             className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.1),rgba(255,255,255,0))]">
         </div>
-      <div className="container mx-auto px-4 md:px-6 h-full flex-grow flex flex-col">
-        <div className="grid md:grid-cols-12 gap-8 items-center h-full pt-8">
+      <div className="container mx-auto px-4 md:px-6 h-full flex-grow flex flex-col pt-12">
+        <div className="grid md:grid-cols-12 gap-8 items-center h-full">
           
           <div className="md:col-span-2">
             <HeroServices />
@@ -50,9 +50,9 @@ export default function Hero() {
         </div>
       </div>
 
-        <div className="mt-auto pt-12">
+        <div className="mt-16 pt-8">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat) => (
                     <div key={stat.label}>
                     <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">{stat.value}</p>
