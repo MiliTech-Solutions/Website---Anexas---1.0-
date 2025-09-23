@@ -13,7 +13,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col pt-0 pb-20">
+    <section className="relative flex flex-col pt-12 pb-20">
         <div 
             className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.1),rgba(255,255,255,0))]">
         </div>
@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
       </div>
 
-        <div className="mt-16 pt-8">
+        <div className="mt-8">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat) => (
