@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="lg:col-start-2">
             <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
