@@ -13,11 +13,11 @@ const services = [
 export default function HeroServices() {
   return (
     <div className="flex flex-col gap-4 text-left">
-        <p className="text-sm font-bold tracking-widest bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text mb-2">OUR SERVICES</p>
+        <p className="text-xs font-bold tracking-widest bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text mb-2">OUR SERVICES</p>
         {services.map((service, index) => (
             <div key={index} className="flex items-center gap-3">
                 <div className="w-px h-6 bg-border"></div>
-                <p className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">{service}</p>
+                <p className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">{service}</p>
             </div>
         ))}
     </div>
