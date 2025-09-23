@@ -37,7 +37,7 @@ export default function CaseStudyShowcase() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our Work</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground text-justify">
             Explore our portfolio and see how we've helped businesses like yours succeed. Use our AI-powered search to find relevant projects.
           </p>
         </div>

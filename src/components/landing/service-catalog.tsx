@@ -42,7 +42,7 @@ export default function ServiceCatalog() {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Services We Can <span className="bg-gradient-to-r from-accent to-primary text-transparent bg-clip-text">Help</span> With
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground text-justify">
             We offer comprehensive digital solutions to help your business thrive in the modern digital landscape.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function ServiceCatalog() {
               </CardHeader>
               <CardContent>
                 <CardTitle className="mb-2">{service.title}</CardTitle>
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-muted-foreground text-justify">{service.description}</p>
               </CardContent>
             </Card>
           ))}

@@ -40,7 +40,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Innovation</span> Meets Excellence
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground text-justify">
               We're a team of passionate designers and developers who believe in the power of digital transformation. Our mission is to help businesses succeed through innovative design and cutting-edge technology.
             </p>
             <div className="grid grid-cols-2 gap-6">

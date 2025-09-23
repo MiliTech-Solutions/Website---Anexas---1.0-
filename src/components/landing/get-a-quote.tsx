@@ -32,7 +32,7 @@ export default function GetAQuote() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Ready to Start Your <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Next Project?</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground text-justify">
                 Let's discuss how we can help transform your digital presence and drive your business forward.
             </p>
             <div className="space-y-6">

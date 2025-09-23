@@ -96,7 +96,7 @@ export default function FinestWork() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Some of Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Finest Work</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground text-justify">
             Explore our portfolio of successful projects that showcase our expertise and creativity.
           </p>
         </div>

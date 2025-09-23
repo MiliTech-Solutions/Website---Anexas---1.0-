@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Logo />
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-justify">
               We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
             </p>
             <div className="flex space-x-4">

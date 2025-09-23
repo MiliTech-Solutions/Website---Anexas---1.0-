@@ -31,7 +31,7 @@ export default function Hero() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
             </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify">
               We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
