@@ -32,8 +32,8 @@ export default function NexoraAdvantage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div key={feature.title} className="text-center flex flex-col items-center">
-              <div className="w-24 h-24 mb-6 rounded-full bg-card flex items-center justify-center border border-border">
-                  <feature.icon className="w-10 h-10 text-cyan-400" />
+              <div className="mb-6">
+                  <feature.icon className="w-12 h-12 text-cyan-400" />
               </div>
               <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
               <p className="text-muted-foreground text-justify max-w-sm">{feature.description}</p>
