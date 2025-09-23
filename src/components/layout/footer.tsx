@@ -53,7 +53,7 @@ const Logo = () => (
 
 export default function Footer() {
   return (
-    <footer className="text-card-foreground border-t border-border/50">
+    <footer className="bg-gradient-to-r from-[#004466] via-black/95 to-black text-card-foreground border-t border-border/50">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="space-y-4 lg:col-span-2">
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:pl-20">
+          <div className="lg:pr-0">
             <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
