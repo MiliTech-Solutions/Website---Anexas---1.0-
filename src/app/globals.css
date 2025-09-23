@@ -57,6 +57,6 @@
   }
   body {
     @apply text-foreground;
-    background: linear-gradient(to right, hsl(var(--background)), #000);
+    background: linear-gradient(to bottom, hsl(var(--background)), #000);
   }
 }
