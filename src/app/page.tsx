@@ -15,6 +15,7 @@ import GetAQuote from '@/components/landing/get-a-quote';
 import ByTheNumbers from '@/components/landing/by-the-numbers';
 import InnovationForte from '@/components/landing/innovation-forte';
 import NexoraAdvantage from '@/components/landing/nexora-advantage';
+import WhoAreWe from '@/components/landing/who-are-we';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Testimonials />
         <InnovationForte />
         <ByTheNumbers />
+        <WhoAreWe />
         <GetAQuote />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
