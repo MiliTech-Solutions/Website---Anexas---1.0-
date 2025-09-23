@@ -55,8 +55,8 @@ export default function Footer() {
   return (
     <footer className="bg-card text-card-foreground">
       <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="space-y-4 lg:col-span-2">
             <Logo />
             <p className="text-muted-foreground text-justify">
               We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-start-2">
+          <div>
             <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
