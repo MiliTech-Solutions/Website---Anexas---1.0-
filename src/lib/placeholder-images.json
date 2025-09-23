@@ -3,26 +3,44 @@
     {
       "id": "case-study-1",
       "description": "An ecommerce website for a fashion brand.",
-      "imageUrl": "https://picsum.photos/seed/cs1/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDB8fHx8MTc1ODYwMTcxNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ecommerce website"
     },
     {
       "id": "case-study-2",
       "description": "A mobile application for a fitness company.",
-      "imageUrl": "https://picsum.photos/seed/cs2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1542641728-6ca359b085f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzU4NTg3NDk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile app"
     },
     {
       "id": "case-study-3",
       "description": "A complete branding identity for a tech startup.",
-      "imageUrl": "https://picsum.photos/seed/cs3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1615469309489-0a464a9925cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxicmFuZGluZyUyMGlkZW50aXR5fGVufDB8fHx8MTc1ODYxMzkyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "branding identity"
     },
     {
       "id": "case-study-4",
       "description": "A SaaS platform for project management.",
-      "imageUrl": "https://picsum.photos/seed/cs4/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1653813705905-472ea6eac827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzYWFzJTIwcGxhdGZvcm18ZW58MHx8fHwxNzU4NjE5NDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "saas platform"
+    },
+    {
+      "id": "avatar-sarah",
+      "description": "Avatar for Sarah Johnson.",
+      "imageUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODU1NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-michael",
+      "description": "Avatar for Michael Chen.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg1ODI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-emily",
+      "description": "Avatar for Emily Rodriguez.",
+      "imageUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODU1NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
     }
   ]
 }

@@ -10,6 +10,7 @@ import CaseStudyShowcase from '@/components/landing/case-study-showcase';
 import ContactForm from '@/components/landing/contact-form';
 import BrandingPackages from '@/components/landing/branding-packages';
 import FinestWork from '@/components/landing/finest-work';
+import Testimonials from '@/components/landing/testimonials';
 import GetAQuote from '@/components/landing/get-a-quote';
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <About />
         <BrandingPackages />
         <FinestWork />
+        <Testimonials />
         <GetAQuote />
         {/* The sections below are currently not visible in the new design.
             You can uncomment them if you wish to bring them back. */}
