@@ -22,6 +22,7 @@ export default {
         orbitron: ['Orbitron', 'sans-serif'],
         kanit: ['Kanit', 'sans-serif'],
         code: ['monospace'],
+        'space-mono': ['"Space Mono"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
