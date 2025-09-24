@@ -59,13 +59,15 @@ export default function Header() {
         <Logo />
         <nav className="hidden md:flex items-center gap-12">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-base font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-110 active:scale-95"
-            >
-              {link.label}
-            </Link>
+            <div key={link.href} className="group relative">
+                <Link
+                href={link.href}
+                className="text-base font-medium text-muted-foreground transition-all duration-300 group-hover:text-foreground"
+                >
+                {link.label}
+                </Link>
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-px w-0 bg-cyan-400 transition-all duration-300 group-hover:w-full group-hover:shadow-[0_0_8px_theme(colors.cyan.400)]"></div>
+            </div>
           ))}
         </nav>
         <div className="hidden md:block">
