@@ -83,15 +83,17 @@ export default function FeaturedServices() {
         className="absolute inset-0 -z-20 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.05),rgba(255,255,255,0))]">
       </div>
       <div className="container mx-auto pl-8 pr-4 md:pl-32 md:pr-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <Fade triggerOnce cascade damping={0.1}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Comprehensive digital solutions tailored to elevate your business presence and drive growth.
-            </p>
-          </Fade>
+        <div className="relative">
+          <div className="max-w-3xl mx-auto text-center mb-16 relative -left-8">
+            <Fade triggerOnce cascade damping={0.1}>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
+              </h2>
+              <p className="text-xl md:text-2xl text-muted-foreground">
+                Comprehensive digital solutions tailored to elevate your business presence and drive growth.
+              </p>
+            </Fade>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:grid-rows-3 gap-x-12 gap-y-16 items-center">
