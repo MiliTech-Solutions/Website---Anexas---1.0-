@@ -97,10 +97,15 @@ export default {
             height: '0',
           },
         },
+        'scroll-indicator': {
+          '0%, 100%': { transform: 'translateY(-25%)', opacity: '0.8' },
+          '50%': { transform: 'translateY(25%)', opacity: '1' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'scroll-indicator': 'scroll-indicator 1.5s ease-in-out infinite',
       },
       gradientColorStops: {
         'from-black-50': 'black 50%',
