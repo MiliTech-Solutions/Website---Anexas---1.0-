@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
 
           <div className="md:col-span-8 text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify">
