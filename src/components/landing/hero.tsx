@@ -1,8 +1,10 @@
+'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import HeroServices from './hero-services';
 import SocialLinks from './social-links';
+import { Fade, Slide } from "react-awesome-reveal";
 
 const stats = [
     { value: '200+', label: 'Projects Completed' },
@@ -28,22 +30,26 @@ export default function Hero() {
           </div>
 
           <div className="md:col-span-8 text-center">
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
-            </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify">
-              We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
-                <Link href="#contact">
-                  Get Started
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="hover:bg-cyan-400 hover:text-primary-foreground hover:border-cyan-400">
-                <Link href="#portfolio">View Our Work</Link>
-              </Button>
-            </div>
+            <Fade triggerOnce cascade damping={0.1}>
+              <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
+              </h1>
+              <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify">
+                We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
+              </p>
+            </Fade>
+            <Fade triggerOnce cascade damping={0.2} delay={500}>
+              <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
+                  <Link href="#contact">
+                    Get Started
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="hover:bg-cyan-400 hover:text-primary-foreground hover:border-cyan-400">
+                  <Link href="#portfolio">View Our Work</Link>
+                </Button>
+              </div>
+            </Fade>
           </div>
           
           <div className="md:col-span-1 md:col-start-12">
@@ -56,21 +62,25 @@ export default function Hero() {
         <div className="mt-8">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
-                {stats.map((stat) => (
-                    <div key={stat.label}>
-                    <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">{stat.value}</p>
-                    <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
-                    </div>
+                {stats.map((stat, index) => (
+                    <Slide direction="up" delay={index * 100} triggerOnce key={stat.label}>
+                      <div>
+                        <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">{stat.value}</p>
+                        <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+                      </div>
+                    </Slide>
                 ))}
                 </div>
             </div>
             <div className="relative mt-12">
               <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
-                  <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500 animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]">
-                    <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]"></div>
+                  <Fade triggerOnce delay={1500}>
+                    <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500 animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]">
+                      <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                        <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]"></div>
+                      </div>
                     </div>
-                  </div>
+                  </Fade>
               </div>
             </div>
         </div>

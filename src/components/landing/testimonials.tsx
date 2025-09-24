@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 const testimonials = [
   {
@@ -37,46 +39,56 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            What Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Clients Say</span>
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground text-justify">
-            Don't just take our word for it. Here's what our satisfied clients have to say about our work.
-          </p>
+          <Fade triggerOnce cascade damping={0.1}>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              What Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Clients Say</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground text-justify">
+              Don't just take our word for it. Here's what our satisfied clients have to say about our work.
+            </p>
+          </Fade>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, index) => (
             testimonial.avatar && (
-              <Card key={testimonial.name} className="bg-card border-border/50 flex flex-col p-6">
-                <CardContent className="flex-grow p-0 space-y-4">
-                  <div className="flex items-center gap-0.5">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+              <Slide direction="up" delay={index * 100} triggerOnce key={testimonial.name}>
+                <Card className="bg-card border-border/50 flex flex-col p-6">
+                  <CardContent className="flex-grow p-0 space-y-4">
+                    <div className="flex items-center gap-0.5">
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+                    </div>
+                    <blockquote className="text-muted-foreground italic text-justify">"{testimonial.quote}"</blockquote>
+                  </CardContent>
+                  <div className="mt-6 flex items-center gap-4">
+                    <Image
+                      src={testimonial.avatar.imageUrl}
+                      alt={testimonial.avatar.description}
+                      width={48}
+                      height={48}
+                      data-ai-hint={testimonial.avatar.imageHint}
+                      className="rounded-full"
+                    />
+                    <div>
+                      <p className="font-semibold text-foreground">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                    </div>
                   </div>
-                  <blockquote className="text-muted-foreground italic text-justify">"{testimonial.quote}"</blockquote>
-                </CardContent>
-                <div className="mt-6 flex items-center gap-4">
-                  <Image
-                    src={testimonial.avatar.imageUrl}
-                    alt={testimonial.avatar.description}
-                    width={48}
-                    height={48}
-                    data-ai-hint={testimonial.avatar.imageHint}
-                    className="rounded-full"
-                  />
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </Slide>
             )
           ))}
         </div>
         <div className="mt-16 text-center">
+          <Fade triggerOnce>
             <p className="text-muted-foreground mb-6">Trusted by companies worldwide</p>
             <div className="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 gap-y-4">
-                {companies.map(company => <company.logo key={company.name} />)}
+                {companies.map((company, index) => (
+                  <Fade delay={index * 100} triggerOnce key={company.name}>
+                    <company.logo />
+                  </Fade>
+                ))}
             </div>
+          </Fade>
         </div>
       </div>
     </section>
