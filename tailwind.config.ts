@@ -20,6 +20,7 @@ export default {
         body: ['Inter', 'sans-serif'],
         headline: ['Audiowide', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
+        kanit: ['Kanit', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
