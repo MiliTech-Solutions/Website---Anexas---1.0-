@@ -14,7 +14,7 @@ export default function SocialLinks() {
   return (
     <div className="flex flex-col items-center gap-6">
         {socialLinks.map((social, index) => (
-            <a key={index} href={social.href} className="text-muted-foreground hover:text-cyan-400 transition-all duration-300 hover:scale-110 active:scale-125">
+            <a key={index} href={social.href} className="text-muted-foreground hover:text-cyan-400 transition-all duration-300 hover:scale-125 hover:drop-shadow-[0_0_8px_theme(colors.cyan.400)] active:scale-150">
                 <social.icon className="w-4 h-4" />
             </a>
         ))}
