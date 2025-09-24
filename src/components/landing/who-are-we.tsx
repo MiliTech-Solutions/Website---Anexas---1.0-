@@ -32,7 +32,7 @@ export default function WhoAreWe() {
           <div className="space-y-8">
             <p className="text-sm font-bold tracking-widest text-cyan-400">ABOUT US</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              WHO ARE WE?
+              <span className="text-gradient">WHO</span> ARE WE?
             </h2>
             <p className="text-lg text-muted-foreground text-justify">
               Nexora AI is a collective of innovators, designers, and AI pioneers dedicated to pushing the boundaries of digital design. We merge cutting-edge technology with artistic vision to create products that are not just beautiful, but brilliantly smart.
