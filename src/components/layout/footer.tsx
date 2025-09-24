@@ -56,7 +56,7 @@ export default function Footer() {
   return (
     <footer className="bg-transparent text-card-foreground border-t border-border/50">
       <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4 lg:col-span-2">
             <Fade triggerOnce>
               <Logo />
@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:pr-0">
+          <div>
             <Fade triggerOnce>
               <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
             </Fade>
@@ -117,7 +117,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="lg:-ml-16">
+          <div>
             <Fade triggerOnce>
               <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
             </Fade>
