@@ -69,7 +69,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button asChild>
+          <Button asChild className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground">
             <Link href="#contact">Contact</Link>
           </Button>
         </div>
@@ -99,7 +99,7 @@ export default function Header() {
                       </SheetClose>
                     ))}
                      <SheetClose asChild>
-                        <Button asChild size="lg" className="mt-4">
+                        <Button asChild size="lg" className="mt-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground">
                             <Link href="#contact">Contact</Link>
                         </Button>
                      </SheetClose>
