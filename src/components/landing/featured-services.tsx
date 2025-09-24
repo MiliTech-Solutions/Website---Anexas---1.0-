@@ -50,28 +50,26 @@ const services = [
 const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: number }) => (
     <Slide direction={service.direction} delay={delay} triggerOnce>
         <div className={`flex flex-col gap-4 max-w-sm ${service.position}`}>
-            <div className="w-16 h-16 rounded-full bg-card flex items-center justify-center border border-border">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-8 h-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
-                >
-                  <defs>
-                    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
-                      <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
-                    </linearGradient>
-                  </defs>
-                  <service.icon stroke="url(#iconGradient)" />
-                </svg>
-            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-16 h-16 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
+            >
+              <defs>
+                <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
+                  <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
+                </linearGradient>
+              </defs>
+              <service.icon stroke="url(#iconGradient)" />
+            </svg>
             <h3 className="text-2xl font-bold">{service.title}</h3>
             <p className="text-muted-foreground">{service.description}</p>
         </div>
