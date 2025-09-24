@@ -11,7 +11,6 @@ const socialLinks = [
     { icon: Instagram, href: '#' },
 ];
 
-
 export default function SocialLinks() {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (navigator.vibrate) {
@@ -35,5 +34,3 @@ export default function SocialLinks() {
     </div>
   );
 }
-
-    
