@@ -7,42 +7,42 @@ const services = [
       icon: PenTool,
       title: 'Content Writing',
       description: 'Engaging, SEO-optimized content that resonates with your audience and drives conversions.',
-      position: 'md:col-start-1 md:row-start-1 justify-self-end text-right items-end',
+      position: 'justify-self-center text-center items-center',
       direction: 'left' as const
     },
     {
       icon: BarChart3,
       title: 'Digital Marketing',
       description: 'Comprehensive marketing strategies to boost your online presence and reach.',
-      position: 'md:col-start-3 md:row-start-1 justify-self-start text-left items-start',
+      position: 'justify-self-center text-center items-center',
       direction: 'right' as const
     },
     {
       icon: Award,
       title: 'Brand Identity',
       description: 'Creating unique brand identities that stand out in the market.',
-      position: 'md:col-start-1 md:row-start-2 justify-self-end text-right items-end',
+      position: 'justify-self-center text-center items-center',
       direction: 'left' as const
     },
     {
       icon: ShoppingCart,
       title: 'eCommerce',
       description: 'Building robust, scalable eCommerce solutions that drive sales.',
-      position: 'md:col-start-3 md:row-start-2 justify-self-start text-left items-start',
+      position: 'justify-self-center text-center items-center',
       direction: 'right' as const
     },
     {
       icon: Code,
       title: 'Development',
       description: 'Custom web and application development to bring your ideas to life.',
-      position: 'md:col-start-1 md:row-start-3 justify-self-end text-right items-end',
+      position: 'justify-self-center text-center items-center',
       direction: 'left' as const
     },
     {
       icon: Briefcase,
       title: 'Management Services',
       description: 'Expert project management to ensure your projects are delivered on time.',
-      position: 'md:col-start-3 md:row-start-3 justify-self-start text-left items-start',
+      position: 'justify-self-center text-center items-center',
       direction: 'right' as const
     },
   ];
@@ -73,7 +73,7 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
                 </svg>
             </div>
             <h3 className="text-2xl font-bold">{service.title}</h3>
-            <p className="text-muted-foreground text-justify">{service.description}</p>
+            <p className="text-muted-foreground text-center">{service.description}</p>
         </div>
     </Slide>
 )
@@ -90,7 +90,7 @@ export default function FeaturedServices() {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground text-justify">
+            <p className="text-xl md:text-2xl text-muted-foreground text-center">
               Comprehensive digital solutions tailored to elevate your business presence and drive growth.
             </p>
           </Fade>
