@@ -44,9 +44,7 @@ export default function GetAQuote() {
                 {contactDetails.map((detail, index) => (
                   <Fade delay={index * 150} triggerOnce key={detail.title}>
                     <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-card">
-                            <detail.icon className="w-6 h-6 text-accent" />
-                        </div>
+                        <detail.icon className="w-8 h-8 text-accent mt-1" />
                         <div>
                             <h3 className="font-semibold text-lg">{detail.title}</h3>
                             <p className="text-muted-foreground">{detail.value}</p>
