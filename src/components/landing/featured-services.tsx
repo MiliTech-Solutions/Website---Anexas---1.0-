@@ -83,7 +83,7 @@ export default function FeaturedServices() {
         className="absolute inset-0 -z-20 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.05),rgba(255,255,255,0))]">
       </div>
       <div className="container mx-auto pl-8 pr-4 md:pl-32 md:pr-6">
-        <div className="max-w-3xl mb-16 text-center">
+        <div className="max-w-3xl mb-16 text-left">
           <Fade triggerOnce cascade damping={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
