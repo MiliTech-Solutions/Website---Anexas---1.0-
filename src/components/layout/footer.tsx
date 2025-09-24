@@ -68,7 +68,7 @@ export default function Footer() {
             </Fade>
             <Fade triggerOnce delay={200}>
               <p className="text-muted-foreground text-justify">
-                “Transforming bold ideas into sleek, & contemporary experiences.”
+                “Transforming bold ideas into sleek & contemporary experiences.”
               </p>
             </Fade>
             <div className="flex space-x-4 pt-4">
