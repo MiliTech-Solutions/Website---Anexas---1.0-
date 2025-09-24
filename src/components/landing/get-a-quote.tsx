@@ -30,7 +30,7 @@ export default function GetAQuote() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Ready to Start Your <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Next Project?</span>
+              Ready to Start Your <span className="text-gradient">Next Project?</span>
             </h2>
             <p className="text-lg text-muted-foreground text-justify">
                 Let's discuss how we can help transform your digital presence and drive your business forward.
