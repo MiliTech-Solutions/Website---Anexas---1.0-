@@ -23,6 +23,7 @@ export default {
         kanit: ['Kanit', 'sans-serif'],
         code: ['monospace'],
         'space-mono': ['"Space Mono"', 'monospace'],
+        electrolize: ['Electrolize', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

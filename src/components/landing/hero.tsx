@@ -33,7 +33,7 @@ export default function Hero() {
           <div className="md:col-span-8 text-center">
             <Fade triggerOnce cascade damping={0.1}>
               <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
-                <span className="font-space-mono bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
+                <span className="font-electrolize bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span> Agency
               </h1>
               <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify">
                 We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
