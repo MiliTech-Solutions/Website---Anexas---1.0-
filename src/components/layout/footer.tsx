@@ -101,39 +101,41 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
-              <Fade triggerOnce>
-                <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
-              </Fade>
-              <ul className="space-y-2">
-                {companyLinks.map((link, index) => (
-                  <Fade triggerOnce delay={index * 50} key={link.label}>
-                    <li>
-                      <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
-                        {link.label}
-                      </Link>
-                    </li>
-                  </Fade>
-                ))}
-              </ul>
-            </div>
+            <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div>
+                <Fade triggerOnce>
+                  <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
+                </Fade>
+                <ul className="space-y-2">
+                  {companyLinks.map((link, index) => (
+                    <Fade triggerOnce delay={index * 50} key={link.label}>
+                      <li>
+                        <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                          {link.label}
+                        </Link>
+                      </li>
+                    </Fade>
+                  ))}
+                </ul>
+              </div>
 
-            <div>
-              <Fade triggerOnce>
-                <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
-              </Fade>
-              <ul className="space-y-3">
-                {contactDetails.map((detail, index) => (
-                  <Fade triggerOnce delay={index * 100} key={detail.value}>
-                    <li className="flex items-start gap-3">
-                      <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                      <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
-                        {detail.value}
-                      </a>
-                    </li>
-                  </Fade>
-                ))}
-              </ul>
+              <div>
+                <Fade triggerOnce>
+                  <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
+                </Fade>
+                <ul className="space-y-3">
+                  {contactDetails.map((detail, index) => (
+                    <Fade triggerOnce delay={index * 100} key={detail.value}>
+                      <li className="flex items-start gap-3">
+                        <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                        <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
+                          {detail.value}
+                        </a>
+                      </li>
+                    </Fade>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
