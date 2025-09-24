@@ -42,6 +42,10 @@ export default function Hero() {
                   sequence={[
                     'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
                     1000,
+                    '',
+                    500,
+                    'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                    1000,
                   ]}
                   wrapper="span"
                   speed={50}
