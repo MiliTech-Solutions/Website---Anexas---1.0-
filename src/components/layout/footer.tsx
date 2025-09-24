@@ -71,7 +71,7 @@ export default function Footer() {
                 “Transforming bold ideas into sleek & contemporary experiences.”
               </p>
             </Fade>
-            <div className="flex space-x-4 pt-4">
+            <div className="flex justify-center md:justify-start space-x-8 md:space-x-4 pt-4">
               {socialLinks.map((social, index) => (
                 <Fade triggerOnce delay={300 + index * 100} key={social.href}>
                   <Link href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
