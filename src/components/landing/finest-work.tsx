@@ -121,7 +121,7 @@ export default function FinestWork() {
           ))}
         </div>
         <div className="mt-16 text-center">
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="hover:bg-cyan-400 hover:text-primary-foreground hover:border-cyan-400">
                 <Link href="#work">View All Projects</Link>
             </Button>
         </div>
