@@ -94,7 +94,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       gradientColorStops: {
-        'from-black-30': 'black 30%',
+        'from-black-50': 'black 50%',
       }
     },
   },
