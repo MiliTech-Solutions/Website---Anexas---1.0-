@@ -30,7 +30,7 @@ export default function ByTheNumbers() {
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm font-bold tracking-widest text-cyan-400 mb-2">OUR ANALYTICS</p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            By the Numbers
+            By the <span className="text-gradient">Numbers</span>
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
