@@ -103,8 +103,12 @@ export default function FeaturedServices() {
 
             <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0">
                 <Fade triggerOnce zoom delay={300}>
-                  <div className="absolute w-40 h-40 rounded-full bg-card/50 border border-border/50 -z-10"></div>
-                  <div className="absolute w-28 h-28 rounded-full bg-card/70 border border-border/80 -z-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center -z-10">
+                    <div className="w-40 h-40 rounded-full bg-card/50 border border-border/50"></div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center -z-10">
+                    <div className="w-28 h-28 rounded-full bg-card/70 border border-border/80"></div>
+                  </div>
                   <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
                       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <defs>
