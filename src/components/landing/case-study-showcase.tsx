@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -55,6 +56,7 @@ export default function CaseStudyShowcase() {
               <Slide direction="up" delay={index * 100} triggerOnce key={study.title}>
                 <Card className="overflow-hidden group border-border hover:border-primary transition-colors duration-300">
                   <CardHeader className="p-0">
+                    <Fade triggerOnce>
                     <div className="aspect-video overflow-hidden">
                       <Image
                         src={study.image.imageUrl}
@@ -65,6 +67,7 @@ export default function CaseStudyShowcase() {
                         className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
                       />
                     </div>
+                    </Fade>
                   </CardHeader>
                   <CardContent className="p-6">
                     <Fade triggerOnce cascade damping={0.1}>

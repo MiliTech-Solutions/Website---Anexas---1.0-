@@ -50,6 +50,7 @@ const services = [
 const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: number }) => (
     <Slide direction={service.direction} delay={delay} triggerOnce>
         <div className={`flex flex-col gap-4 max-w-sm ${service.position}`}>
+          <Fade triggerOnce>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -70,8 +71,11 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
               </defs>
               <service.icon stroke="url(#iconGradient)" />
             </svg>
-            <h3 className="text-2xl font-bold">{service.title}</h3>
-            <p className="text-muted-foreground">{service.description}</p>
+            </Fade>
+            <Fade triggerOnce delay={100} cascade damping={0.1}>
+              <h3 className="text-2xl font-bold">{service.title}</h3>
+              <p className="text-muted-foreground">{service.description}</p>
+            </Fade>
         </div>
     </Slide>
 )

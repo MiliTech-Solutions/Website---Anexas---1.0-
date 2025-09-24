@@ -109,6 +109,7 @@ export default function FinestWork() {
             <Slide direction="up" delay={index * 100} triggerOnce key={work.title}>
               <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
                  <div className="aspect-[4/3] overflow-hidden">
+                  <Fade triggerOnce>
                   <Image
                     src={work.image.src}
                     alt={work.image.alt}
@@ -117,6 +118,7 @@ export default function FinestWork() {
                     data-ai-hint={work.image.hint}
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
+                  </Fade>
                 </div>
                 <CardContent className="p-6">
                   <Fade triggerOnce cascade damping={0.1}>

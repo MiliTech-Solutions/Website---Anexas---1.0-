@@ -51,7 +51,7 @@ export default function About() {
             </Slide>
             <div className="grid grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <Fade delay={index * 150} triggerOnce key={feature.title}>
+                <Fade delay={index * 150} triggerOnce key={feature.title} cascade damping={0.1}>
                   <div className="flex items-start gap-4">
                       <div className="w-12 h-12 flex items-center justify-center">
                           <feature.icon className="w-8 h-8 text-accent" />
@@ -69,12 +69,14 @@ export default function About() {
             <Slide direction="right" triggerOnce>
               <Card className="bg-card border-border/50">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Our Impact</CardTitle>
+                  <Fade triggerOnce>
+                    <CardTitle className="text-2xl text-center bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Our Impact</CardTitle>
+                  </Fade>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                     {stats.map((stat, index) => (
-                      <Fade delay={index * 150} triggerOnce key={stat.label}>
+                      <Fade delay={index * 150} triggerOnce key={stat.label} cascade damping={0.1}>
                         <div className="text-center">
                           <p className="text-4xl font-bold text-foreground mb-2">
                             <CountUp end={stat.value} duration={2.5} suffix={stat.suffix || ''} enableScrollSpy />

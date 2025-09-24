@@ -11,6 +11,7 @@ import {
   SheetTrigger,
   SheetClose
 } from "@/components/ui/sheet"
+import { Fade } from 'react-awesome-reveal';
 
 
 const navLinks = [
@@ -57,24 +58,30 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
-        <Logo />
+        <Fade triggerOnce>
+          <Logo />
+        </Fade>
         <nav className="hidden md:flex items-center gap-12">
-          {navLinks.map((link) => (
-            <div key={link.href} className="group relative">
-                <Link
-                href={link.href}
-                className="text-base font-headline text-muted-foreground transition-all duration-300 group-hover:text-foreground"
-                >
-                {link.label}
-                </Link>
-                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-px w-0 bg-cyan-400 transition-all duration-300 group-hover:w-full group-hover:shadow-[0_0_8px_theme(colors.cyan.400)]"></div>
-            </div>
+          {navLinks.map((link, index) => (
+            <Fade triggerOnce delay={index * 100} key={link.href}>
+              <div className="group relative">
+                  <Link
+                  href={link.href}
+                  className="text-base font-headline text-muted-foreground transition-all duration-300 group-hover:text-foreground"
+                  >
+                  {link.label}
+                  </Link>
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-px w-0 bg-cyan-400 transition-all duration-300 group-hover:w-full group-hover:shadow-[0_0_8px_theme(colors.cyan.400)]"></div>
+              </div>
+            </Fade>
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button asChild className="bg-cyan-400 text-primary-foreground hover:bg-cyan-400/90">
-            <Link href="#contact">Contact</Link>
-          </Button>
+          <Fade triggerOnce delay={navLinks.length * 100}>
+            <Button asChild className="bg-cyan-400 text-primary-foreground hover:bg-cyan-400/90">
+              <Link href="#contact">Contact</Link>
+            </Button>
+          </Fade>
         </div>
         <div className="md:hidden">
             <Sheet>
@@ -91,21 +98,25 @@ export default function Header() {
                     
                   </div>
                   <nav className="flex flex-col gap-6">
-                    {navLinks.map((link) => (
-                      <SheetClose asChild key={link.href}>
-                        <Link
-                          href={link.href}
-                          className="text-lg font-headline text-foreground"
-                        >
-                          {link.label}
-                        </Link>
-                      </SheetClose>
+                    {navLinks.map((link, index) => (
+                      <Fade triggerOnce delay={index * 100} key={link.href}>
+                        <SheetClose asChild>
+                          <Link
+                            href={link.href}
+                            className="text-lg font-headline text-foreground"
+                          >
+                            {link.label}
+                          </Link>
+                        </SheetClose>
+                      </Fade>
                     ))}
-                     <SheetClose asChild>
-                        <Button asChild size="lg" className="mt-4 bg-cyan-400 text-primary-foreground hover:bg-cyan-400/90">
-                            <Link href="#contact">Contact</Link>
-                        </Button>
-                     </SheetClose>
+                     <Fade triggerOnce delay={navLinks.length * 100}>
+                       <SheetClose asChild>
+                          <Button asChild size="lg" className="mt-4 bg-cyan-400 text-primary-foreground hover:bg-cyan-400/90">
+                              <Link href="#contact">Contact</Link>
+                          </Button>
+                       </SheetClose>
+                     </Fade>
                   </nav>
                 </div>
               </SheetContent>

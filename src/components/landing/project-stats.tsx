@@ -1,3 +1,4 @@
+'use client';
 import { Briefcase, Heart, Clock, Headset } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
 import CountUp from 'react-countup';
@@ -20,6 +21,7 @@ export default function ProjectStats() {
                 <Fade triggerOnce>
                   <stat.icon className="h-10 w-10 mb-4 text-accent" />
                 </Fade>
+                <Fade triggerOnce delay={100}>
                 <p className="text-4xl md:text-5xl font-extrabold text-foreground">
                   {stat.isSpecial ? (
                     <>
@@ -30,6 +32,7 @@ export default function ProjectStats() {
                     <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
                   )}
                 </p>
+                </Fade>
                 <Fade triggerOnce delay={200}>
                   <p className="text-sm font-medium text-muted-foreground mt-2 uppercase tracking-wider">{stat.label}</p>
                 </Fade>

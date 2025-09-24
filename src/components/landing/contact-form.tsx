@@ -66,27 +66,35 @@ export default function ContactForm() {
             <CardContent>
               <form ref={formRef} action={dispatch} key={state.resetKey}>
                 <div className="grid gap-6">
-                  <Fade triggerOnce cascade damping={0.1}>
+                  <Fade triggerOnce cascade damping={0.1} delay={100}>
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
                       <Input id="name" name="name" placeholder="Your Name" aria-describedby="name-error" />
                       {state.errors?.name && <p id="name-error" className="text-sm text-destructive">{state.errors.name[0]}</p>}
                     </div>
+                  </Fade>
+                  <Fade triggerOnce cascade damping={0.1} delay={200}>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email</Label>
                       <Input id="email" name="email" type="email" placeholder="your@email.com" aria-describedby="email-error" />
                       {state.errors?.email && <p id="email-error" className="text-sm text-destructive">{state.errors.email[0]}</p>}
                     </div>
+                  </Fade>
+                  <Fade triggerOnce cascade damping={0.1} delay={300}>
                     <div className="space-y-2">
                       <Label htmlFor="subject">Subject</Label>
                       <Input id="subject" name="subject" placeholder="What's this about?" aria-describedby="subject-error" />
                       {state.errors?.subject && <p id="subject-error" className="text-sm text-destructive">{state.errors.subject[0]}</p>}
                     </div>
+                  </Fade>
+                  <Fade triggerOnce cascade damping={0.1} delay={400}>
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
                       <Textarea id="message" name="message" placeholder="Tell us about your project..." className="min-h-[120px]" aria-describedby="message-error" />
                       {state.errors?.message && <p id="message-error" className="text-sm text-destructive">{state.errors.message[0]}</p>}
                     </div>
+                  </Fade>
+                  <Fade triggerOnce delay={500}>
                     <SubmitButton />
                   </Fade>
                 </div>

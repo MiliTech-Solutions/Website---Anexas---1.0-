@@ -49,9 +49,11 @@ export default function ByTheNumbers() {
                 <Fade triggerOnce>
                   <stat.icon className="w-10 h-10 mb-4 text-cyan-400" />
                 </Fade>
+                <Fade triggerOnce delay={100}>
                 <p className="text-4xl md:text-5xl font-bold text-cyan-400">
                   <CountUp end={parseInt(stat.value)} duration={2.5} separator="," suffix={stat.suffix} enableScrollSpy />
                 </p>
+                </Fade>
                 <Fade triggerOnce delay={200}>
                  <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wider">{stat.label}</p>
                 </Fade>

@@ -87,6 +87,7 @@ export default function Testimonials() {
         <div className="mt-16 text-center">
           <Fade triggerOnce>
             <p className="text-muted-foreground mb-6">Trusted by companies worldwide</p>
+          </Fade>
             <div className="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 gap-y-4">
                 {companies.map((company, index) => (
                   <Fade delay={index * 100} triggerOnce key={company.name}>
@@ -94,7 +95,6 @@ export default function Testimonials() {
                   </Fade>
                 ))}
             </div>
-          </Fade>
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@ export default function GetAQuote() {
             </Slide>
             <div className="space-y-6">
                 {contactDetails.map((detail, index) => (
-                  <Fade delay={index * 150} triggerOnce key={detail.title}>
+                  <Fade delay={index * 150} triggerOnce key={detail.title} cascade damping={0.1}>
                     <div className="flex items-start gap-4">
                         <detail.icon className="w-8 h-8 text-accent mt-1" />
                         <div>
@@ -65,7 +65,7 @@ export default function GetAQuote() {
                 </CardHeader>
                 <CardContent>
                   <form className="grid gap-6">
-                    <Fade triggerOnce cascade damping={0.1}>
+                    <Fade triggerOnce cascade damping={0.1} delay={100}>
                       <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                               <Label htmlFor="first-name">First Name</Label>
@@ -76,20 +76,28 @@ export default function GetAQuote() {
                               <Input id="last-name" placeholder="Doe" />
                           </div>
                       </div>
+                    </Fade>
+                    <Fade triggerOnce cascade damping={0.1} delay={200}>
                       <div className="space-y-2">
                           <Label htmlFor="email">Email</Label>
                           <Input id="email" type="email" placeholder="john@example.com" />
                       </div>
+                    </Fade>
+                    <Fade triggerOnce cascade damping={0.1} delay={300}>
                       <div className="space-y-2">
                           <Label htmlFor="phone">Phone</Label>
                           <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
                       </div>
+                    </Fade>
+                    <Fade triggerOnce cascade damping={0.1} delay={400}>
                       <div className="space-y-2">
                           <Label htmlFor="project-details">Project Details</Label>
                           <Textarea id="project-details" placeholder="Tell us about your project requirements..." />
                       </div>
+                      </Fade>
+                      <Fade triggerOnce delay={500}>
                       <Button type="submit" size="lg">Submit</Button>
-                    </Fade>
+                      </Fade>
                   </form>
                 </CardContent>
               </Card>

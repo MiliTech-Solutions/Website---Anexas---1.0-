@@ -52,7 +52,7 @@ export default function Hero() {
                 />
               </div>
             </Fade>
-            <Fade triggerOnce cascade damping={0.2} delay={500}>
+            <Fade triggerOnce delay={500}>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
                   <Link href="#contact">
@@ -79,6 +79,7 @@ export default function Hero() {
                 {stats.map((stat, index) => (
                     <Slide direction="up" delay={index * 100} triggerOnce key={stat.label}>
                       <div>
+                        <Fade triggerOnce>
                         <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
                           {stat.isSpecial ? (
                             <>
@@ -89,7 +90,10 @@ export default function Hero() {
                             <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
                           )}
                         </p>
-                        <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+                        </Fade>
+                        <Fade triggerOnce delay={100}>
+                          <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+                        </Fade>
                       </div>
                     </Slide>
                 ))}

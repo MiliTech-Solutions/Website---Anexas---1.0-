@@ -88,7 +88,7 @@ export default function BrandingPackages() {
                 <CardContent className="flex-grow">
                   <ul className="space-y-3 mt-6">
                     {pkg.features.map((feature, fIndex) => (
-                      <Fade delay={fIndex * 50} triggerOnce key={feature}>
+                      <Fade delay={fIndex * 50} triggerOnce key={feature} cascade damping={0.1}>
                         <li className="flex items-center gap-3">
                           <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
                             <Check className="w-4 h-4 text-accent" />

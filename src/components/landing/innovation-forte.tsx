@@ -20,6 +20,7 @@ export default function InnovationForte() {
           </div>
           <Slide direction="right" triggerOnce>
             <div className="overflow-hidden rounded-lg">
+              <Fade triggerOnce>
               <Image
                 src="https://picsum.photos/seed/innovation/600/750"
                 alt="Looking up at a modern glass skyscraper"
@@ -28,6 +29,7 @@ export default function InnovationForte() {
                 data-ai-hint="skyscraper architecture"
                 className="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
               />
+              </Fade>
             </div>
           </Slide>
         </div>

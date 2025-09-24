@@ -24,6 +24,7 @@ export default function WhoAreWe() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Slide direction="left" triggerOnce>
             <div className="overflow-hidden rounded-lg">
+              <Fade triggerOnce>
               <Image
                 src="https://picsum.photos/seed/whoarewe/800/600"
                 alt="A person looking out over an airport tarmac."
@@ -32,6 +33,7 @@ export default function WhoAreWe() {
                 data-ai-hint="airport tarmac"
                 className="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
               />
+              </Fade>
             </div>
           </Slide>
           <div className="space-y-8">
@@ -46,7 +48,7 @@ export default function WhoAreWe() {
             </Slide>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {features.map((feature, index) => (
-                <Fade delay={index * 150} triggerOnce key={feature.title}>
+                <Fade delay={index * 150} triggerOnce key={feature.title} cascade damping={0.1}>
                   <div className="flex flex-col gap-3">
                     <feature.icon className="w-8 h-8 text-cyan-400" />
                     <h3 className="font-semibold text-xl">{feature.title}</h3>
