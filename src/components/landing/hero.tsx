@@ -45,7 +45,7 @@ export default function Hero() {
                   ]}
                   wrapper="span"
                   speed={50}
-                  repeat={2}
+                  repeat={1}
                 />
               </div>
             </Fade>
