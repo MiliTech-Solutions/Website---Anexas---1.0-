@@ -41,9 +41,11 @@ export default function Hero() {
                 <TypeAnimation
                   sequence={[
                     'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                    1000
                   ]}
                   wrapper="span"
                   speed={50}
+                  repeat={2}
                 />
               </div>
             </Fade>
