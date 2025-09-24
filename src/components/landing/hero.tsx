@@ -35,7 +35,7 @@ export default function Hero() {
               We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
+              <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400">
                 <Link href="#contact">
                   Get Started
                 </Link>
