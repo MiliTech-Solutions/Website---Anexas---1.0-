@@ -54,11 +54,16 @@ export default function Testimonials() {
               <Slide direction="up" delay={index * 100} triggerOnce key={testimonial.name}>
                 <Card className="bg-card border-border/50 flex flex-col p-6">
                   <CardContent className="flex-grow p-0 space-y-4">
-                    <div className="flex items-center gap-0.5">
-                      {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
-                    </div>
-                    <blockquote className="text-muted-foreground italic text-justify">"{testimonial.quote}"</blockquote>
+                    <Fade triggerOnce>
+                      <div className="flex items-center gap-0.5">
+                        {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+                      </div>
+                    </Fade>
+                    <Fade triggerOnce delay={100}>
+                      <blockquote className="text-muted-foreground italic text-justify">"{testimonial.quote}"</blockquote>
+                    </Fade>
                   </CardContent>
+                  <Fade triggerOnce delay={200}>
                   <div className="mt-6 flex items-center gap-4">
                     <Image
                       src={testimonial.avatar.imageUrl}
@@ -73,6 +78,7 @@ export default function Testimonials() {
                       <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                     </div>
                   </div>
+                  </Fade>
                 </Card>
               </Slide>
             )

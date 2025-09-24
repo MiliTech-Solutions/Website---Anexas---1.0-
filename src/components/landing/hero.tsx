@@ -5,12 +5,13 @@ import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import HeroServices from './hero-services';
 import SocialLinks from './social-links';
 import { Fade, Slide } from "react-awesome-reveal";
+import CountUp from 'react-countup';
 
 const stats = [
-    { value: '200+', label: 'Projects Completed' },
-    { value: '150+', label: 'Happy Clients' },
-    { value: '5+', label: 'Years Experience' },
-    { value: '24/7', label: 'Support' },
+    { value: 200, suffix: '+', label: 'Projects Completed' },
+    { value: 150, suffix: '+', label: 'Happy Clients' },
+    { value: 5, suffix: '+', label: 'Years Experience' },
+    { value: 24, label: 'Support', isSpecial: true },
 ];
 
 export default function Hero() {
@@ -65,7 +66,16 @@ export default function Hero() {
                 {stats.map((stat, index) => (
                     <Slide direction="up" delay={index * 100} triggerOnce key={stat.label}>
                       <div>
-                        <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">{stat.value}</p>
+                        <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+                          {stat.isSpecial ? (
+                            <>
+                              <CountUp end={24} duration={2} enableScrollSpy />/
+                              <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
+                            </>
+                          ) : (
+                            <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
+                          )}
+                        </p>
                         <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
                       </div>
                     </Slide>

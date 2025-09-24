@@ -55,32 +55,36 @@ export default function ServiceCatalog() {
             <Slide direction="up" delay={index * 100} triggerOnce key={service.title}>
               <Card className="bg-card border-border/50 h-full transition-all duration-300 transform hover:-translate-y-2 hover:border-primary rounded-xl">
                 <CardHeader className="flex flex-row items-start gap-4 pb-4">
-                  <div className="p-3 rounded-md bg-primary/10">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
-                    >
-                      <defs>
-                        <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
-                          <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
-                        </linearGradient>
-                      </defs>
-                      <service.icon stroke="url(#iconGradient)" />
-                    </svg>
-                  </div>
+                  <Fade triggerOnce>
+                    <div className="p-3 rounded-md bg-primary/10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
+                      >
+                        <defs>
+                          <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
+                            <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
+                          </linearGradient>
+                        </defs>
+                        <service.icon stroke="url(#iconGradient)" />
+                      </svg>
+                    </div>
+                  </Fade>
                 </CardHeader>
                 <CardContent>
-                  <CardTitle className="mb-2">{service.title}</CardTitle>
-                  <p className="text-muted-foreground text-justify">{service.description}</p>
+                  <Fade triggerOnce cascade damping={0.1}>
+                    <CardTitle className="mb-2">{service.title}</CardTitle>
+                    <p className="text-muted-foreground text-justify">{service.description}</p>
+                  </Fade>
                 </CardContent>
               </Card>
             </Slide>

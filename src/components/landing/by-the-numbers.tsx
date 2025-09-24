@@ -1,21 +1,24 @@
 'use client';
 import { Rocket, Smile, Code, Users } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import CountUp from 'react-countup';
 
 const stats = [
   {
     icon: Rocket,
-    value: '150+',
+    value: '150',
+    suffix: '+',
     label: 'PROJECTS LAUNCHED',
   },
   {
     icon: Smile,
-    value: '100+',
+    value: '100',
+    suffix: '+',
     label: 'HAPPY CLIENTS',
   },
   {
     icon: Code,
-    value: '500,000',
+    value: '500000',
     label: 'LINES OF CODE',
   },
   {
@@ -41,9 +44,15 @@ export default function ByTheNumbers() {
           {stats.map((stat, index) => (
             <Slide direction="up" delay={index * 100} triggerOnce key={stat.label}>
               <div className="flex flex-col items-center">
-                <stat.icon className="w-10 h-10 mb-4 text-cyan-400" />
-                <p className="text-4xl md:text-5xl font-bold text-cyan-400">{stat.value}</p>
-                <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wider">{stat.label}</p>
+                <Fade triggerOnce>
+                  <stat.icon className="w-10 h-10 mb-4 text-cyan-400" />
+                </Fade>
+                <p className="text-4xl md:text-5xl font-bold text-cyan-400">
+                  <CountUp end={parseInt(stat.value)} duration={2.5} separator="," suffix={stat.suffix} enableScrollSpy />
+                </p>
+                <Fade triggerOnce delay={200}>
+                 <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wider">{stat.label}</p>
+                </Fade>
               </div>
             </Slide>
           ))}

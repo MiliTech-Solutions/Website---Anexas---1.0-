@@ -59,10 +59,13 @@ export default function GetAQuote() {
             <Slide direction="right" triggerOnce>
               <Card className="bg-card border-border/50">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center">Get a Free Quote</CardTitle>
+                  <Fade triggerOnce>
+                    <CardTitle className="text-2xl text-center">Get a Free Quote</CardTitle>
+                  </Fade>
                 </CardHeader>
                 <CardContent>
                   <form className="grid gap-6">
+                    <Fade triggerOnce cascade damping={0.1}>
                       <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                               <Label htmlFor="first-name">First Name</Label>
@@ -86,6 +89,7 @@ export default function GetAQuote() {
                           <Textarea id="project-details" placeholder="Tell us about your project requirements..." />
                       </div>
                       <Button type="submit" size="lg">Submit</Button>
+                    </Fade>
                   </form>
                 </CardContent>
               </Card>

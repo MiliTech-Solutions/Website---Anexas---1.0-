@@ -119,8 +119,10 @@ export default function FinestWork() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
-                  <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
+                  <Fade triggerOnce cascade damping={0.1}>
+                    <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
+                    <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
+                  </Fade>
                 </CardContent>
               </Card>
             </Slide>

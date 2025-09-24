@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 const socialLinks = [
   { icon: Facebook, href: '#' },
@@ -34,22 +35,22 @@ const contactDetails = [
 ];
 
 const Logo = () => (
-    <Link href="/" className="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-foreground">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
-                    <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
-                </linearGradient>
-            </defs>
-            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M2 7L12 12L22 7" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M12 12V22" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round"/>
-        </svg>
-      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Anexas</span>
-      <span>Digital</span>
-    </Link>
-  );
+  <Link href="/" className="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-foreground">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style={{ stopColor: 'hsl(var(--cyan-400))' }} />
+          <stop offset="100%" style={{ stopColor: 'hsl(var(--blue-500))' }} />
+        </linearGradient>
+      </defs>
+      <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M2 7L12 12L22 7" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M12 12V22" stroke="url(#logoGradientFooter)" strokeWidth="2" strokeLinejoin="round" />
+    </svg>
+    <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Anexas</span>
+    <span>Digital</span>
+  </Link>
+);
 
 export default function Footer() {
   return (
@@ -57,55 +58,73 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="space-y-4 lg:col-span-2">
-            <Logo />
-            <p className="text-muted-foreground text-justify">
-              We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
-            </p>
+            <Fade triggerOnce>
+              <Logo />
+            </Fade>
+            <Fade triggerOnce delay={100}>
+              <p className="text-muted-foreground text-justify">
+                We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
+              </p>
+            </Fade>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <Link key={social.href} href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
-                  <social.icon className="w-5 h-5" />
-                </Link>
+              {socialLinks.map((social, index) => (
+                <Fade triggerOnce delay={200 + index * 100} key={social.href}>
+                  <Link href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    <social.icon className="w-5 h-5" />
+                  </Link>
+                </Fade>
               ))}
             </div>
           </div>
 
           <div className="lg:pr-0">
-            <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
+            <Fade triggerOnce>
+              <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
+            </Fade>
             <ul className="space-y-2">
-              {serviceLinks.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
+              {serviceLinks.map((link, index) => (
+                <Fade triggerOnce delay={index * 50} key={link.label}>
+                  <li>
+                    <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                </Fade>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
+            <Fade triggerOnce>
+              <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
+            </Fade>
             <ul className="space-y-2">
-              {companyLinks.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
+              {companyLinks.map((link, index) => (
+                <Fade triggerOnce delay={index * 50} key={link.label}>
+                  <li>
+                    <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                </Fade>
               ))}
             </ul>
           </div>
-          
+
           <div className="lg:-ml-16">
-            <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
+            <Fade triggerOnce>
+              <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
+            </Fade>
             <ul className="space-y-3">
-              {contactDetails.map((detail) => (
-                <li key={detail.value} className="flex items-start gap-3">
+              {contactDetails.map((detail, index) => (
+                <Fade triggerOnce delay={index * 100} key={detail.value}>
+                  <li className="flex items-start gap-3">
                     <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
                     <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
-                        {detail.value}
+                      {detail.value}
                     </a>
-                </li>
+                  </li>
+                </Fade>
               ))}
             </ul>
           </div>
@@ -113,11 +132,19 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Anexas. All rights reserved.</p>
+          <Fade triggerOnce>
+            <p>&copy; {new Date().getFullYear()} Anexas. All rights reserved.</p>
+          </Fade>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-primary">Privacy</Link>
-            <Link href="#" className="hover:text-primary">Terms</Link>
-            <Link href="#" className="hover:text-primary">Cookies</Link>
+            <Fade triggerOnce delay={100}>
+              <Link href="#" className="hover:text-primary">Privacy</Link>
+            </Fade>
+            <Fade triggerOnce delay={200}>
+              <Link href="#" className="hover:text-primary">Terms</Link>
+            </Fade>
+            <Fade triggerOnce delay={300}>
+              <Link href="#" className="hover:text-primary">Cookies</Link>
+            </Fade>
           </div>
         </div>
       </div>

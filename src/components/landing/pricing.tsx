@@ -76,21 +76,25 @@ export default function Pricing() {
                       </Badge>
                     </Fade>
                   )}
-                  <div className="text-center pt-4">
-                      <CardTitle className="text-2xl font-semibold mb-2">{pkg.name}</CardTitle>
-                      <p className={`text-4xl font-bold ${pkg.priceColor}`}>{pkg.price}</p>
-                      <p className="text-muted-foreground mt-2">{pkg.description}</p>
-                  </div>
+                  <Fade triggerOnce cascade damping={0.1}>
+                    <div className="text-center pt-4">
+                        <CardTitle className="text-2xl font-semibold mb-2">{pkg.name}</CardTitle>
+                        <p className={`text-4xl font-bold ${pkg.priceColor}`}>{pkg.price}</p>
+                        <p className="text-muted-foreground mt-2">{pkg.description}</p>
+                    </div>
+                  </Fade>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <ul className="space-y-3 mt-6">
-                    {pkg.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Check className="w-4 h-4 text-accent" />
-                        </div>
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>
+                    {pkg.features.map((feature, fIndex) => (
+                      <Fade delay={fIndex * 50} triggerOnce key={feature}>
+                        <li className="flex items-center gap-3">
+                          <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-accent" />
+                          </div>
+                          <span className="text-muted-foreground">{feature}</span>
+                        </li>
+                      </Fade>
                     ))}
                   </ul>
                 </CardContent>

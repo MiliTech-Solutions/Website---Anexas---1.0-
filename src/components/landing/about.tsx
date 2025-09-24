@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Lightbulb, Users, Zap, Award } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import CountUp from 'react-countup';
 
 const features = [
   {
@@ -27,10 +28,10 @@ const features = [
 ];
 
 const stats = [
-    { value: '98%', label: 'Client Satisfaction', color: 'bg-green-500' },
-    { value: '250%', label: 'Average ROI', color: 'bg-blue-500' },
-    { value: '45', label: 'Countries Served', color: 'bg-purple-500' },
-    { value: '24h', label: 'Response Time', color: 'bg-orange-500' },
+    { value: 98, suffix: '%', label: 'Client Satisfaction', color: 'bg-green-500' },
+    { value: 250, suffix: '%', label: 'Average ROI', color: 'bg-blue-500' },
+    { value: 45, label: 'Countries Served', color: 'bg-purple-500' },
+    { value: 24, suffix: 'h', label: 'Response Time', color: 'bg-orange-500' },
 ]
 
 export default function About() {
@@ -75,7 +76,9 @@ export default function About() {
                     {stats.map((stat, index) => (
                       <Fade delay={index * 150} triggerOnce key={stat.label}>
                         <div className="text-center">
-                          <p className="text-4xl font-bold text-foreground mb-2">{stat.value}</p>
+                          <p className="text-4xl font-bold text-foreground mb-2">
+                            <CountUp end={stat.value} duration={2.5} suffix={stat.suffix || ''} enableScrollSpy />
+                          </p>
                           <p className="text-muted-foreground text-sm mb-3">{stat.label}</p>
                           <div className="w-full bg-border h-1 rounded-full">
                             <div className={`h-1 rounded-full ${stat.color}`} style={{width: '100%'}}></div>

@@ -37,11 +37,15 @@ export default function NexoraAdvantage() {
           {features.map((feature, index) => (
             <Slide direction="up" delay={index * 100} triggerOnce key={feature.title}>
               <div className="text-center flex flex-col items-center">
-                <div className="mb-6">
-                    <feature.icon className="w-12 h-12 text-cyan-400" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-justify max-w-sm">{feature.description}</p>
+                <Fade triggerOnce delay={100}>
+                  <div className="mb-6">
+                      <feature.icon className="w-12 h-12 text-cyan-400" />
+                  </div>
+                </Fade>
+                <Fade triggerOnce delay={200} cascade damping={0.1}>
+                  <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground text-justify max-w-sm">{feature.description}</p>
+                </Fade>
               </div>
             </Slide>
           ))}
