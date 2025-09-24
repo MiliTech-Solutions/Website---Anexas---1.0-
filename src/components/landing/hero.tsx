@@ -41,7 +41,7 @@ export default function Hero() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500 hover:text-primary-foreground hover:border-transparent">
-                <Link href="#work">View Our Work</Link>
+                <Link href="#portfolio">View Our Work</Link>
               </Button>
             </div>
           </div>
