@@ -7,42 +7,42 @@ const services = [
       icon: PenTool,
       title: 'Content Writing',
       description: 'Engaging, SEO-optimized content that resonates with your audience and drives conversions.',
-      position: 'justify-self-center text-center items-center',
+      position: 'justify-self-end text-right items-end',
       direction: 'left' as const
     },
     {
       icon: BarChart3,
       title: 'Digital Marketing',
       description: 'Comprehensive marketing strategies to boost your online presence and reach.',
-      position: 'justify-self-center text-center items-center',
+      position: 'justify-self-start text-left items-start',
       direction: 'right' as const
     },
     {
       icon: Award,
       title: 'Brand Identity',
       description: 'Creating unique brand identities that stand out in the market.',
-      position: 'justify-self-center text-center items-center',
+      position: 'justify-self-end text-right items-end',
       direction: 'left' as const
     },
     {
       icon: ShoppingCart,
       title: 'eCommerce',
       description: 'Building robust, scalable eCommerce solutions that drive sales.',
-      position: 'justify-self-center text-center items-center',
+      position: 'justify-self-start text-left items-start',
       direction: 'right' as const
     },
     {
       icon: Code,
       title: 'Development',
       description: 'Custom web and application development to bring your ideas to life.',
-      position: 'justify-self-center text-center items-center',
+      position: 'justify-self-end text-right items-end',
       direction: 'left' as const
     },
     {
       icon: Briefcase,
       title: 'Management Services',
       description: 'Expert project management to ensure your projects are delivered on time.',
-      position: 'justify-self-center text-center items-center',
+      position: 'justify-self-start text-left items-start',
       direction: 'right' as const
     },
   ];
@@ -73,7 +73,7 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
                 </svg>
             </div>
             <h3 className="text-2xl font-bold">{service.title}</h3>
-            <p className="text-muted-foreground text-center">{service.description}</p>
+            <p className="text-muted-foreground">{service.description}</p>
         </div>
     </Slide>
 )
@@ -90,7 +90,7 @@ export default function FeaturedServices() {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground text-center">
+            <p className="text-xl md:text-2xl text-muted-foreground">
               Comprehensive digital solutions tailored to elevate your business presence and drive growth.
             </p>
           </Fade>
@@ -101,7 +101,7 @@ export default function FeaturedServices() {
                 <ServiceCard key={index} service={service} delay={Math.floor(index / 2) * 100} />
             ))}
 
-            <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0 -ml-24">
+            <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0 -ml-48">
                 <Fade triggerOnce zoom delay={300}>
                   <div className="absolute inset-0 flex items-center justify-center -z-10">
                     <div className="w-56 h-48 rounded-full bg-card/50 border border-border/50 animate-ripple"></div>
