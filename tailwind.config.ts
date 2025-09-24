@@ -98,8 +98,8 @@ export default {
           },
         },
         'scroll-indicator': {
-          '0%, 100%': { transform: 'translateY(-25%)', opacity: '0.8' },
-          '50%': { transform: 'translateY(25%)', opacity: '1' },
+          '0%, 100%': { transform: 'translateY(-15%)', opacity: '0.8' },
+          '50%': { transform: 'translateY(15%)', opacity: '1' },
         }
       },
       animation: {
