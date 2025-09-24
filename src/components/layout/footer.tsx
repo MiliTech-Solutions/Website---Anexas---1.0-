@@ -137,11 +137,11 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-border/50 flex flex-col items-center text-sm text-muted-foreground">
           <Fade triggerOnce>
             <p>&copy; {new Date().getFullYear()} Anexas. All rights reserved.</p>
           </Fade>
-          <div className="flex gap-4 mt-4 md:mt-0">
+          <div className="flex gap-4 mt-4">
             <Fade triggerOnce delay={100}>
               <Link href="#" className="hover:text-primary">Privacy</Link>
             </Fade>
