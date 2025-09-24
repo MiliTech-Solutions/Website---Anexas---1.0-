@@ -57,6 +57,6 @@
   }
   body {
     @apply text-foreground;
-    background: linear-gradient(to right, black, #002233, black);
+    background: linear-gradient(to right, #001122, black 55%, #002233);
   }
 }
