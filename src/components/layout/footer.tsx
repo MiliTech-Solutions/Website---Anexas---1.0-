@@ -67,7 +67,7 @@ export default function Footer() {
               </p>
             </Fade>
             <Fade triggerOnce delay={200}>
-              <p className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+              <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center">
                 “Transforming bold ideas into sleek & contemporary experiences.”
               </p>
             </Fade>
