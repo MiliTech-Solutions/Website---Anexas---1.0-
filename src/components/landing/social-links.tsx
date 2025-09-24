@@ -27,7 +27,7 @@ export default function SocialLinks() {
                 <a href={social.href} className="text-muted-foreground transition-all duration-300 group-hover:text-cyan-400 group-hover:scale-125 group-hover:-translate-x-1" onClick={handleClick}>
                     <social.icon className="w-4 h-4" />
                 </a>
-                <div className="w-px h-6 bg-border transition-all duration-300 group-hover:w-1.5 group-hover:bg-accent group-hover:shadow-[0_0_20px_theme(colors.accent)]"></div>
+                <div className="w-px h-6 bg-border transition-all duration-300 group-hover:w-1.5 group-hover:bg-cyan-400 group-hover:shadow-[0_0_20px_theme(colors.cyan.400)]"></div>
             </div>
           ))}
         </Slide>
