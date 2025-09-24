@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
             <div className="relative mt-12">
               <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
-                  <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500">
+                  <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500 animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]">
                     <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
                       <div className="w-2 h-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]"></div>
                     </div>
