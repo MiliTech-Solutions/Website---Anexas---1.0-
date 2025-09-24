@@ -60,7 +60,7 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-16 h-16 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
+              className="w-12 h-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
             >
               <defs>
                 <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -83,7 +83,7 @@ export default function FeaturedServices() {
         className="absolute inset-0 -z-20 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.05),rgba(255,255,255,0))]">
       </div>
       <div className="container mx-auto pl-8 pr-4 md:pl-32 md:pr-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mb-16">
           <Fade triggerOnce cascade damping={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
