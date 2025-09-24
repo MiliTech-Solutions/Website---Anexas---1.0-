@@ -48,7 +48,7 @@ export default function ServiceCatalog() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="bg-card border-border/50 h-full transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
+            <Card key={service.title} className="bg-card border-border/50 h-full transition-all duration-300 transform hover:-translate-y-2 hover:border-primary rounded-xl">
               <CardHeader className="flex flex-row items-start gap-4 pb-4">
                 <div className="p-3 rounded-md bg-primary/10">
                   <svg
