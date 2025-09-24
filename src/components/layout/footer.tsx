@@ -63,12 +63,17 @@ export default function Footer() {
             </Fade>
             <Fade triggerOnce delay={100}>
               <p className="text-muted-foreground text-justify">
+                Anexas is a digital agency specializing in modern, functional, and user-friendly solutions. We help businesses thrive in the digital landscape.
+              </p>
+            </Fade>
+            <Fade triggerOnce delay={200}>
+              <p className="text-muted-foreground text-justify">
                 “Transforming bold ideas into sleek, future-ready digital experiences.”
               </p>
             </Fade>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pt-4">
               {socialLinks.map((social, index) => (
-                <Fade triggerOnce delay={200 + index * 100} key={social.href}>
+                <Fade triggerOnce delay={300 + index * 100} key={social.href}>
                   <Link href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
                     <social.icon className="w-5 h-5" />
                   </Link>
