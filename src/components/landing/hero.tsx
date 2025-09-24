@@ -37,7 +37,7 @@ export default function Hero() {
                 <span className="font-kanit bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span>
                 <span className="block">A g e n c y</span>
               </h1>
-              <div className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify h-16">
+              <div className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-center h-16">
                 <TypeAnimation
                   sequence={[
                     'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
