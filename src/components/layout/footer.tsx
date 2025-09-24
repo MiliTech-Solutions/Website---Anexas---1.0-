@@ -119,7 +119,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div>
+              <div className="lg:pr-8">
                 <Fade triggerOnce>
                   <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
                 </Fade>
