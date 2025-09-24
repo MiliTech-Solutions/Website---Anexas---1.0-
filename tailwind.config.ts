@@ -24,6 +24,7 @@ export default {
         code: ['monospace'],
         'space-mono': ['"Space Mono"', 'monospace'],
         electrolize: ['Electrolize', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
