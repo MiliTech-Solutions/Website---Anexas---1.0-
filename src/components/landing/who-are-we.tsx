@@ -19,7 +19,7 @@ const features = [
 export default function WhoAreWe() {
   return (
     <section id="who-are-we" className="relative py-20 md:py-28 bg-background overflow-hidden">
-      <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(ellipse_at_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
+      <div className="absolute inset-y-0 right-0 w-full bg-[radial-gradient(ellipse_at_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Slide direction="left" triggerOnce>
