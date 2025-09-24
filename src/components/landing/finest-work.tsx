@@ -62,7 +62,7 @@ const finestWork = [
     }
   },
     {
-    title: 'Healthcare Management System',
+    title: 'Healthcare System',
     category: 'Healthcare',
     image: {
       src: 'https://picsum.photos/seed/work7/600/400',
