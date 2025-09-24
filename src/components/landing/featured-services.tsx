@@ -84,7 +84,7 @@ export default function FeaturedServices() {
       </div>
       <div className="container mx-auto pl-8 pr-4 md:pl-32 md:pr-6">
         <div className="relative">
-          <div className="max-w-3xl mx-auto text-center mb-16 relative -left-16">
+          <div className="max-w-3xl mx-auto text-center mb-16 relative -left-24">
             <Fade triggerOnce cascade damping={0.1}>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
