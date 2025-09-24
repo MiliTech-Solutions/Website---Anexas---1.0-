@@ -102,15 +102,16 @@ export default {
           '50%': { transform: 'translateY(15%)', opacity: '1' },
         },
         'ripple': {
-          '0%, 100%': { transform: 'scale(0.8)', opacity: '0' },
-          '50%': { transform: 'scale(1.2)', opacity: '0.3' },
+          '0%': { transform: 'scale(0.8)', opacity: '0' },
+          '50%': { transform: 'scale(1.4)', opacity: '0.4' },
+          '100%': { transform: 'scale(1.8)', opacity: '0' },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'scroll-indicator': 'scroll-indicator 1.5s ease-in-out infinite',
-        'ripple': 'ripple 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'ripple': 'ripple 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
       gradientColorStops: {
         'from-black-50': 'black 50%',
