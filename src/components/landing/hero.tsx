@@ -36,7 +36,7 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
-                <Link href="#get-a-quote">
+                <Link href="#contact">
                   Get Started
                 </Link>
               </Button>
