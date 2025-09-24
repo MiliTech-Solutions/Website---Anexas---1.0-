@@ -19,6 +19,7 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Audiowide', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
