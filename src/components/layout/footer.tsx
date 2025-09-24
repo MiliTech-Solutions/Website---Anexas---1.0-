@@ -68,7 +68,8 @@ export default function Footer() {
             </Fade>
             <Fade triggerOnce delay={200}>
               <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center">
-                “Transforming bold ideas into sleek & contemporary experiences.”
+                “Transforming bold ideas into sleek
+                <span className="block">& contemporary experiences.”</span>
               </p>
             </Fade>
             <div className="flex justify-center md:justify-start space-x-16 md:space-x-4 pt-4">
