@@ -6,6 +6,7 @@ import HeroServices from './hero-services';
 import SocialLinks from './social-links';
 import { Fade, Slide } from "react-awesome-reveal";
 import CountUp from 'react-countup';
+import { TypeAnimation } from 'react-type-animation';
 
 const stats = [
     { value: 200, suffix: '+', label: 'Projects Completed' },
@@ -36,9 +37,18 @@ export default function Hero() {
                 <span className="font-kanit bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span>
                 <span className="block">A g e n c y</span>
               </h1>
-              <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify">
-                We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
-              </p>
+              <div className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-justify h-16">
+                <TypeAnimation
+                  sequence={[
+                    'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                    1000,
+                    '',
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </div>
             </Fade>
             <Fade triggerOnce cascade damping={0.2} delay={500}>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
