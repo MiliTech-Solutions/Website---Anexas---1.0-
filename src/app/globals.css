@@ -67,4 +67,7 @@
   .text-gradient {
     @apply bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text;
   }
+  .translucent-button {
+    @apply bg-card/50 text-foreground backdrop-blur-sm border border-border/50 hover:bg-card/75 hover:border-border;
+  }
 }

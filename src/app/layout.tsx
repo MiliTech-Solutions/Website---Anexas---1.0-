@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
+import ScrollButtons from '@/components/layout/scroll-buttons';
 
 export const metadata: Metadata = {
   title: 'Anexas | Digital Solutions Agency',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={cn("font-body antialiased")}>
         {children}
         <Toaster />
+        <ScrollButtons />
       </body>
     </html>
   );
