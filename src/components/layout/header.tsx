@@ -57,12 +57,12 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
         <Logo />
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-12">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-base font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-110"
             >
               {link.label}
             </Link>
