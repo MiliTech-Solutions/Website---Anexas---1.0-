@@ -94,7 +94,7 @@ export default function GetAQuote() {
                 </CardContent>
               </Card>
             </Slide>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2/5 w-full bg-[radial-gradient(ellipse_at_bottom,_rgba(0,128,128,0.3),_transparent_70%)] -z-10"></div>
+            <div className="absolute bottom-0 left-0 h-2/5 w-full bg-[radial-gradient(ellipse_at_bottom,_rgba(0,128,128,0.3),_transparent_70%)] -z-10"></div>
           </div>
         </div>
       </div>
