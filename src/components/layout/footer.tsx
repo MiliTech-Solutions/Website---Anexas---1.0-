@@ -72,7 +72,7 @@ export default function Footer() {
                 <span className="block">& contemporary experiences.”</span>
               </p>
             </Fade>
-            <div className="flex justify-center md:justify-start space-x-16 md:space-x-4 pt-4">
+            <div className="flex justify-center space-x-8 pt-4">
               {socialLinks.map((social, index) => (
                 <Fade triggerOnce delay={300 + index * 100} key={social.href}>
                   <Link href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
