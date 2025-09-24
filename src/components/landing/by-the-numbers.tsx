@@ -30,8 +30,10 @@ const stats = [
 
 export default function ByTheNumbers() {
   return (
-    <section id="analytics" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="analytics" className="relative py-20 md:py-28 bg-background overflow-hidden">
+      <div className="absolute top-0 left-0 h-full w-2/5 bg-[radial-gradient(ellipse_at_top_left,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
+      <div className="absolute bottom-0 right-0 h-full w-2/5 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <Fade triggerOnce cascade damping={0.1}>
             <p className="text-sm font-bold tracking-widest text-cyan-400 mb-2">OUR ANALYTICS</p>
