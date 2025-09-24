@@ -63,7 +63,7 @@ export default function Footer() {
             </Fade>
             <Fade triggerOnce delay={100}>
               <p className="text-muted-foreground text-justify">
-                We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.
+                “Transforming bold ideas into sleek, future-ready digital experiences.”
               </p>
             </Fade>
             <div className="flex space-x-4">
