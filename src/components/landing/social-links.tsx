@@ -12,7 +12,7 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-20">
         {socialLinks.map((social, index) => (
             <a key={index} href={social.href} className="text-muted-foreground hover:text-cyan-400 transition-all duration-300 hover:scale-125 active:scale-150">
                 <social.icon className="w-4 h-4" />
