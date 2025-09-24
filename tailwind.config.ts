@@ -103,8 +103,8 @@ export default {
         },
         'ripple': {
           '0%': { transform: 'scale(0.8)', opacity: '0' },
-          '50%': { transform: 'scale(1.4)', opacity: '0.4' },
-          '100%': { transform: 'scale(1.8)', opacity: '0' },
+          '50%': { transform: 'scale(1.5)', opacity: '0.5' },
+          '100%': { transform: 'scale(2.2)', opacity: '0' },
         }
       },
       animation: {
