@@ -101,7 +101,7 @@ export default function FeaturedServices() {
                 <ServiceCard key={index} service={service} delay={Math.floor(index / 2) * 100} />
             ))}
 
-            <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0">
+            <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0 -ml-8">
                 <Fade triggerOnce zoom delay={300}>
                   <div className="absolute inset-0 flex items-center justify-center -z-10">
                     <div className="w-56 h-48 rounded-full bg-card/50 border border-border/50 animate-ripple"></div>
