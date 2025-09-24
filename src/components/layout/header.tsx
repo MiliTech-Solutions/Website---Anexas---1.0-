@@ -17,6 +17,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '#services', label: 'Services' },
   { href: '#portfolio', label: 'Portfolio' },
+  { href: '#contact', label: 'Contact' },
   { href: '#about', label: 'About Us' },
 ];
 
@@ -62,7 +63,7 @@ export default function Header() {
             <div key={link.href} className="group relative">
                 <Link
                 href={link.href}
-                className="text-base font-medium text-muted-foreground transition-all duration-300 group-hover:text-foreground"
+                className="text-base font-headline text-muted-foreground transition-all duration-300 group-hover:text-foreground"
                 >
                 {link.label}
                 </Link>
@@ -94,7 +95,7 @@ export default function Header() {
                       <SheetClose asChild key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-lg font-medium text-foreground"
+                          className="text-lg font-headline text-foreground"
                         >
                           {link.label}
                         </Link>
