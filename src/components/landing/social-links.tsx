@@ -21,14 +21,19 @@ export default function SocialLinks() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-16">
+    <div className="flex flex-col items-end gap-4">
         <Slide direction="right" triggerOnce cascade damping={0.1} delay={300}>
           {socialLinks.map((social, index) => (
-              <a key={index} href={social.href} className="text-muted-foreground transition-all duration-300 active:scale-90 hover:-translate-y-1 hover:text-cyan-400 hover:scale-125" onClick={handleClick}>
-                  <social.icon className="w-4 h-4" />
-              </a>
+            <div key={index} className="flex items-center justify-end gap-3 group cursor-pointer">
+                <a href={social.href} className="text-muted-foreground transition-all duration-300 group-hover:text-cyan-400 group-hover:scale-125 group-hover:-translate-x-1" onClick={handleClick}>
+                    <social.icon className="w-4 h-4" />
+                </a>
+                <div className="w-px h-6 bg-border transition-all duration-300 group-hover:w-1 group-hover:bg-cyan-400 group-hover:shadow-[0_0_15px_theme(colors.cyan.400)]"></div>
+            </div>
           ))}
         </Slide>
     </div>
   );
 }
+
+    
