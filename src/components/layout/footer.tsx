@@ -125,7 +125,7 @@ export default function Footer() {
               {contactDetails.map((detail, index) => (
                 <Fade triggerOnce delay={index * 100} key={detail.value}>
                   <li className="flex items-start gap-3">
-                    <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                    <detail.icon className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                     <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
                       {detail.value}
                     </a>
