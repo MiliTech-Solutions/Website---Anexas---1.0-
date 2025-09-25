@@ -115,8 +115,8 @@ export default function FinestWork() {
               const patternIndex = index % 4;
               if (patternIndex === 0) return 'left' as const;
               if (patternIndex === 1) return 'right' as const;
-              if (patternIndex === 2) return 'up' as const;
-              return 'down' as const;
+              if (patternIndex === 2) return 'down' as const;
+              return 'up' as const;
             };
 
             const animationProps = isMobile 
