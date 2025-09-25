@@ -110,8 +110,16 @@ export default function FinestWork() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {finestWork.map((work, index) => {
             const AnimationWrapper = isMobile ? Slide : Fade;
+            
+            const getMobileAnimationDirection = () => {
+              const patternIndex = index % 3;
+              if (patternIndex === 0) return 'left' as const;
+              if (patternIndex === 1) return 'right' as const;
+              return 'up' as const;
+            };
+
             const animationProps = isMobile 
-              ? { direction: index % 2 === 0 ? 'left' as const : 'right' as const, delay: 0, triggerOnce: true }
+              ? { direction: getMobileAnimationDirection(), delay: 0, triggerOnce: true }
               : { delay: index * 100, triggerOnce: true, cascade: true, damping: 0.1 };
 
             return (
