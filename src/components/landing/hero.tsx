@@ -35,7 +35,7 @@ export default function Hero() {
 
           <div className="md:col-span-8 text-center">
             <Fade triggerOnce cascade damping={0.1}>
-              <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+              <h1 className="font-headline text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground">
                 <span className="font-kanit bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span>
                 <span className="block">A g e n c y</span>
               </h1>
@@ -55,7 +55,7 @@ export default function Hero() {
               </div>
             </Fade>
             <Fade triggerOnce delay={500}>
-              <div className="mt-16 sm:mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <div className="mt-16 flex flex-col sm:flex-row justify-center gap-4">
                 <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
                   <Link href="#contact">
                     Get Started
