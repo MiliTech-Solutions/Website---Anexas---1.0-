@@ -92,14 +92,14 @@ const LogoAndRipples = () => (
         <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <linearGradient id="logoGradientHero" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <linearGradient id="logoGradientFeatured" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
                         <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
                     </linearGradient>
                 </defs>
-                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
-                <path d="M2 7L12 12L22 7" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
-                <path d="M12 12V22" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M2 7L12 12L22 7" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M12 12V22" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
             </svg>
         </div>
       </Fade>
