@@ -28,7 +28,9 @@ export default function Hero() {
         <div className="grid md:grid-cols-12 gap-8 items-center h-full">
           
           <div className="md:col-span-2">
-            <HeroServices />
+            <Fade triggerOnce>
+              <HeroServices />
+            </Fade>
           </div>
 
           <div className="md:col-span-8 text-center">
@@ -64,10 +66,17 @@ export default function Hero() {
                 </Button>
               </div>
             </Fade>
+            <div className="mt-8 flex justify-center">
+              <Fade triggerOnce>
+                <SocialLinks />
+              </Fade>
+            </div>
           </div>
           
-          <div className="md:col-span-1 md:col-start-12">
-             <SocialLinks />
+          <div className="md:col-span-1 md:col-start-12 hidden md:block">
+             <Fade triggerOnce>
+                <SocialLinks />
+             </Fade>
           </div>
 
         </div>
