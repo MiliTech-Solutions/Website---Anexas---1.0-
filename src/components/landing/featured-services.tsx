@@ -80,6 +80,32 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
     </Slide>
 )
 
+const LogoAndRipples = () => (
+  <div className="flex items-center justify-center relative my-8 md:my-0">
+      <Fade triggerOnce zoom delay={300}>
+        <div className="absolute inset-0 flex items-center justify-center -z-10">
+          <div className="w-28 h-56 rounded-full bg-card/50 border border-border/50 animate-ripple"></div>
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center -z-10">
+          <div className="w-20 h-40 rounded-full bg-card/70 border border-border/80 animate-ripple [animation-delay:0.5s]"></div>
+        </div>
+        <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradientHero" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
+                        <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
+                    </linearGradient>
+                </defs>
+                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M2 7L12 12L22 7" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M12 12V22" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
+            </svg>
+        </div>
+      </Fade>
+  </div>
+);
+
 export default function FeaturedServices() {
   return (
     <section id="featured-services" className="py-20 md:py-32 relative">
@@ -100,35 +126,29 @@ export default function FeaturedServices() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 items-center">
+        {/* Desktop View */}
+        <div className="hidden md:grid grid-cols-2 gap-x-12 gap-y-16 items-center">
             {services.slice(0, 3).map((service, index) => (
                 <ServiceCard key={index} service={service} delay={index * 100} />
             ))}
-            <div className="flex items-center justify-center relative my-8 md:my-0">
-                <Fade triggerOnce zoom delay={300}>
-                  <div className="absolute inset-0 flex items-center justify-center -z-10">
-                    <div className="w-28 h-56 rounded-full bg-card/50 border border-border/50 animate-ripple"></div>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center -z-10">
-                    <div className="w-20 h-40 rounded-full bg-card/70 border border-border/80 animate-ripple [animation-delay:0.5s]"></div>
-                  </div>
-                  <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
-                      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <defs>
-                              <linearGradient id="logoGradientHero" x1="0%" y1="0%" x2="100%" y2="0%">
-                                  <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
-                                  <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
-                              </linearGradient>
-                          </defs>
-                          <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
-                          <path d="M2 7L12 12L22 7" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
-                          <path d="M12 12V22" stroke="url(#logoGradientHero)" strokeWidth="1.5" strokeLinejoin="round"/>
-                      </svg>
-                  </div>
-                </Fade>
-            </div>
+            <LogoAndRipples />
             {services.slice(3).map((service, index) => (
                 <ServiceCard key={index} service={service} delay={(index + 3) * 100} />
+            ))}
+        </div>
+
+        {/* Mobile/Tablet View */}
+        <div className="grid grid-cols-1 gap-y-16 items-center justify-items-center md:hidden">
+            {services.slice(0, 3).map((service, index) => (
+                <div key={index} className="max-w-sm w-full flex justify-center">
+                    <ServiceCard service={service} delay={index * 100} />
+                </div>
+            ))}
+            <LogoAndRipples />
+            {services.slice(3).map((service, index) => (
+                <div key={index} className="max-w-sm w-full flex justify-center">
+                    <ServiceCard service={service} delay={(index + 3) * 100} />
+                </div>
             ))}
         </div>
       </div>
