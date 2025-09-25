@@ -86,7 +86,7 @@ export default function Header() {
         <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="transition-all duration-300 ease-in-out hover:bg-transparent hover:scale-125 hover:rotate-90 hover:text-cyan-400 focus:outline-none">
+                <Button variant="ghost" size="icon" className="transition-all duration-500 ease-in-out hover:bg-transparent hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] hover:scale-125 hover:rotate-90 focus:outline-none">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
                 </Button>
