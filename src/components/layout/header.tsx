@@ -42,6 +42,8 @@ const Logo = () => (
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isAnimating, setAnimating] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +52,15 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleMenuClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setAnimating(true);
+    setTimeout(() => {
+        setMenuOpen(true);
+        setAnimating(false);
+    }, 500);
+  };
 
   return (
     <header
@@ -84,9 +95,17 @@ export default function Header() {
           </Fade>
         </div>
         <div className="md:hidden">
-            <Sheet>
+            <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="transition-all duration-500 ease-in-out hover:bg-transparent hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none hover:transform-none active:transform-none">
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className={cn(
+                    "transition-all duration-500 ease-in-out hover:bg-transparent hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none hover:transform-none active:transform-none",
+                    isAnimating && 'transform rotate-90'
+                  )}
+                  onClick={handleMenuClick}
+                >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
                 </Button>
