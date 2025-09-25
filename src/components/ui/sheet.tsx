@@ -56,22 +56,62 @@ interface SheetContentProps
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, children, ...props }, ref) => (
+>(({ side = "right", className, children, ...props }, ref) => {
+  const [isAnimating, setIsAnimating] = React.useState(false);
+  const internalRef = React.useRef<HTMLDivElement>(null);
+
+  const handleClose = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setIsAnimating(true);
+    setTimeout(() => {
+      // Find the parent Sheet and update its 'open' state if possible
+      const parentDialog = internalRef.current?.closest('[role="dialog"]');
+      if (parentDialog) {
+        const closeEvent = new CustomEvent('close-sheet', { bubbles: true, cancelable: true });
+        parentDialog.dispatchEvent(closeEvent);
+      }
+      setIsAnimating(false);
+    }, 500); // Duration of the animation
+  };
+
+  React.useEffect(() => {
+    const dialog = internalRef.current?.closest('[role="dialog"]');
+    const onDialogClose = (e: Event) => {
+        const sheetRoot = dialog?.parentElement;
+        if(sheetRoot) {
+            const onOpenChange = (sheetRoot as any)._onOpenChange as (open: boolean) => void;
+            if(onOpenChange) onOpenChange(false);
+        }
+    }
+    dialog?.addEventListener('close-sheet', onDialogClose);
+    return () => {
+        dialog?.removeEventListener('close-sheet', onDialogClose);
+    }
+  }, []);
+
+  return (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
-      ref={ref}
+      ref={internalRef}
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-background transition-all duration-500 ease-in-out hover:opacity-100 hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary">
+      <SheetPrimitive.Close 
+        onClick={handleClose}
+        className={cn(
+          "absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-background transition-all duration-500 ease-in-out hover:opacity-100 hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary",
+          isAnimating && "animate-zoom-spin-out"
+        )}
+      >
         <X className="h-6 w-6" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
-))
+  )
+})
 SheetContent.displayName = SheetPrimitive.Content.displayName
 
 const SheetHeader = ({

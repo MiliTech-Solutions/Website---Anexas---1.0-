@@ -43,7 +43,7 @@ const Logo = () => (
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isAnimating, setAnimating] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,14 +52,16 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
   const handleMenuClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setAnimating(true);
-    setTimeout(() => {
+    if (!isMenuOpen) {
+      e.preventDefault();
+      setIsAnimating(true);
+      setTimeout(() => {
         setMenuOpen(true);
-        setAnimating(false);
-    }, 500);
+        setIsAnimating(false);
+      }, 500); 
+    }
   };
 
   return (
@@ -102,7 +104,7 @@ export default function Header() {
                   size="icon" 
                   className={cn(
                     "transition-all duration-500 ease-in-out hover:bg-transparent hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none hover:transform-none active:transform-none",
-                    isAnimating && 'transform rotate-90'
+                    isAnimating && 'animate-zoom-spin-in'
                   )}
                   onClick={handleMenuClick}
                 >
@@ -114,7 +116,6 @@ export default function Header() {
                 <div className="p-4">
                   <div className="flex justify-between items-center mb-8">
                     <Logo />
-                    
                   </div>
                   <nav className="flex flex-col gap-6">
                     {navLinks.map((link, index) => (
