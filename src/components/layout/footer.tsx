@@ -56,8 +56,8 @@ const Logo = () => (
 export default function Footer() {
   return (
     <footer className="bg-transparent text-card-foreground border-t border-border/50">
-      <div className="container mx-auto px-4 md:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:pr-16">
+      <div className="container mx-auto px-4 md:pl-8 md:pr-16 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
           <div className="space-y-4 lg:col-span-5">
             <ClientOnly>
               <Fade triggerOnce>
