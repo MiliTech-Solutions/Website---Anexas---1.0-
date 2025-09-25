@@ -51,7 +51,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
               testimonial.avatar && (
-                <Slide direction="up" delay={index * 100} triggerOnce key={testimonial.name}>
+                <Slide direction={index % 2 === 0 ? 'left' : 'right'} delay={index * 100} triggerOnce key={testimonial.name}>
                   <Card className="bg-card border-border/50 flex flex-col p-6">
                     <CardContent className="flex-grow p-0 space-y-4">
                       <Fade triggerOnce>
