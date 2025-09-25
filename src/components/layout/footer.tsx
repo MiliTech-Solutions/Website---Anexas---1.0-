@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Fade, Slide } from 'react-awesome-reveal';
 import ClientOnly from '@/components/client-only';
+import { Fade } from 'react-awesome-reveal';
 
 const socialLinks = [
   { icon: Facebook, href: '#' },
@@ -56,7 +56,7 @@ const Logo = () => (
 export default function Footer() {
   return (
     <footer className="bg-transparent text-card-foreground border-t border-border/50">
-      <div className="container mx-auto px-4 md:px-6 py-12">
+      <div className="container mx-auto px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:pr-16">
           <div className="space-y-4 lg:col-span-5">
             <ClientOnly>
