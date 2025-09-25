@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const finestWork = [
   {
@@ -91,6 +92,8 @@ const finestWork = [
 ]
 
 export default function FinestWork() {
+  const isMobile = useIsMobile();
+
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -105,30 +108,37 @@ export default function FinestWork() {
           </Fade>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {finestWork.map((work, index) => (
-            <Slide direction="up" delay={index * 100} triggerOnce key={work.title}>
-              <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
-                 <div className="aspect-[4/3] overflow-hidden">
-                  <Fade triggerOnce>
-                  <Image
-                    src={work.image.src}
-                    alt={work.image.alt}
-                    width={600}
-                    height={400}
-                    data-ai-hint={work.image.hint}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  />
-                  </Fade>
-                </div>
-                <CardContent className="p-6">
-                  <Fade triggerOnce cascade damping={0.1}>
-                    <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
-                    <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
-                  </Fade>
-                </CardContent>
-              </Card>
-            </Slide>
-          ))}
+          {finestWork.map((work, index) => {
+            const AnimationWrapper = isMobile ? Slide : Fade;
+            const animationProps = isMobile 
+              ? { direction: index % 2 === 0 ? 'left' as const : 'right' as const, delay: 0, triggerOnce: true }
+              : { delay: index * 100, triggerOnce: true, cascade: true, damping: 0.1 };
+
+            return (
+              <AnimationWrapper {...animationProps} key={work.title}>
+                <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <Fade triggerOnce>
+                    <Image
+                      src={work.image.src}
+                      alt={work.image.alt}
+                      width={600}
+                      height={400}
+                      data-ai-hint={work.image.hint}
+                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    />
+                    </Fade>
+                  </div>
+                  <CardContent className="p-6">
+                    <Fade triggerOnce cascade damping={0.1}>
+                      <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
+                      <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
+                    </Fade>
+                  </CardContent>
+                </Card>
+              </AnimationWrapper>
+            );
+          })}
         </div>
         <div className="mt-16 text-center">
             <Fade triggerOnce>
