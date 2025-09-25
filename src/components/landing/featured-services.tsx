@@ -88,7 +88,7 @@ export default function FeaturedServices() {
       </div>
       <div className="container mx-auto pl-8 pr-4 md:pl-32 md:pr-6">
         <div className="relative">
-          <div className="max-w-3xl mx-auto text-center mb-16 md:relative md:-left-24">
+          <div className="max-w-3xl mx-auto text-center mb-16 md:-left-24">
             <Fade triggerOnce cascade damping={0.1}>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
@@ -100,12 +100,11 @@ export default function FeaturedServices() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] md:grid-rows-3 gap-x-12 gap-y-16 items-center">
-            {services.map((service, index) => (
-                <ServiceCard key={index} service={service} delay={Math.floor(index / 2) * 100} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 items-center">
+            {services.slice(0, 3).map((service, index) => (
+                <ServiceCard key={index} service={service} delay={index * 100} />
             ))}
-
-            <div className="md:col-start-2 md:row-start-1 md:row-span-3 flex items-center justify-center relative my-8 md:my-0 -ml-48">
+            <div className="flex items-center justify-center relative my-8 md:my-0">
                 <Fade triggerOnce zoom delay={300}>
                   <div className="absolute inset-0 flex items-center justify-center -z-10">
                     <div className="w-28 h-56 rounded-full bg-card/50 border border-border/50 animate-ripple"></div>
@@ -128,7 +127,9 @@ export default function FeaturedServices() {
                   </div>
                 </Fade>
             </div>
-
+            {services.slice(3).map((service, index) => (
+                <ServiceCard key={index} service={service} delay={(index + 3) * 100} />
+            ))}
         </div>
       </div>
     </section>
