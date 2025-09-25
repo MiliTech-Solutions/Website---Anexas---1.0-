@@ -119,8 +119,15 @@ export default function FinestWork() {
               return 'up' as const;
             };
 
+            const mobileDirection = getMobileAnimationDirection();
+
             const animationProps = isMobile 
-              ? { direction: getMobileAnimationDirection(), delay: 0, triggerOnce: true }
+              ? { 
+                  direction: mobileDirection, 
+                  delay: 0, 
+                  triggerOnce: true,
+                  duration: mobileDirection === 'up' ? 1000 : undefined,
+                }
               : { delay: index * 100, triggerOnce: true, cascade: true, damping: 0.1 };
 
             return (
