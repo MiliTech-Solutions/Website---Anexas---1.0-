@@ -55,7 +55,7 @@ export default function Hero() {
               </div>
             </Fade>
             <Fade triggerOnce delay={500}>
-              <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <div className="mt-16 sm:mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
                   <Link href="#contact">
                     Get Started
@@ -68,7 +68,7 @@ export default function Hero() {
             </Fade>
             <div className="mt-8 flex justify-center">
               <Fade triggerOnce>
-                <div className="mt-4 flex justify-center sm:hidden">
+                <div className="mt-4 flex justify-center md:hidden">
                     <SocialLinks />
                 </div>
               </Fade>
