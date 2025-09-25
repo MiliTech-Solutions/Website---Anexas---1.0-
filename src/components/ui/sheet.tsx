@@ -101,11 +101,11 @@ const SheetContent = React.forwardRef<
       <SheetPrimitive.Close 
         onClick={handleClose}
         className={cn(
-          "absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-background transition-all duration-500 ease-in-out hover:opacity-100 hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary",
+          "group absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-background transition-all duration-500 ease-in-out hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary",
           isAnimating && "animate-zoom-spin-out"
         )}
       >
-        <X className="h-6 w-6" />
+        <X className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>

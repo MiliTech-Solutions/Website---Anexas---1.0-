@@ -103,12 +103,12 @@ export default function Header() {
                   variant="ghost" 
                   size="icon" 
                   className={cn(
-                    "transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] hover:transform-none active:transform-none",
+                    "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0",
                     isAnimating && 'animate-zoom-spin-in'
                   )}
                   onClick={handleMenuClick}
                 >
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
