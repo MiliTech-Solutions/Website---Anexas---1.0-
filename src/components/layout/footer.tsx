@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Fade, Slide } from 'react-awesome-reveal';
+import ClientOnly from '@/components/client-only';
 
 const socialLinks = [
   { icon: Facebook, href: '#' },
@@ -58,81 +59,101 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:pr-16">
           <div className="space-y-4 lg:col-span-5">
-            <Fade triggerOnce>
-              <Logo />
-            </Fade>
-            <Fade triggerOnce delay={100}>
-              <p className="text-muted-foreground text-justify">
-                Anexas is a digital agency specializing in modern, functional, and user-friendly solutions. We help businesses thrive in the digital landscape.
-              </p>
-            </Fade>
-            <Fade triggerOnce delay={200}>
-              <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center">
-                “Transforming bold ideas into sleek
-                <span className="block">& contemporary experiences.”</span>
-              </p>
-            </Fade>
+            <ClientOnly>
+              <Fade triggerOnce>
+                <Logo />
+              </Fade>
+            </ClientOnly>
+            <ClientOnly>
+              <Fade triggerOnce delay={100}>
+                <p className="text-muted-foreground text-justify">
+                  Anexas is a digital agency specializing in modern, functional, and user-friendly solutions. We help businesses thrive in the digital landscape.
+                </p>
+              </Fade>
+            </ClientOnly>
+            <ClientOnly>
+              <Fade triggerOnce delay={200}>
+                <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center">
+                  “Transforming bold ideas into sleek
+                  <span className="block">& contemporary experiences.”</span>
+                </p>
+              </Fade>
+            </ClientOnly>
             <div className="flex justify-center space-x-8 pt-4">
               {socialLinks.map((social, index) => (
-                <Fade triggerOnce delay={300 + index * 100} key={social.href}>
-                  <Link href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
-                    <social.icon className="w-5 h-5" />
-                  </Link>
-                </Fade>
+                <ClientOnly key={social.href}>
+                  <Fade triggerOnce delay={300 + index * 100}>
+                    <Link href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
+                      <social.icon className="w-5 h-5" />
+                    </Link>
+                  </Fade>
+                </ClientOnly>
               ))}
             </div>
           </div>
 
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
-              <Fade triggerOnce>
-                <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
-              </Fade>
+              <ClientOnly>
+                <Fade triggerOnce>
+                  <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
+                </Fade>
+              </ClientOnly>
               <ul className="space-y-2">
                 {serviceLinks.map((link, index) => (
-                  <Fade triggerOnce delay={index * 50} key={link.label}>
-                    <li>
-                      <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
-                        {link.label}
-                      </Link>
-                    </li>
-                  </Fade>
-                ))}
-              </ul>
-            </div>
-
-            <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div>
-                <Fade triggerOnce>
-                  <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
-                </Fade>
-                <ul className="space-y-2">
-                  {companyLinks.map((link, index) => (
-                    <Fade triggerOnce delay={index * 50} key={link.label}>
+                  <ClientOnly key={link.label}>
+                    <Fade triggerOnce delay={index * 50}>
                       <li>
                         <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
                           {link.label}
                         </Link>
                       </li>
                     </Fade>
+                  </ClientOnly>
+                ))}
+              </ul>
+            </div>
+
+            <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div>
+                <ClientOnly>
+                  <Fade triggerOnce>
+                    <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
+                  </Fade>
+                </ClientOnly>
+                <ul className="space-y-2">
+                  {companyLinks.map((link, index) => (
+                    <ClientOnly key={link.label}>
+                      <Fade triggerOnce delay={index * 50}>
+                        <li>
+                          <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                            {link.label}
+                          </Link>
+                        </li>
+                      </Fade>
+                    </ClientOnly>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <Fade triggerOnce>
-                  <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
-                </Fade>
+                <ClientOnly>
+                  <Fade triggerOnce>
+                    <h4 className="font-semibold text-lg mb-4 text-white">Contact</h4>
+                  </Fade>
+                </ClientOnly>
                 <ul className="space-y-3">
                   {contactDetails.map((detail, index) => (
-                    <Fade triggerOnce delay={index * 100} key={detail.value}>
-                      <li className="flex items-start gap-3">
-                        <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                        <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
-                          {detail.value}
-                        </a>
-                      </li>
-                    </Fade>
+                    <ClientOnly key={detail.value}>
+                      <Fade triggerOnce delay={index * 100}>
+                        <li className="flex items-start gap-3">
+                          <detail.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                          <a href={detail.href} className="text-muted-foreground hover:text-primary transition-colors">
+                            {detail.value}
+                          </a>
+                        </li>
+                      </Fade>
+                    </ClientOnly>
                   ))}
                 </ul>
               </div>
@@ -142,19 +163,27 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border/50 flex flex-col items-center text-sm text-muted-foreground">
-          <Fade triggerOnce>
-            <p>&copy; {new Date().getFullYear()} Anexas. All rights reserved.</p>
-          </Fade>
+          <ClientOnly>
+            <Fade triggerOnce>
+              <p>&copy; {new Date().getFullYear()} Anexas. All rights reserved.</p>
+            </Fade>
+          </ClientOnly>
           <div className="flex gap-4 mt-4">
-            <Fade triggerOnce delay={100}>
-              <Link href="#" className="hover:text-primary">Privacy</Link>
-            </Fade>
-            <Fade triggerOnce delay={200}>
-              <Link href="#" className="hover:text-primary">Terms</Link>
-            </Fade>
-            <Fade triggerOnce delay={300}>
-              <Link href="#" className="hover:text-primary">Cookies</Link>
-            </Fade>
+            <ClientOnly>
+              <Fade triggerOnce delay={100}>
+                <Link href="#" className="hover:text-primary">Privacy</Link>
+              </Fade>
+            </ClientOnly>
+            <ClientOnly>
+              <Fade triggerOnce delay={200}>
+                <Link href="#" className="hover:text-primary">Terms</Link>
+              </Fade>
+            </ClientOnly>
+            <ClientOnly>
+              <Fade triggerOnce delay={300}>
+                <Link href="#" className="hover:text-primary">Cookies</Link>
+              </Fade>
+            </ClientOnly>
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import { Fade } from 'react-awesome-reveal';
+import ClientOnly from '@/components/client-only';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -52,57 +53,71 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <Fade triggerOnce>
-        <div className="max-w-2xl mx-auto">
-          <Card className="border-border">
-            <CardHeader className="text-center">
-              <Fade triggerOnce cascade damping={0.1}>
-                <CardTitle className="text-3xl md:text-4xl">Get in Touch</CardTitle>
-                <CardDescription className="mt-2 text-lg text-muted-foreground">
-                  Have a project in mind? We'd love to hear about it.
-                </CardDescription>
-              </Fade>
-            </CardHeader>
-            <CardContent>
-              <form ref={formRef} action={dispatch} key={state.resetKey}>
-                <div className="grid gap-6">
-                  <Fade triggerOnce cascade damping={0.1} delay={100}>
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" name="name" placeholder="Your Name" aria-describedby="name-error" />
-                      {state.errors?.name && <p id="name-error" className="text-sm text-destructive">{state.errors.name[0]}</p>}
-                    </div>
+        <ClientOnly>
+          <Fade triggerOnce>
+          <div className="max-w-2xl mx-auto">
+            <Card className="border-border">
+              <CardHeader className="text-center">
+                <ClientOnly>
+                  <Fade triggerOnce cascade damping={0.1}>
+                    <CardTitle className="text-3xl md:text-4xl">Get in Touch</CardTitle>
+                    <CardDescription className="mt-2 text-lg text-muted-foreground">
+                      Have a project in mind? We'd love to hear about it.
+                    </CardDescription>
                   </Fade>
-                  <Fade triggerOnce cascade damping={0.1} delay={200}>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" name="email" type="email" placeholder="your@email.com" aria-describedby="email-error" />
-                      {state.errors?.email && <p id="email-error" className="text-sm text-destructive">{state.errors.email[0]}</p>}
-                    </div>
-                  </Fade>
-                  <Fade triggerOnce cascade damping={0.1} delay={300}>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input id="subject" name="subject" placeholder="What's this about?" aria-describedby="subject-error" />
-                      {state.errors?.subject && <p id="subject-error" className="text-sm text-destructive">{state.errors.subject[0]}</p>}
-                    </div>
-                  </Fade>
-                  <Fade triggerOnce cascade damping={0.1} delay={400}>
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea id="message" name="message" placeholder="Tell us about your project..." className="min-h-[120px]" aria-describedby="message-error" />
-                      {state.errors?.message && <p id="message-error" className="text-sm text-destructive">{state.errors.message[0]}</p>}
-                    </div>
-                  </Fade>
-                  <Fade triggerOnce delay={500}>
-                    <SubmitButton />
-                  </Fade>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-        </Fade>
+                </ClientOnly>
+              </CardHeader>
+              <CardContent>
+                <form ref={formRef} action={dispatch} key={state.resetKey}>
+                  <div className="grid gap-6">
+                    <ClientOnly>
+                      <Fade triggerOnce cascade damping={0.1} delay={100}>
+                        <div className="space-y-2">
+                          <Label htmlFor="name">Name</Label>
+                          <Input id="name" name="name" placeholder="Your Name" aria-describedby="name-error" />
+                          {state.errors?.name && <p id="name-error" className="text-sm text-destructive">{state.errors.name[0]}</p>}
+                        </div>
+                      </Fade>
+                    </ClientOnly>
+                    <ClientOnly>
+                      <Fade triggerOnce cascade damping={0.1} delay={200}>
+                        <div className="space-y-2">
+                          <Label htmlFor="email">Email</Label>
+                          <Input id="email" name="email" type="email" placeholder="your@email.com" aria-describedby="email-error" />
+                          {state.errors?.email && <p id="email-error" className="text-sm text-destructive">{state.errors.email[0]}</p>}
+                        </div>
+                      </Fade>
+                    </ClientOnly>
+                    <ClientOnly>
+                      <Fade triggerOnce cascade damping={0.1} delay={300}>
+                        <div className="space-y-2">
+                          <Label htmlFor="subject">Subject</Label>
+                          <Input id="subject" name="subject" placeholder="What's this about?" aria-describedby="subject-error" />
+                          {state.errors?.subject && <p id="subject-error" className="text-sm text-destructive">{state.errors.subject[0]}</p>}
+                        </div>
+                      </Fade>
+                    </ClientOnly>
+                    <ClientOnly>
+                      <Fade triggerOnce cascade damping={0.1} delay={400}>
+                        <div className="space-y-2">
+                          <Label htmlFor="message">Message</Label>
+                          <Textarea id="message" name="message" placeholder="Tell us about your project..." className="min-h-[120px]" aria-describedby="message-error" />
+                          {state.errors?.message && <p id="message-error" className="text-sm text-destructive">{state.errors.message[0]}</p>}
+                        </div>
+                      </Fade>
+                    </ClientOnly>
+                    <ClientOnly>
+                      <Fade triggerOnce delay={500}>
+                        <SubmitButton />
+                      </Fade>
+                    </ClientOnly>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+          </Fade>
+        </ClientOnly>
       </div>
     </section>
   );

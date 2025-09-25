@@ -1,6 +1,7 @@
 'use client';
 import { PenTool, BarChart3, Award, ShoppingCart, Code, Briefcase } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import ClientOnly from '@/components/client-only';
 
 const services = [
     {
@@ -48,40 +49,47 @@ const services = [
   ];
 
 const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: number }) => (
+  <ClientOnly>
     <Slide direction={service.direction} delay={delay} triggerOnce>
         <div className={`flex flex-col gap-4 max-w-sm ${service.position}`}>
-          <Fade triggerOnce>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-12 h-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
-            >
-              <defs>
-                <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
-                  <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
-                </linearGradient>
-              </defs>
-              <service.icon stroke="url(#iconGradient)" />
-            </svg>
-            </Fade>
-            <Fade triggerOnce delay={100} cascade damping={0.1}>
-              <h3 className="text-2xl font-bold">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
-            </Fade>
+          <ClientOnly>
+            <Fade triggerOnce>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-12 h-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
+              >
+                <defs>
+                  <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
+                    <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
+                  </linearGradient>
+                </defs>
+                <service.icon stroke="url(#iconGradient)" />
+              </svg>
+              </Fade>
+            </ClientOnly>
+            <ClientOnly>
+              <Fade triggerOnce delay={100} cascade damping={0.1}>
+                <h3 className="text-2xl font-bold">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
+              </Fade>
+            </ClientOnly>
         </div>
     </Slide>
+  </ClientOnly>
 )
 
 const LogoAndRipples = () => (
   <div className="flex items-center justify-center relative my-8 md:my-0">
+    <ClientOnly>
       <Fade triggerOnce zoom delay={300}>
         <div className="absolute inset-0 flex items-center justify-center -z-10">
           <div className="w-28 h-56 rounded-full bg-card/50 border border-border/50 animate-ripple"></div>
@@ -103,6 +111,7 @@ const LogoAndRipples = () => (
             </svg>
         </div>
       </Fade>
+    </ClientOnly>
   </div>
 );
 
@@ -115,6 +124,7 @@ export default function FeaturedServices() {
       <div className="container mx-auto pl-8 pr-4 md:px-6">
         <div className="relative">
         <div className="max-w-3xl mx-auto text-center mb-16 md:-left-24">
+          <ClientOnly>
             <Fade triggerOnce cascade damping={0.1}>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
@@ -123,6 +133,7 @@ export default function FeaturedServices() {
                 Comprehensive digital solutions tailored to elevate your business presence and drive growth.
               </p>
             </Fade>
+          </ClientOnly>
           </div>
         </div>
 

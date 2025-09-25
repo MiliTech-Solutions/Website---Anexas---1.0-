@@ -7,6 +7,7 @@ import SocialLinks from './social-links';
 import { Fade, Slide } from "react-awesome-reveal";
 import CountUp from 'react-countup';
 import { TypeAnimation } from 'react-type-animation';
+import ClientOnly from '@/components/client-only';
 
 const stats = [
     { value: 200, suffix: '+', label: 'Projects Completed' },
@@ -28,57 +29,67 @@ export default function Hero() {
         <div className="grid md:grid-cols-12 gap-8 items-center h-full">
           
           <div className="md:col-span-2">
-            <Fade triggerOnce>
-              <HeroServices />
-            </Fade>
+            <ClientOnly>
+              <Fade triggerOnce>
+                <HeroServices />
+              </Fade>
+            </ClientOnly>
           </div>
 
           <div className="md:col-span-8 text-center">
-            <Fade triggerOnce cascade damping={0.1}>
-              <h1 className="font-headline text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground">
-                <span className="font-kanit bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span>
-                <span className="block">A g e n c y</span>
-              </h1>
-              <div className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-center h-16">
-                <TypeAnimation
-                  sequence={[
-                    'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
-                    1000,
-                    '',
-                    500,
-                    'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
-                    1000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                />
-              </div>
-            </Fade>
-            <Fade triggerOnce delay={500}>
-              <div className="mt-16 flex flex-col sm:flex-row justify-center gap-4">
-                <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
-                  <Link href="#contact">
-                    Get Started
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="hover:bg-cyan-400 hover:text-primary-foreground hover:border-cyan-400">
-                  <Link href="#portfolio">View Our Work</Link>
-                </Button>
-              </div>
-            </Fade>
-            <div className="mt-6 flex justify-center md:hidden">
-              <Fade triggerOnce>
-                <div className="flex justify-center md:hidden">
-                    <SocialLinks />
+            <ClientOnly>
+              <Fade triggerOnce cascade damping={0.1}>
+                <h1 className="font-headline text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight text-foreground">
+                  <span className="font-kanit bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Digital</span>
+                  <span className="block">A g e n c y</span>
+                </h1>
+                <div className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-center h-16">
+                  <TypeAnimation
+                    sequence={[
+                      'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                      1000,
+                      '',
+                      500,
+                      'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                  />
                 </div>
               </Fade>
+            </ClientOnly>
+            <ClientOnly>
+              <Fade triggerOnce delay={500}>
+                <div className="mt-16 flex flex-col sm:flex-row justify-center gap-4">
+                  <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
+                    <Link href="#contact">
+                      Get Started
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="hover:bg-cyan-400 hover:text-primary-foreground hover:border-cyan-400">
+                    <Link href="#portfolio">View Our Work</Link>
+                  </Button>
+                </div>
+              </Fade>
+            </ClientOnly>
+            <div className="mt-6 flex justify-center md:hidden">
+              <ClientOnly>
+                <Fade triggerOnce>
+                  <div className="flex justify-center md:hidden">
+                      <SocialLinks />
+                  </div>
+                </Fade>
+              </ClientOnly>
             </div>
           </div>
           
           <div className="md:col-span-1 md:col-start-12 hidden md:block">
-             <Fade triggerOnce>
-                <SocialLinks />
-             </Fade>
+            <ClientOnly>
+               <Fade triggerOnce>
+                  <SocialLinks />
+               </Fade>
+            </ClientOnly>
           </div>
 
         </div>
@@ -88,30 +99,37 @@ export default function Hero() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
                 {stats.map((stat, index) => (
-                    <Slide direction="up" delay={index * 100} triggerOnce key={stat.label}>
+                  <ClientOnly key={stat.label}>
+                    <Slide direction="up" delay={index * 100} triggerOnce>
                       <div>
-                        <Fade triggerOnce>
-                        <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
-                          {stat.isSpecial ? (
-                            <>
-                              <CountUp end={24} duration={2} enableScrollSpy />/
-                              <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
-                            </>
-                          ) : (
-                            <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
-                          )}
-                        </p>
-                        </Fade>
-                        <Fade triggerOnce delay={100}>
-                          <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
-                        </Fade>
+                        <ClientOnly>
+                          <Fade triggerOnce>
+                          <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+                            {stat.isSpecial ? (
+                              <>
+                                <CountUp end={24} duration={2} enableScrollSpy />/
+                                <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
+                              </>
+                            ) : (
+                              <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
+                            )}
+                          </p>
+                          </Fade>
+                        </ClientOnly>
+                        <ClientOnly>
+                          <Fade triggerOnce delay={100}>
+                            <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+                          </Fade>
+                        </ClientOnly>
                       </div>
                     </Slide>
+                  </ClientOnly>
                 ))}
                 </div>
             </div>
             <div className="relative mt-12">
               <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2">
+                <ClientOnly>
                   <Fade triggerOnce delay={1500}>
                     <div className="w-6 h-12 rounded-full flex items-center justify-center p-0.5 bg-gradient-to-b from-cyan-400 to-blue-500 animate-scroll-indicator shadow-[0_0_15px_theme(colors.cyan.400)]">
                       <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
@@ -119,6 +137,7 @@ export default function Hero() {
                       </div>
                     </div>
                   </Fade>
+                </ClientOnly>
               </div>
             </div>
         </div>
