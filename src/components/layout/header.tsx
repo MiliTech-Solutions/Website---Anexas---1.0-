@@ -103,7 +103,7 @@ export default function Header() {
                   variant="ghost" 
                   size="icon" 
                   className={cn(
-                    "transition-all duration-500 ease-in-out hover:bg-transparent hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none hover:transform-none active:transform-none",
+                    "transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 hover:text-cyan-400 hover:shadow-[0_0_15px_theme(colors.cyan.400)] focus:outline-none hover:transform-none active:transform-none",
                     isAnimating && 'animate-zoom-spin-in'
                   )}
                   onClick={handleMenuClick}
