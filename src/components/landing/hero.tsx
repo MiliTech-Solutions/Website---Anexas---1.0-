@@ -66,9 +66,9 @@ export default function Hero() {
                 </Button>
               </div>
             </Fade>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-6 flex justify-center md:hidden">
               <Fade triggerOnce>
-                <div className="mt-4 flex justify-center md:hidden">
+                <div className="flex justify-center md:hidden">
                     <SocialLinks />
                 </div>
               </Fade>
