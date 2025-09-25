@@ -114,7 +114,7 @@ export default function FeaturedServices() {
       </div>
       <div className="container mx-auto pl-8 pr-4 md:px-6">
         <div className="relative">
-          <div className="max-w-3xl mx-auto text-center mb-16 md:-left-24">
+        <div className="max-w-3xl mx-auto text-center mb-16 md:-left-24">
             <Fade triggerOnce cascade damping={0.1}>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
@@ -128,28 +128,24 @@ export default function FeaturedServices() {
 
         {/* Desktop View */}
         <div className="hidden md:grid grid-cols-2 gap-x-12 gap-y-16 items-center">
-            {services.slice(0, 3).map((service, index) => (
-                <ServiceCard key={index} service={service} delay={index * 100} />
-            ))}
-            <LogoAndRipples />
-            {services.slice(3).map((service, index) => (
-                <ServiceCard key={index} service={service} delay={(index + 3) * 100} />
-            ))}
+          <ServiceCard service={services[0]} delay={0} />
+          <ServiceCard service={services[1]} delay={100} />
+          <ServiceCard service={services[2]} delay={200} />
+          <LogoAndRipples />
+          <ServiceCard service={services[3]} delay={300} />
+          <ServiceCard service={services[4]} delay={400} />
+          <ServiceCard service={services[5]} delay={500} />
         </div>
 
         {/* Mobile/Tablet View */}
         <div className="grid grid-cols-1 gap-y-16 items-center justify-items-center md:hidden">
-            {services.slice(0, 3).map((service, index) => (
-                <div key={index} className="max-w-sm w-full flex justify-center">
-                    <ServiceCard service={service} delay={index * 100} />
-                </div>
-            ))}
-            <LogoAndRipples />
-            {services.slice(3).map((service, index) => (
-                <div key={index} className="max-w-sm w-full flex justify-center">
-                    <ServiceCard service={service} delay={(index + 3) * 100} />
-                </div>
-            ))}
+          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[0]} delay={0} /></div>
+          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[1]} delay={100} /></div>
+          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[2]} delay={200} /></div>
+          <LogoAndRipples />
+          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[3]} delay={300} /></div>
+          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[4]} delay={400} /></div>
+          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[5]} delay={500} /></div>
         </div>
       </div>
     </section>
