@@ -12,7 +12,7 @@ const contactDetails = [
     {
         icon: Mail,
         title: 'Email Us',
-        value: 'hello@digitalagency.com'
+        value: 'anexas.militechsoln@gmail.com'
     },
     {
         icon: Phone,
