@@ -97,7 +97,7 @@ export default function FeaturedServices() {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground text-justify">
+          <p className="text-xl md:text-2xl text-muted-foreground text-center">
             Comprehensive digital solutions tailored to elevate your business presence and drive growth.
           </p>
         </div>
