@@ -66,7 +66,7 @@ const ServiceCard = ({ service, alignment }: { service: typeof services[0], alig
 
 const LogoAndRipples = () => (
     <div className="flex items-center justify-center relative my-8 md:my-0 h-full">
-      <div className="relative w-72 h-48 flex items-center justify-center">
+      <div className="relative w-72 h-36 flex items-center justify-center">
         <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-border/30 animate-ripple delay-0"></div>
         <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-border/30 animate-ripple delay-1000"></div>
         <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-border/30 animate-ripple delay-2000"></div>
@@ -99,61 +99,37 @@ export default function FeaturedServices() {
       </div>
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <ClientOnly>
-            <Fade triggerOnce cascade damping={0.1}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground text-center">
-                Comprehensive digital solutions tailored to elevate your business presence and drive growth.
-              </p>
-            </Fade>
-          </ClientOnly>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Expertise</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground text-center">
+            Comprehensive digital solutions tailored to elevate your business presence and drive growth.
+          </p>
         </div>
 
         {/* Desktop View */}
         <div className="hidden md:grid grid-cols-3 gap-x-12 gap-y-16 items-center">
           <div className="flex flex-col gap-16">
             {leftServices.map((service) => (
-              <ClientOnly key={service.title}>
-                  <Slide direction="left" triggerOnce>
-                    <ServiceCard service={service} alignment="right" />
-                  </Slide>
-              </ClientOnly>
+              <ServiceCard key={service.title} service={service} alignment="right" />
             ))}
           </div>
-          <ClientOnly>
-            <Slide direction="up" triggerOnce>
-              <LogoAndRipples />
-            </Slide>
-          </ClientOnly>
+          <LogoAndRipples />
           <div className="flex flex-col gap-16">
             {rightServices.map((service) => (
-                <ClientOnly key={service.title}>
-                    <Slide direction="right" triggerOnce>
-                        <ServiceCard service={service} alignment="left" />
-                    </Slide>
-                </ClientOnly>
+              <ServiceCard key={service.title} service={service} alignment="left" />
             ))}
           </div>
         </div>
 
         {/* Mobile/Tablet View */}
         <div className="grid grid-cols-1 gap-y-12 items-center justify-items-center md:hidden">
-          {services.map((service, index) => (
-            <>
-              <ClientOnly key={service.title}>
-                  <Slide direction="up" triggerOnce>
-                    <ServiceCard service={service} alignment="left" />
-                  </Slide>
-              </ClientOnly>
-              {index === 2 && 
-                <ClientOnly>
-                    <Slide direction="up" triggerOnce>
-                        <LogoAndRipples />
-                    </Slide>
-                </ClientOnly>}
-            </>
+          {services.slice(0,3).map((service, index) => (
+            <ServiceCard key={service.title} service={service} alignment="left" />
+          ))}
+          <LogoAndRipples />
+          {services.slice(3).map((service, index) => (
+            <ServiceCard key={service.title} service={service} alignment="left" />
           ))}
         </div>
       </div>
