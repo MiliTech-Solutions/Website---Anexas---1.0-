@@ -22,7 +22,7 @@ const contactDetails = [
     {
         icon: MapPin,
         title: 'Visit Us',
-        value: '121 - A, Askari XIV, Rawalpindi'
+        value: '121 - A, Askari XIV, Defence, Rawalpindi'
     }
 ]
 
