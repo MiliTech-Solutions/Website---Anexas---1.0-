@@ -58,7 +58,9 @@ export default function ByTheNumbers() {
                   <ClientOnly>
                     <Fade triggerOnce delay={100}>
                     <p className="text-4xl md:text-5xl font-bold text-cyan-400">
-                      <CountUp end={parseInt(stat.value)} duration={2.5} separator="," suffix={stat.suffix} enableScrollSpy />
+                      <ClientOnly>
+                        <CountUp end={parseInt(stat.value)} duration={2.5} separator="," suffix={stat.suffix} enableScrollSpy />
+                      </ClientOnly>
                     </p>
                     </Fade>
                   </ClientOnly>

@@ -30,11 +30,18 @@ export default function ProjectStats() {
                     <p className="text-4xl md:text-5xl font-extrabold text-foreground">
                       {stat.isSpecial ? (
                         <>
-                          <CountUp end={24} duration={2} enableScrollSpy />/
-                          <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
+                          <ClientOnly>
+                            <CountUp end={24} duration={2} enableScrollSpy />
+                          </ClientOnly>
+                          /
+                          <ClientOnly>
+                            <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
+                          </ClientOnly>
                         </>
                       ) : (
-                        <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
+                        <ClientOnly>
+                          <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
+                        </ClientOnly>
                       )}
                     </p>
                     </Fade>

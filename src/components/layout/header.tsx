@@ -104,54 +104,56 @@ export default function Header() {
           </ClientOnly>
         </div>
         <div className="md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
-              <SheetTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  className={cn(
-                    "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0",
-                    isAnimating && 'animate-zoom-spin-in'
-                  )}
-                  onClick={handleMenuClick}
-                >
-                  <Menu className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[80vw] bg-background">
-                <div className="p-4">
-                  <div className="flex justify-between items-center mb-8">
-                    <Logo />
-                  </div>
-                  <nav className="flex flex-col gap-6">
-                    {navLinks.map((link, index) => (
-                      <ClientOnly key={link.href}>
-                        <Fade triggerOnce delay={index * 100}>
-                          <SheetClose asChild>
-                            <Link
-                              href={link.href}
-                              className="text-lg font-headline text-foreground"
-                            >
-                              {link.label}
-                            </Link>
-                          </SheetClose>
-                        </Fade>
+            <ClientOnly>
+              <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className={cn(
+                      "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0",
+                      isAnimating && 'animate-zoom-spin-in'
+                    )}
+                    onClick={handleMenuClick}
+                  >
+                    <Menu className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]" />
+                    <span className="sr-only">Open menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[80vw] bg-background">
+                  <div className="p-4">
+                    <div className="flex justify-between items-center mb-8">
+                      <Logo />
+                    </div>
+                    <nav className="flex flex-col gap-6">
+                      {navLinks.map((link, index) => (
+                        <ClientOnly key={link.href}>
+                          <Fade triggerOnce delay={index * 100}>
+                            <SheetClose asChild>
+                              <Link
+                                href={link.href}
+                                className="text-lg font-headline text-foreground"
+                              >
+                                {link.label}
+                              </Link>
+                            </SheetClose>
+                          </Fade>
+                        </ClientOnly>
+                      ))}
+                      <ClientOnly>
+                       <Fade triggerOnce delay={navLinks.length * 100}>
+                         <SheetClose asChild>
+                            <Button asChild size="lg" className="mt-4 bg-cyan-400 text-primary-foreground hover:bg-cyan-400/90">
+                                <Link href="#contact">Contact</Link>
+                            </Button>
+                         </SheetClose>
+                       </Fade>
                       </ClientOnly>
-                    ))}
-                    <ClientOnly>
-                     <Fade triggerOnce delay={navLinks.length * 100}>
-                       <SheetClose asChild>
-                          <Button asChild size="lg" className="mt-4 bg-cyan-400 text-primary-foreground hover:bg-cyan-400/90">
-                              <Link href="#contact">Contact</Link>
-                          </Button>
-                       </SheetClose>
-                     </Fade>
-                    </ClientOnly>
-                  </nav>
-                </div>
-              </SheetContent>
-            </Sheet>
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </ClientOnly>
         </div>
       </div>
     </header>

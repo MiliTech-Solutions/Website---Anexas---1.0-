@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { suggestCaseStudies } from '@/ai/flows/case-study-search-suggestions';
 import { Search, Loader2 } from 'lucide-react';
+import ClientOnly from '@/components/client-only';
+import { Fade } from 'react-awesome-reveal';
 
 export default function CaseStudySearch() {
   const [query, setQuery] = useState('');
@@ -60,18 +62,22 @@ export default function CaseStudySearch() {
       </div>
       
       {suggestions.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2 justify-center">
-            <p className="text-sm text-muted-foreground w-full text-center mb-2">AI Suggestions:</p>
-            {suggestions.map((suggestion, index) => (
-                <Badge 
-                  key={index} 
-                  variant="secondary" 
-                  className="cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors py-1 px-3" 
-                  onClick={() => handleSuggestionClick(suggestion)}>
-                  {suggestion}
-                </Badge>
-            ))}
-        </div>
+        <ClientOnly>
+          <Fade>
+            <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <p className="text-sm text-muted-foreground w-full text-center mb-2">AI Suggestions:</p>
+                {suggestions.map((suggestion, index) => (
+                    <Badge 
+                      key={index} 
+                      variant="secondary" 
+                      className="cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors py-1 px-3" 
+                      onClick={() => handleSuggestionClick(suggestion)}>
+                      {suggestion}
+                    </Badge>
+                ))}
+            </div>
+          </Fade>
+        </ClientOnly>
       )}
     </div>
   );

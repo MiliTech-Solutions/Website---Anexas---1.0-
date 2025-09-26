@@ -103,11 +103,18 @@ export default function Hero() {
                           <p className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
                             {stat.isSpecial ? (
                               <>
-                                <CountUp end={24} duration={2} enableScrollSpy />/
-                                <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
+                                <ClientOnly>
+                                  <CountUp end={24} duration={2} enableScrollSpy />
+                                </ClientOnly>
+                                /
+                                <ClientOnly>
+                                  <CountUp end={7} duration={2} delay={0.5} enableScrollSpy />
+                                </ClientOnly>
                               </>
                             ) : (
-                              <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
+                              <ClientOnly>
+                                <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} enableScrollSpy />
+                              </ClientOnly>
                             )}
                           </p>
                           </Fade>
