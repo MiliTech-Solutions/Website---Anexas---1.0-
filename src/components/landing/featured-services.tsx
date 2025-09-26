@@ -8,8 +8,8 @@ const services = [
       icon: PenTool,
       title: 'Content Writing',
       description: 'Engaging, SEO-optimized content that resonates with your audience and drives conversions.',
-      position: 'justify-self-end text-right items-end',
-      direction: 'left' as const
+      position: 'justify-self-start text-left items-start',
+      direction: 'right' as const
     },
     {
       icon: BarChart3,
@@ -22,8 +22,8 @@ const services = [
       icon: Award,
       title: 'Brand Identity',
       description: 'Creating unique brand identities that stand out in the market.',
-      position: 'justify-self-end text-right items-end',
-      direction: 'left' as const
+      position: 'justify-self-start text-left items-start',
+      direction: 'right' as const
     },
     {
       icon: ShoppingCart,
@@ -36,8 +36,8 @@ const services = [
       icon: Code,
       title: 'Development',
       description: 'Custom web and application development to bring your ideas to life.',
-      position: 'justify-self-end text-right items-end',
-      direction: 'left' as const
+      position: 'justify-self-start text-left items-start',
+      direction: 'right' as const
     },
     {
       icon: Briefcase,
