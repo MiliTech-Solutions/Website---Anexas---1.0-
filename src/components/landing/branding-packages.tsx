@@ -61,7 +61,7 @@ export default function BrandingPackages() {
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 Branding <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Packages</span>
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground text-justify">
+              <p className="mt-4 text-lg text-muted-foreground text-center">
                 Build a powerful brand identity that resonates with your audience and sets you apart from the competition.
               </p>
             </Fade>

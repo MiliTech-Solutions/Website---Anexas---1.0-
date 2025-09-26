@@ -60,7 +60,7 @@ export default function Pricing() {
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 Website <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Packages</span>
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground text-justify">
+              <p className="mt-4 text-lg text-muted-foreground text-center">
                 Choose the perfect package for your business needs. All packages include responsive design and modern functionality.
               </p>
             </Fade>
