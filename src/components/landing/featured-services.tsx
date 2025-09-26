@@ -63,18 +63,22 @@ const ServiceCard = ({ service, alignment }: { service: typeof services[0], alig
 
 const LogoAndRipples = () => (
   <div className="flex items-center justify-center relative my-8 md:my-0 h-full">
-    <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="logoGradientFeatured" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
-                    <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
-                </linearGradient>
-            </defs>
-            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
-            <path d="M2 7L12 12L22 7" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
-            <path d="M12 12V22" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
-        </svg>
+    <div className="relative w-24 h-24 flex items-center justify-center">
+      <div className="absolute w-full h-full rounded-full bg-card/50 border border-border/30 animate-ripple delay-0"></div>
+      <div className="absolute w-full h-full rounded-full bg-card/50 border border-border/30 animate-ripple delay-1000"></div>
+      <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl z-10">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                  <linearGradient id="logoGradientFeatured" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
+                      <stop offset="100%" style={{stopColor: 'hsl(var(--blue-500))'}} />
+                  </linearGradient>
+              </defs>
+              <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
+              <path d="M2 7L12 12L22 7" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
+              <path d="M12 12V22" stroke="url(#logoGradientFeatured)" strokeWidth="1.5" strokeLinejoin="round"/>
+          </svg>
+      </div>
     </div>
   </div>
 );
@@ -102,25 +106,24 @@ export default function FeaturedServices() {
         <div className="hidden md:grid grid-cols-3 gap-x-12 gap-y-16 items-center">
           <div className="flex flex-col gap-16">
             {leftServices.map((service) => (
-              <ServiceCard key={service.title} service={service} alignment="left" />
+              <ServiceCard key={service.title} service={service} alignment="right" />
             ))}
           </div>
           <LogoAndRipples />
           <div className="flex flex-col gap-16">
             {rightServices.map((service) => (
-              <ServiceCard key={service.title} service={service} alignment="right" />
+              <ServiceCard key={service.title} service={service} alignment="left" />
             ))}
           </div>
         </div>
 
         {/* Mobile/Tablet View */}
-        <div className="grid grid-cols-1 gap-y-16 items-center justify-items-center md:hidden">
-          {leftServices.map((service) => (
+        <div className="grid grid-cols-1 gap-y-12 items-center justify-items-center md:hidden">
+          {services.map((service, index) => (
+            <>
               <ServiceCard key={service.title} service={service} alignment="left" />
-          ))}
-          <LogoAndRipples />
-          {rightServices.map((service) => (
-             <ServiceCard key={service.title} service={service} alignment="left" />
+              {index === 2 && <LogoAndRipples />}
+            </>
           ))}
         </div>
       </div>
