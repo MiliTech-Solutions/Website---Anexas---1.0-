@@ -47,7 +47,7 @@ export default function ServiceCatalog() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                 Services We Can <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Help With</span>
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground text-justify">
+              <p className="mt-4 text-lg text-muted-foreground text-center">
                 We offer comprehensive digital solutions to help your business thrive in the modern digital landscape.
               </p>
             </Fade>
