@@ -30,9 +30,7 @@ export default function Hero() {
           
           <div className="md:col-span-2">
             <ClientOnly>
-              <Fade triggerOnce>
-                <HeroServices />
-              </Fade>
+              <HeroServices />
             </ClientOnly>
           </div>
 
@@ -44,18 +42,20 @@ export default function Hero() {
                   <span className="block">A g e n c y</span>
                 </h1>
                 <div className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground text-center h-16">
-                  <TypeAnimation
-                    sequence={[
-                      'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
-                      1000,
-                      '',
-                      500,
-                      'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
-                      1000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                  />
+                  <ClientOnly>
+                    <TypeAnimation
+                      sequence={[
+                        'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                        1000,
+                        '',
+                        500,
+                        'We create stunning digital experiences that drive growth and elevate your brand in the digital landscape.',
+                        1000,
+                      ]}
+                      wrapper="span"
+                      speed={50}
+                    />
+                  </ClientOnly>
                 </div>
               </Fade>
             </ClientOnly>
@@ -75,20 +75,16 @@ export default function Hero() {
             </ClientOnly>
             <div className="mt-6 flex justify-center md:hidden">
               <ClientOnly>
-                <Fade triggerOnce>
-                  <div className="flex justify-center md:hidden">
-                      <SocialLinks />
-                  </div>
-                </Fade>
+                <div className="flex justify-center md:hidden">
+                    <SocialLinks />
+                </div>
               </ClientOnly>
             </div>
           </div>
           
           <div className="md:col-span-1 md:col-start-12 hidden md:block">
             <ClientOnly>
-               <Fade triggerOnce>
-                  <SocialLinks />
-               </Fade>
+                <SocialLinks />
             </ClientOnly>
           </div>
 
