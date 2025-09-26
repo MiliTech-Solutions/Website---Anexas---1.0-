@@ -17,7 +17,7 @@ const contactDetails = [
     {
         icon: Phone,
         title: 'Call Us',
-        value: '+1 (555) 123-4567'
+        value: '(+92) 370 977 5882'
     },
     {
         icon: MapPin,
@@ -99,7 +99,7 @@ export default function GetAQuote() {
                         <Fade triggerOnce cascade damping={0.1} delay={300}>
                           <div className="space-y-2">
                               <Label htmlFor="phone">Phone</Label>
-                              <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                              <Input id="phone" type="tel" placeholder="(+92) 370 977 5882" />
                           </div>
                         </Fade>
                       </ClientOnly>

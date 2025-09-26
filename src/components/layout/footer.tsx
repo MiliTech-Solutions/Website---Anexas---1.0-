@@ -31,7 +31,7 @@ const companyLinks = [
 
 const contactDetails = [
   { icon: Mail, value: 'anexas.militechsoln@gmail.com', href: 'mailto:anexas.militechsoln@gmail.com' },
-  { icon: Phone, value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+  { icon: Phone, value: '(+92) 370 977 5882', href: 'tel:+923709775882' },
   { icon: MapPin, value: '123 Digital Street, Tech City, TC 12345', href: '#' },
 ];
 
