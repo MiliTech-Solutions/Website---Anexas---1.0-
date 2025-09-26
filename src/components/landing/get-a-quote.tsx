@@ -22,7 +22,7 @@ const contactDetails = [
     {
         icon: MapPin,
         title: 'Visit Us',
-        value: '123 Digital Street, Tech City, TC 12345'
+        value: '121 - A, Askari XIV, Rawalpindi'
     }
 ]
 
