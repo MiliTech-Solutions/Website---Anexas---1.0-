@@ -85,7 +85,7 @@ export default function About() {
                     <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                       {stats.map((stat, index) => (
                         <ClientOnly key={stat.label}>
-                          <Fade delay={index * 150} triggerOnce cascade damping={0.1}>
+                          <Fade delay={index * 150} triggerOnce cascade damping-={0.1}>
                             <div className="text-center">
                               <p className="text-4xl font-bold text-foreground mb-2">
                                 <CountUp end={stat.value} duration={2.5} suffix={stat.suffix || ''} enableScrollSpy />
