@@ -49,8 +49,10 @@ const services = [
   ];
 
 const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: number }) => (
+  <ClientOnly>
     <Slide direction={service.direction} delay={delay} triggerOnce>
         <div className={`flex flex-col gap-4 max-w-sm ${service.position}`}>
+          <ClientOnly>
             <Fade triggerOnce>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,12 +75,16 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
                 <service.icon stroke="url(#iconGradient)" />
               </svg>
               </Fade>
+            </ClientOnly>
+            <ClientOnly>
             <Fade triggerOnce delay={100} cascade damping={0.1}>
                 <h3 className="text-2xl font-bold">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </Fade>
+            </ClientOnly>
         </div>
     </Slide>
+  </ClientOnly>
 )
 
 const LogoAndRipples = () => (
