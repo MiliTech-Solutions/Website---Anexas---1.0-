@@ -9,7 +9,7 @@ const packages = [
   {
     name: 'Starter',
     price: '$999',
-    priceColor: 'text-primary',
+    priceColor: 'text-orange-400',
     description: 'Perfect for small businesses getting started online',
     features: [
       '5-page responsive website',
