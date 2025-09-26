@@ -49,10 +49,8 @@ const services = [
   ];
 
 const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: number }) => (
-  <ClientOnly>
     <Slide direction={service.direction} delay={delay} triggerOnce>
         <div className={`flex flex-col gap-4 max-w-sm ${service.position}`}>
-          <ClientOnly>
             <Fade triggerOnce>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,16 +73,12 @@ const ServiceCard = ({ service, delay }: { service: typeof services[0], delay: n
                 <service.icon stroke="url(#iconGradient)" />
               </svg>
               </Fade>
-            </ClientOnly>
-            <ClientOnly>
-              <Fade triggerOnce delay={100} cascade damping={0.1}>
+            <Fade triggerOnce delay={100} cascade damping={0.1}>
                 <h3 className="text-2xl font-bold">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </Fade>
-            </ClientOnly>
         </div>
     </Slide>
-  </ClientOnly>
 )
 
 const LogoAndRipples = () => (
@@ -139,24 +133,24 @@ export default function FeaturedServices() {
 
         {/* Desktop View */}
         <div className="hidden md:grid grid-cols-2 gap-x-12 gap-y-16 items-center">
-          <ServiceCard service={services[0]} delay={0} />
-          <ServiceCard service={services[1]} delay={100} />
-          <ServiceCard service={services[2]} delay={200} />
-          <LogoAndRipples />
-          <ServiceCard service={services[3]} delay={300} />
-          <ServiceCard service={services[4]} delay={400} />
-          <ServiceCard service={services[5]} delay={500} />
+          <ClientOnly><ServiceCard service={services[0]} delay={0} /></ClientOnly>
+          <ClientOnly><ServiceCard service={services[1]} delay={100} /></ClientOnly>
+          <ClientOnly><ServiceCard service={services[2]} delay={200} /></ClientOnly>
+          <div className="col-span-2 flex justify-center"><LogoAndRipples /></div>
+          <ClientOnly><ServiceCard service={services[3]} delay={300} /></ClientOnly>
+          <ClientOnly><ServiceCard service={services[4]} delay={400} /></ClientOnly>
+          <ClientOnly><ServiceCard service={services[5]} delay={500} /></ClientOnly>
         </div>
 
         {/* Mobile/Tablet View */}
         <div className="grid grid-cols-1 gap-y-16 items-center justify-items-center md:hidden">
-          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[0]} delay={0} /></div>
-          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[1]} delay={100} /></div>
-          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[2]} delay={200} /></div>
-          <LogoAndRipples />
-          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[3]} delay={300} /></div>
-          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[4]} delay={400} /></div>
-          <div className="max-w-sm w-full flex justify-center"><ServiceCard service={services[5]} delay={500} /></div>
+          <div className="max-w-sm w-full flex justify-center"><ClientOnly><ServiceCard service={services[0]} delay={0} /></ClientOnly></div>
+          <div className="max-w-sm w-full flex justify-center"><ClientOnly><ServiceCard service={services[1]} delay={100} /></ClientOnly></div>
+          <div className="max-w-sm w-full flex justify-center"><ClientOnly><ServiceCard service={services[2]} delay={200} /></ClientOnly></div>
+          <div className="col-span-1 flex justify-center"><LogoAndRipples /></div>
+          <div className="max-w-sm w-full flex justify-center"><ClientOnly><ServiceCard service={services[3]} delay={300} /></ClientOnly></div>
+          <div className="max-w-sm w-full flex justify-center"><ClientOnly><ServiceCard service={services[4]} delay={400} /></ClientOnly></div>
+          <div className="max-w-sm wull flex justify-center"><ClientOnly><ServiceCard service={services[5]} delay={500} /></ClientOnly></div>
         </div>
       </div>
     </section>
