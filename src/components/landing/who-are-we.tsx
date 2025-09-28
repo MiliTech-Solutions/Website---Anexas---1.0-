@@ -24,7 +24,7 @@ export default function WhoAreWe() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <ClientOnly>
-            <Slide direction="left" triggerOnce>
+            <Slide direction="left" triggerOnce duration={1000}>
               <div className="overflow-hidden rounded-lg">
                 <ClientOnly>
                   <Fade triggerOnce>
