@@ -110,7 +110,7 @@ export default function FinestWork() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {finestWork.map((work, index) => (
             <ClientOnly key={work.title}>
-              <Slide direction={index % 2 === 0 ? 'left' : 'right'} delay={index * 100} triggerOnce>
+              <Slide direction="up" delay={index * 100} triggerOnce>
                 <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
                   <div className="aspect-[4/3] overflow-hidden">
                     <ClientOnly>
