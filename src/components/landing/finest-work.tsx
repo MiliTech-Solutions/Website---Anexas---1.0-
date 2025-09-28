@@ -111,24 +111,24 @@ export default function FinestWork() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {finestWork.map((work, index) => (
             <ClientOnly key={work.title}>
-              <Slide direction={index % 2 === 0 ? 'left' : 'right'} triggerOnce>
-                <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={work.image.src}
-                      alt={work.image.alt}
-                      width={600}
-                      height={400}
-                      data-ai-hint={work.image.hint}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
-                    <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
-                  </CardContent>
-                </Card>
-              </Slide>
+                <Slide direction={index % 2 === 0 ? 'left' : 'right'} triggerOnce>
+                  <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={work.image.src}
+                        alt={work.image.alt}
+                        width={600}
+                        height={400}
+                        data-ai-hint={work.image.hint}
+                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
+                      <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
+                    </CardContent>
+                  </Card>
+                </Slide>
             </ClientOnly>
           ))}
         </div>
