@@ -61,7 +61,7 @@ export default function Hero() {
             </ClientOnly>
             <ClientOnly>
               <Fade triggerOnce delay={500}>
-                <div className="mt-16 flex flex-col sm:flex-row justify-center gap-4">
+                <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                   <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 text-primary-foreground hover:bg-cyan-400 active:scale-90 transition-all duration-150">
                     <Link href="#contact">
                       Get Started
