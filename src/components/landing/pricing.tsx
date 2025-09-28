@@ -26,7 +26,7 @@ const packages = [
     priceColor: 'text-accent',
     description: 'Ideal for growing businesses with advanced needs',
     features: [
-      '10-page responsive website',
+      '4-page responsive website',
       'Custom design & branding',
       'Advanced SEO optimization',
       'CMS integration',
