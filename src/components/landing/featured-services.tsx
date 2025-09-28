@@ -70,8 +70,8 @@ const LogoAndRipples = () => (
         <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-cyan-400/20 animate-ripple delay-0"></div>
         <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-cyan-400/20 animate-ripple delay-1000"></div>
         <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-cyan-400/20 animate-ripple delay-2000"></div>
-        <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl z-10">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="w-32 h-32 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl z-10">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]">
                 <defs>
                     <linearGradient id="logoGradientFeatured" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style={{stopColor: 'hsl(var(--cyan-400))'}} />
@@ -98,6 +98,7 @@ export default function FeaturedServices() {
         className="absolute inset-0 -z-20 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,144,255,0.05),rgba(255,255,255,0))]">
       </div>
       <div className="absolute top-0 right-0 h-full w-2/5 bg-[radial-gradient(ellipse_at_center_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
+      <div className="absolute top-0 left-0 h-full w-2/5 bg-[radial-gradient(ellipse_at_center_left,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
