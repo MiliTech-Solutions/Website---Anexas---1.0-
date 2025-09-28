@@ -36,7 +36,7 @@ const packages = [
   },
   {
     name: 'Enterprise',
-    price: '$4999',
+    price: '$1000',
     priceColor: 'text-purple-400',
     description: 'Complete solution for large-scale operations',
     features: [
