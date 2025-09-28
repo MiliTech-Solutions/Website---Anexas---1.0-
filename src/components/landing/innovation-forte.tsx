@@ -34,11 +34,11 @@ export default function InnovationForte() {
               <Slide direction="right" triggerOnce>
                 <div className="overflow-hidden rounded-lg">
                   <Image
-                    src="https://picsum.photos/seed/innovation/600/750"
-                    alt="Looking up at a modern glass skyscraper"
+                    src="https://i.postimg.cc/cJLK3df8/5ce559177078cd244f889b1ca5d1ec53.jpg"
+                    alt="Abstract image of a brain with network connections"
                     width={600}
                     height={750}
-                    data-ai-hint="skyscraper architecture"
+                    data-ai-hint="abstract brain"
                     className="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
                   />
                 </div>
