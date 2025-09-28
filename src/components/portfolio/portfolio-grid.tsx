@@ -19,9 +19,9 @@ const allProjects = [
         title: 'Financial Services Platform',
         category: 'Fintech',
         image: {
-          src: 'https://picsum.photos/seed/work2/600/400',
-          alt: 'A desk with financial documents, a calculator, and a smartphone.',
-          hint: 'financial platform'
+          src: 'https://i.postimg.cc/m2xTLVd2/ab30ce71a9f8ac8e987e3608e5b9952e.jpg',
+          alt: 'An abstract image representing financial services technology.',
+          hint: 'financial services'
         }
       },
       {
@@ -139,33 +139,6 @@ const allProjects = [
           src: 'https://picsum.photos/seed/work15/600/400',
           alt: 'A person playing a video game on a high-end PC setup.',
           hint: 'gaming platform'
-        }
-      },
-      {
-        title: 'Smart Home Hub',
-        category: 'IoT',
-        image: {
-          src: 'https://picsum.photos/seed/work16/600/400',
-          alt: 'A smart home dashboard controlling lights and temperature.',
-          hint: 'smart home'
-        }
-      },
-      {
-        title: 'Virtual Reality Experience',
-        category: 'VR/AR',
-        image: {
-          src: 'https://picsum.photos/seed/work17/600/400',
-          alt: 'A person wearing a VR headset and exploring a virtual world.',
-          hint: 'virtual reality'
-        }
-      },
-      {
-        title: 'Content Management System',
-        category: 'Web Development',
-        image: {
-          src: 'https://picsum.photos/seed/work18/600/400',
-          alt: 'A CMS dashboard for managing website content.',
-          hint: 'content management'
         }
       },
 ];

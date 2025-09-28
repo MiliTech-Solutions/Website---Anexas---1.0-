@@ -21,9 +21,9 @@ const finestWork = [
     title: 'Financial Services Platform',
     category: 'Fintech',
     image: {
-      src: 'https://picsum.photos/seed/work2/600/400',
-      alt: 'A desk with financial documents, a calculator, and a smartphone.',
-      hint: 'financial platform'
+      src: 'https://i.postimg.cc/m2xTLVd2/ab30ce71a9f8ac8e987e3608e5b9952e.jpg',
+      alt: 'An abstract image representing financial services technology.',
+      hint: 'financial services'
     }
   },
   {
@@ -66,7 +66,7 @@ const finestWork = [
     title: 'Healthcare System',
     category: 'Healthcare',
     image: {
-      src: 'https://picsum.photos/seed/work7/600/400',
+      src: 'https://picsum.photos/seed/work7/600_400',
       alt: 'A doctor reviewing patient data on a tablet.',
       hint: 'healthcare system'
     }
