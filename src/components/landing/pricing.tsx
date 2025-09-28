@@ -40,7 +40,7 @@ const packages = [
     priceColor: 'text-purple-400',
     description: 'Complete solution for large-scale operations',
     features: [
-      'Unlimited pages',
+      '8-page responsive website',
       'Custom functionality',
       'Advanced integrations',
       'Priority support',
