@@ -71,14 +71,16 @@ export default function Footer() {
                 </p>
               </Fade>
             </ClientOnly>
-            <ClientOnly>
-              <Fade triggerOnce delay={200}>
-                <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center">
-                  “Transforming bold ideas into sleek
-                  <span className="block">& contemporary experiences.”</span>
-                </p>
-              </Fade>
-            </ClientOnly>
+            <div className="md:hidden">
+              <ClientOnly>
+                <Fade triggerOnce delay={200}>
+                  <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center">
+                    “Transforming bold ideas into sleek
+                    <span className="block">& contemporary experiences.”</span>
+                  </p>
+                </Fade>
+              </ClientOnly>
+            </div>
             <div className="flex justify-center space-x-8 pt-4">
               {socialLinks.map((social, index) => (
                 <ClientOnly key={social.href}>
@@ -89,6 +91,16 @@ export default function Footer() {
                   </Fade>
                 </ClientOnly>
               ))}
+            </div>
+             <div className="hidden md:block">
+              <ClientOnly>
+                <Fade triggerOnce delay={200}>
+                  <p className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text text-center pt-4">
+                    “Transforming bold ideas into sleek
+                    <span className="block">& contemporary experiences.”</span>
+                  </p>
+                </Fade>
+              </ClientOnly>
             </div>
           </div>
 
