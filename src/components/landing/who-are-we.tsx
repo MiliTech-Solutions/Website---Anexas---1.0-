@@ -29,11 +29,11 @@ export default function WhoAreWe() {
                 <ClientOnly>
                   <Fade triggerOnce>
                   <Image
-                    src="https://picsum.photos/seed/whoarewe/800/600"
-                    alt="A person looking out over an airport tarmac."
+                    src="https://i.postimg.cc/bvkGSnHJ/6c66d9e8da756f18fcf925941496bf8b.jpg"
+                    alt="A team of professionals collaborating in an office."
                     width={800}
                     height={600}
-                    data-ai-hint="airport tarmac"
+                    data-ai-hint="team collaboration"
                     className="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
                   />
                   </Fade>
