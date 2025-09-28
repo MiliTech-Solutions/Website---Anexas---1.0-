@@ -37,7 +37,7 @@ const allProjects = [
         title: 'Mobile Banking App',
         category: 'Mobile App',
         image: {
-          src: 'https://picsum.photos/seed/work4/600/400',
+          src: 'https://i.postimg.cc/tC9BYmBq/IMG-20250927-152313.jpg',
           alt: 'A smartphone displaying a mobile banking application interface.',
           hint: 'mobile banking'
         }
