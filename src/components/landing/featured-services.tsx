@@ -66,10 +66,10 @@ const ServiceCard = ({ service, alignment }: { service: typeof services[0], alig
 
 const LogoAndRipples = () => (
     <div className="flex items-center justify-center relative my-8 md:my-0 h-full">
-      <div className="relative w-72 h-36 flex items-center justify-center">
-        <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-border/30 animate-ripple delay-0"></div>
-        <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-border/30 animate-ripple delay-1000"></div>
-        <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-border/30 animate-ripple delay-2000"></div>
+      <div className="relative w-36 h-72 flex items-center justify-center">
+        <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-cyan-400/20 animate-ripple delay-0"></div>
+        <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-cyan-400/20 animate-ripple delay-1000"></div>
+        <div className="absolute w-full h-full rounded-[50px] bg-card/50 border border-cyan-400/20 animate-ripple delay-2000"></div>
         <div className="w-24 h-24 rounded-full bg-card flex items-center justify-center border border-border shadow-2xl z-10">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
