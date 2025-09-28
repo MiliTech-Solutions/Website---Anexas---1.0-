@@ -46,7 +46,7 @@ const allProjects = [
         title: 'E-commerce Store for Fashion',
         category: 'E-commerce',
         image: {
-          src: 'https://picsum.photos/seed/work5/600/400',
+          src: 'https://i.postimg.cc/Hsfj6FF1/ce5010565453a674f39b5068d403b2c2.jpg',
           alt: 'A stylish layout of clothing and accessories for an online store.',
           hint: 'fashion ecommerce'
         }
