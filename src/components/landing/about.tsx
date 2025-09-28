@@ -41,8 +41,8 @@ export default function About() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <ClientOnly>
-              <Slide direction="left" triggerOnce>
+            <Slide direction="left" triggerOnce>
+              <ClientOnly>
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Innovation</span>
                   <span className="block">Meets Excellence</span>
@@ -50,12 +50,12 @@ export default function About() {
                 <p className="text-lg text-muted-foreground text-justify">
                   We're a team of passionate designers and developers who believe in the power of digital transformation. Our mission is to help businesses succeed through innovative design and cutting-edge technology.
                 </p>
-              </Slide>
-            </ClientOnly>
+              </ClientOnly>
+            </Slide>
             <div className="grid grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <ClientOnly key={feature.title}>
-                  <Fade delay={index * 150} triggerOnce cascade damping={0.1}>
+                <Fade key={feature.title} delay={index * 150} triggerOnce cascade damping={0.1}>
+                  <ClientOnly>
                     <div className="flex items-start gap-4">
                         <div className="w-12 h-12 flex items-center justify-center">
                             <feature.icon className="w-8 h-8 text-accent" />
@@ -65,27 +65,27 @@ export default function About() {
                         <p className="text-muted-foreground text-sm">{feature.description}</p>
                       </div>
                     </div>
-                  </Fade>
-                </ClientOnly>
+                  </ClientOnly>
+                </Fade>
               ))}
             </div>
           </div>
           <div>
-            <ClientOnly>
-              <Slide direction="right" triggerOnce>
+            <Slide direction="right" triggerOnce>
+              <ClientOnly>
                 <Card className="bg-card border-border/50">
                   <CardHeader>
-                    <ClientOnly>
-                      <Fade triggerOnce>
+                    <Fade triggerOnce>
+                      <ClientOnly>
                         <CardTitle className="text-2xl text-center bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Our Impact</CardTitle>
-                      </Fade>
-                    </ClientOnly>
+                      </ClientOnly>
+                    </Fade>
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                       {stats.map((stat, index) => (
-                        <ClientOnly key={stat.label}>
-                          <Fade delay={index * 150} triggerOnce cascade damping-={0.1}>
+                        <Fade key={stat.label} delay={index * 150} triggerOnce cascade damping-={0.1}>
+                          <ClientOnly>
                             <div className="text-center">
                               <p className="text-4xl font-bold text-foreground mb-2">
                                 <ClientOnly>
@@ -97,14 +97,14 @@ export default function About() {
                                 <div className={`h-1 rounded-full ${stat.color}`} style={{width: '100%'}}></div>
                               </div>
                             </div>
-                          </Fade>
-                        </ClientOnly>
+                          </ClientOnly>
+                        </Fade>
                       ))}
                     </div>
                   </CardContent>
                 </Card>
-              </Slide>
-            </ClientOnly>
+              </ClientOnly>
+            </Slide>
           </div>
         </div>
       </div>
