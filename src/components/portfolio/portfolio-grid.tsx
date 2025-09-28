@@ -179,7 +179,6 @@ const ProjectCard = ({ work, index }: ProjectCardProps) => {
   const direction = index % 3 === 0 ? 'left' : index % 3 === 1 ? 'up' : 'right';
 
   return (
-    <ClientOnly>
       <Slide direction={direction} triggerOnce>
         <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
           <div className="aspect-[4/3] overflow-hidden">
@@ -198,7 +197,6 @@ const ProjectCard = ({ work, index }: ProjectCardProps) => {
           </CardContent>
         </Card>
       </Slide>
-    </ClientOnly>
   );
 };
 
@@ -221,9 +219,11 @@ export default function PortfolioGrid() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allProjects.map((work, index) => (
-            <ProjectCard key={work.title} work={work} index={index} />
-          ))}
+          <ClientOnly>
+            {allProjects.map((work, index) => (
+              <ProjectCard key={work.title} work={work} index={index} />
+            ))}
+          </ClientOnly>
         </div>
       </div>
     </section>
