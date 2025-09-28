@@ -43,7 +43,7 @@ const packages = [
       '8-page responsive website',
       'Custom functionality',
       'Advanced integrations',
-      'Priority support',
+      'Asthetic Animations',
       'Performance monitoring',
     ],
     isPopular: false,
