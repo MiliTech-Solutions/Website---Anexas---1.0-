@@ -38,7 +38,7 @@ const stats = [
 export default function About() {
   return (
     <section id="about" className="relative py-20 md:py-28 bg-background overflow-hidden">
-      <div className="absolute top-2/3 left-0 h-1/2 w-2/5 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center_left,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
+      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -71,7 +71,8 @@ export default function About() {
               ))}
             </div>
           </div>
-          <div>
+          <div className="relative">
+            <div className="absolute bottom-0 left-0 h-full w-full bg-[radial-gradient(ellipse_at_bottom_left,_rgba(0,128,128,0.3),_transparent_70%)] -z-10"></div>
             <Slide direction="right" triggerOnce>
               <ClientOnly>
                 <Card className="bg-card border-border/50">
