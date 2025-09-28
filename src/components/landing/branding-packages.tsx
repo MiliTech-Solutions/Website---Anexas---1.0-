@@ -8,7 +8,7 @@ import ClientOnly from '@/components/client-only';
 const packages = [
   {
     name: 'Brand Essentials',
-    price: '$799',
+    price: '$75',
     priceColor: 'text-orange-400',
     description: 'Foundation package for new businesses',
     features: [
