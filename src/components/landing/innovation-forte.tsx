@@ -7,6 +7,7 @@ export default function InnovationForte() {
   return (
     <section id="innovation" className="relative py-20 md:py-28 bg-background overflow-hidden">
       <div className="absolute top-0 left-0 h-[45%] w-2/5 bg-[radial-gradient(ellipse_at_left,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
+      <div className="absolute bottom-0 right-0 h-1/2 w-2/5 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
