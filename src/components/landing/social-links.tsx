@@ -21,7 +21,7 @@ export default function SocialLinks() {
   };
 
   return (
-    <div className="flex flex-row items-center gap-8 md:flex-col md:items-end">
+    <div className="flex flex-row items-center gap-12 md:flex-col md:items-end">
       <ClientOnly>
         <Slide direction="right" triggerOnce cascade damping={0.1} delay={300}>
           {socialLinks.map((social, index) => (
