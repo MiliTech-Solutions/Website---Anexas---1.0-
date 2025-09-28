@@ -36,7 +36,7 @@ const packages = [
   },
   {
     name: 'Brand Mastery',
-    price: '$3999',
+    price: '$250',
     priceColor: 'text-purple-400',
     description: 'Premium branding for industry leaders',
     features: [
