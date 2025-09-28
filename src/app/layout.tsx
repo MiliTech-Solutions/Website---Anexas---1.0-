@@ -3,6 +3,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import ScrollButtons from '@/components/layout/scroll-buttons';
+import ScrollRestoration from '@/components/utils/scroll-restoration';
 
 export const metadata: Metadata = {
   title: 'Anexas | Digital Solutions Agency',
@@ -25,6 +26,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <ScrollButtons />
+        <ScrollRestoration />
       </body>
     </html>
   );
