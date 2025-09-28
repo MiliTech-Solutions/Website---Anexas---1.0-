@@ -107,38 +107,30 @@ export default function FinestWork() {
             </Fade>
           </ClientOnly>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {finestWork.map((work, index) => (
-            <ClientOnly key={work.title}>
-              <Slide direction="up" delay={index * 100} triggerOnce>
-                <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
+        <ClientOnly>
+          <Fade direction="up" cascade damping={0.1} triggerOnce>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {finestWork.map((work) => (
+                <Card key={work.title} className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <ClientOnly>
-                      <Fade triggerOnce>
-                      <Image
-                        src={work.image.src}
-                        alt={work.image.alt}
-                        width={600}
-                        height={400}
-                        data-ai-hint={work.image.hint}
-                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                      />
-                      </Fade>
-                    </ClientOnly>
+                    <Image
+                      src={work.image.src}
+                      alt={work.image.alt}
+                      width={600}
+                      height={400}
+                      data-ai-hint={work.image.hint}
+                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    />
                   </div>
                   <CardContent className="p-6">
-                    <ClientOnly>
-                      <Fade triggerOnce cascade damping={0.1}>
-                        <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
-                        <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
-                      </Fade>
-                    </ClientOnly>
+                    <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent">{work.category}</Badge>
+                    <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
                   </CardContent>
                 </Card>
-              </Slide>
-            </ClientOnly>
-          ))}
-        </div>
+              ))}
+            </div>
+          </Fade>
+        </ClientOnly>
         <div className="mt-16 text-center">
           <ClientOnly>
             <Fade triggerOnce>
