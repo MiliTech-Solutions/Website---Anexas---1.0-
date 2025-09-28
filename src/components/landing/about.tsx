@@ -72,7 +72,7 @@ export default function About() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute bottom-0 left-0 h-full w-full bg-[radial-gradient(ellipse_at_bottom_left,_rgba(0,128,128,0.3),_transparent_70%)] -z-10"></div>
+            <div className="absolute top-0 right-0 h-full w-full bg-[radial-gradient(ellipse_at_top_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-10"></div>
             <Slide direction="right" triggerOnce>
               <ClientOnly>
                 <Card className="bg-card border-border/50">
