@@ -17,10 +17,14 @@ export default function InnovationForte() {
                   <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                     <span className="tracking-wider">Innovation is</span> <span className="block text-gradient">Our Forte</span>
                   </h2>
-                  <p className="text-lg text-muted-foreground text-justify">
-                    At Nexora AI, innovation isn't just a buzzword; it's our driving force. We are perpetually exploring the frontiers of artificial intelligence and design, merging advanced technologies like generative models and neural networks with intuitive user experiences. Our commitment to research and development means we deliver solutions that are not just current, but truly ahead of the curve, giving our clients a definitive competitive advantage.
-                  </p>
                 </div>
+              </Slide>
+            </ClientOnly>
+            <ClientOnly>
+              <Slide direction="up" triggerOnce>
+                <p className="text-lg text-muted-foreground text-justify">
+                  At Nexora AI, innovation isn't just a buzzword; it's our driving force. We are perpetually exploring the frontiers of artificial intelligence and design, merging advanced technologies like generative models and neural networks with intuitive user experiences. Our commitment to research and development means we deliver solutions that are not just current, but truly ahead of the curve, giving our clients a definitive competitive advantage.
+                </p>
               </Slide>
             </ClientOnly>
           </div>
