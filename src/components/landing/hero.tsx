@@ -18,7 +18,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col py-8 md:py-28">
+    <section className="relative flex flex-col py-8 md:pt-16 md:pb-28">
         <div 
             className="absolute top-0 left-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:36px_36px]">
         </div>
