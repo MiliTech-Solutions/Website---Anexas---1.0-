@@ -114,6 +114,60 @@ const allProjects = [
           hint: 'online learning'
         }
       },
+      {
+        title: 'Food Delivery App',
+        category: 'Mobile App',
+        image: {
+          src: 'https://picsum.photos/seed/work13/600/400',
+          alt: 'A food delivery app interface on a smartphone.',
+          hint: 'food delivery'
+        }
+      },
+      {
+        title: 'Music Streaming Service',
+        category: 'Entertainment',
+        image: {
+          src: 'https://picsum.photos/seed/work14/600/400',
+          alt: 'A music streaming app on a tablet with headphones.',
+          hint: 'music streaming'
+        }
+      },
+      {
+        title: 'Online Gaming Platform',
+        category: 'Gaming',
+        image: {
+          src: 'https://picsum.photos/seed/work15/600/400',
+          alt: 'A person playing a video game on a high-end PC setup.',
+          hint: 'gaming platform'
+        }
+      },
+      {
+        title: 'Smart Home Hub',
+        category: 'IoT',
+        image: {
+          src: 'https://picsum.photos/seed/work16/600/400',
+          alt: 'A smart home dashboard controlling lights and temperature.',
+          hint: 'smart home'
+        }
+      },
+      {
+        title: 'Virtual Reality Experience',
+        category: 'VR/AR',
+        image: {
+          src: 'https://picsum.photos/seed/work17/600/400',
+          alt: 'A person wearing a VR headset and exploring a virtual world.',
+          hint: 'virtual reality'
+        }
+      },
+      {
+        title: 'Content Management System',
+        category: 'Web Development',
+        image: {
+          src: 'https://picsum.photos/seed/work18/600/400',
+          alt: 'A CMS dashboard for managing website content.',
+          hint: 'content management'
+        }
+      },
 ];
 
 type ProjectCardProps = {
