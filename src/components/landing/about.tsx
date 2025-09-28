@@ -4,6 +4,8 @@ import { Lightbulb, Users, Zap, Award } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
 import CountUp from 'react-countup';
 import ClientOnly from '@/components/client-only';
+import { useInView } from 'react-intersection-observer';
+import { useState, useEffect } from 'react';
 
 const features = [
   {
@@ -35,7 +37,43 @@ const stats = [
     { value: 24, suffix: 'h', label: 'Response Time', color: 'bg-orange-500' },
 ]
 
+function StatBar({ stat, startAnimation }: { stat: typeof stats[0], startAnimation: boolean }) {
+  return (
+    <Fade triggerOnce cascade damping-={0.1}>
+      <ClientOnly>
+        <div className="text-center">
+          <p className="text-4xl font-bold text-foreground mb-2">
+            <ClientOnly>
+              <CountUp end={stat.value} duration={2.5} suffix={stat.suffix || ''} enableScrollSpy />
+            </ClientOnly>
+          </p>
+          <p className="text-muted-foreground text-sm mb-3">{stat.label}</p>
+          <div className="w-full bg-border h-1 rounded-full overflow-hidden">
+            <div 
+              className={`h-1 rounded-full ${stat.color} transition-all duration-1000 ease-out`} 
+              style={{width: startAnimation ? '100%' : '0%'}}
+            ></div>
+          </div>
+        </div>
+      </ClientOnly>
+    </Fade>
+  );
+}
+
+
 export default function About() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setStartAnimation(true);
+    }
+  }, [inView]);
+
   return (
     <section id="about" className="relative py-20 md:py-28 bg-background overflow-hidden">
       
@@ -75,7 +113,7 @@ export default function About() {
             <div className="absolute top-0 right-0 h-full w-full bg-[radial-gradient(ellipse_at_top_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-10"></div>
             <Slide direction="right" triggerOnce>
               <ClientOnly>
-                <Card className="bg-card border-border/50">
+                <Card className="bg-card border-border/50" ref={ref}>
                   <CardHeader>
                     <Fade triggerOnce>
                       <ClientOnly>
@@ -85,22 +123,8 @@ export default function About() {
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                      {stats.map((stat, index) => (
-                        <Fade key={stat.label} delay={index * 150} triggerOnce cascade damping-={0.1}>
-                          <ClientOnly>
-                            <div className="text-center">
-                              <p className="text-4xl font-bold text-foreground mb-2">
-                                <ClientOnly>
-                                  <CountUp end={stat.value} duration={2.5} suffix={stat.suffix || ''} enableScrollSpy />
-                                </ClientOnly>
-                              </p>
-                              <p className="text-muted-foreground text-sm mb-3">{stat.label}</p>
-                              <div className="w-full bg-border h-1 rounded-full">
-                                <div className={`h-1 rounded-full ${stat.color}`} style={{width: '100%'}}></div>
-                              </div>
-                            </div>
-                          </ClientOnly>
-                        </Fade>
+                      {stats.map((stat) => (
+                        <StatBar key={stat.label} stat={stat} startAnimation={startAnimation} />
                       ))}
                     </div>
                   </CardContent>
