@@ -12,7 +12,7 @@ const packages = [
     priceColor: 'text-orange-400',
     description: 'Perfect for small businesses getting started online',
     features: [
-      '5-page responsive website',
+      '2-page responsive website',
       'Mobile-optimized design',
       'Basic SEO setup',
       'Contact form integration',
