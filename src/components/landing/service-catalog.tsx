@@ -39,7 +39,8 @@ const services = [
 
 export default function ServiceCatalog() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-background">
+    <section id="services" className="relative py-20 md:py-28 bg-background overflow-hidden">
+      <div className="absolute top-0 right-0 h-full w-2/5 bg-[radial-gradient(ellipse_at_top_right,_rgba(0,128,128,0.3),_transparent_70%)] -z-0"></div>
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <ClientOnly>
