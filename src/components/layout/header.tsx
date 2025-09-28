@@ -17,10 +17,10 @@ import ClientOnly from '@/components/client-only';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#contact', label: 'Contact' },
-  { href: '#about', label: 'About Us' },
+  { href: '/#services', label: 'Services' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/#contact', label: 'Contact' },
+  { href: '/#about', label: 'About Us' },
 ];
 
 const Logo = () => (

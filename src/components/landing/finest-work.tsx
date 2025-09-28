@@ -137,7 +137,7 @@ export default function FinestWork() {
           <ClientOnly>
             <Fade triggerOnce>
               <Button asChild size="lg" variant="outline" className="hover:bg-cyan-400 hover:text-primary-foreground hover:border-cyan-400">
-                  <Link href="#work">View All Projects</Link>
+                  <Link href="/portfolio">View All Projects</Link>
               </Button>
             </Fade>
           </ClientOnly>
