@@ -28,9 +28,9 @@ const allProjects = [
         title: 'Enterprise Resource',
         category: 'Business Solutions',
         image: {
-          src: 'https://picsum.photos/seed/work3/600/400',
-          alt: 'Two people collaborating in a modern office with laptops.',
-          hint: 'enterprise solution'
+          src: 'https://i.postimg.cc/fRTYhGBy/e6aec7ec58f28492aac8f4beb5ac5be4.jpg',
+          alt: 'Abstract background for Enterprise Resource project.',
+          hint: 'abstract background'
         }
       },
       {
