@@ -55,8 +55,8 @@ const allProjects = [
         title: 'SaaS Platform for HR',
         category: 'SaaS',
         image: {
-          src: 'https://picsum.photos/seed/work6/600/400',
-          alt: 'An HR management software dashboard on a laptop screen.',
+          src: 'https://i.postimg.cc/0N9k3vfn/99f405c6a00426001fed40383998985e.jpg',
+          alt: 'Abstract design for a SaaS platform for HR.',
           hint: 'hr saas'
         }
       },
