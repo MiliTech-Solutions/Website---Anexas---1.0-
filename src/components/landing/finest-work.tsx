@@ -12,7 +12,7 @@ const finestWork = [
     title: 'Corporate Analytics Dashboard',
     category: 'Business Intelligence',
     image: {
-      src: 'https://picsum.photos/seed/work1/600/400',
+      src: 'https://i.postimg.cc/4yMh1qbT/10.webp',
       alt: 'A corporate analytics dashboard showing charts and graphs.',
       hint: 'analytics dashboard'
     }
