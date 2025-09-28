@@ -9,7 +9,7 @@ import ClientOnly from '@/components/client-only';
 
 const finestWork = [
   {
-    title: 'Corporate Analytics Dashboard',
+    title: 'Corp. Analytics Dashboard',
     category: 'Business Intelligence',
     image: {
       src: 'https://i.postimg.cc/4yMh1qbT/10.webp',
