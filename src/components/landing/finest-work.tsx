@@ -107,11 +107,11 @@ export default function FinestWork() {
             </Fade>
           </ClientOnly>
         </div>
-        <ClientOnly>
-          <Fade direction="up" cascade damping={0.1} triggerOnce>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {finestWork.map((work) => (
-                <Card key={work.title} className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {finestWork.map((work, index) => (
+            <ClientOnly key={work.title}>
+              <Slide direction={index % 2 === 0 ? 'left' : 'right'} triggerOnce>
+                <Card className="bg-card border-border/50 overflow-hidden group transition-all duration-300 transform hover:-translate-y-2 hover:border-primary">
                   <div className="aspect-[4/3] overflow-hidden">
                     <Image
                       src={work.image.src}
@@ -127,10 +127,10 @@ export default function FinestWork() {
                     <h3 className="text-xl font-semibold text-foreground">{work.title}</h3>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </Fade>
-        </ClientOnly>
+              </Slide>
+            </ClientOnly>
+          ))}
+        </div>
         <div className="mt-16 text-center">
           <ClientOnly>
             <Fade triggerOnce>
