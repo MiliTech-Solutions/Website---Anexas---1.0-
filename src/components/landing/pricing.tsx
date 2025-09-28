@@ -22,7 +22,7 @@ const packages = [
   },
   {
     name: 'Professional',
-    price: '$2499',
+    price: '$750',
     priceColor: 'text-accent',
     description: 'Ideal for growing businesses with advanced needs',
     features: [
