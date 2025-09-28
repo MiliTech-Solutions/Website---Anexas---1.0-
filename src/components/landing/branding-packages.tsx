@@ -22,7 +22,7 @@ const packages = [
   },
   {
     name: 'Brand Identity',
-    price: '$1999',
+    price: '$150',
     priceColor: 'text-accent',
     description: 'Complete branding solution for established businesses',
     features: [
