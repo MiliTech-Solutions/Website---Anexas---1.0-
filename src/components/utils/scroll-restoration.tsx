@@ -11,9 +11,14 @@ function saveScrollPos(url: string) {
 function restoreScrollPos(url: string) {
     const json = sessionStorage.getItem(url);
     if (json) {
-        const scrollPos = JSON.parse(json);
-        if (scrollPos) {
-            window.scrollTo(scrollPos.x, scrollPos.y);
+        try {
+            const scrollPos = JSON.parse(json);
+            if (scrollPos) {
+                // Restore after a short delay to ensure page is rendered
+                setTimeout(() => window.scrollTo(scrollPos.x, scrollPos.y), 0);
+            }
+        } catch (e) {
+            console.error("Failed to parse scroll position:", e);
         }
     }
 }
@@ -23,6 +28,11 @@ export default function ScrollRestoration() {
     const searchParams = useSearchParams();
 
     useEffect(() => {
+        // This is necessary to disable the default browser scroll restoration.
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        
         const url = pathname + searchParams.toString();
         restoreScrollPos(url);
         
