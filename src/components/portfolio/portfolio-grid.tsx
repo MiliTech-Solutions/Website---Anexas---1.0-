@@ -79,7 +79,7 @@ const allProjects = [
         }
       },
       {
-        title: 'Travel & Booking Website',
+        title: 'Travel Website',
         category: 'Travel',
         image: {
           src: 'https://picsum.photos/seed/work9/600/400',
