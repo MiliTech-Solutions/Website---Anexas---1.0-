@@ -66,8 +66,8 @@ const finestWork = [
     title: 'Healthcare System',
     category: 'Healthcare',
     image: {
-      src: 'https://picsum.photos/seed/work7/600_400',
-      alt: 'A doctor reviewing patient data on a tablet.',
+      src: 'https://i.postimg.cc/Jh7R9ZXX/dd7b9965920110d32585eee96176c3b9.jpg',
+      alt: 'An abstract medical background with DNA strands.',
       hint: 'healthcare system'
     }
   },
