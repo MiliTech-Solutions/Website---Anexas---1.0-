@@ -45,7 +45,7 @@ const packages = [
       'Comprehensive guidelines',
       'Complete stationery suite',
       'Marketing collateral',
-      'Brand implementation support',
+      'Social media templates',
     ],
     isPopular: false,
   },
