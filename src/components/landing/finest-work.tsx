@@ -54,7 +54,7 @@ const finestWork = [
     }
   },
   {
-    title: 'HE SaaS Platform',
+    title: 'HR SaaS Platform',
     category: 'SaaS',
     image: {
       src: 'https://i.postimg.cc/0N9k3vfn/99f405c6a00426001fed40383998985e.jpg',
