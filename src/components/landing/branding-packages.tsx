@@ -30,7 +30,7 @@ const packages = [
       'Complete brand identity',
       'Brand guidelines document',
       'Stationery design suite',
-      'Social media templates',
+      'Company letter head',
     ],
     isPopular: true,
   },
