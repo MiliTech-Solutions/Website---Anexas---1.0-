@@ -43,7 +43,7 @@ const allProjects = [
         }
       },
       {
-        title: 'E-commerce Store for Fashion',
+        title: 'Fashion eCom. Store',
         category: 'E-commerce',
         image: {
           src: 'https://i.postimg.cc/Hsfj6FF1/ce5010565453a674f39b5068d403b2c2.jpg',
