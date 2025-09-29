@@ -59,17 +59,18 @@ const SheetContent = React.forwardRef<
 >(({ side = "right", className, children, ...props }, ref) => {
   const [isAnimating, setIsAnimating] = React.useState(false);
 
-  const handleClose = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsAnimating(true);
-    setTimeout(() => {
-      const parentSheet = (e.target as HTMLElement).closest('[data-radix-collection-item]');
-      if(parentSheet){
-        const closeButton = parentSheet.querySelector('[aria-label="Close"]');
-        (closeButton as HTMLElement)?.click();
+  const handleClose = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const sheet = (e.target as HTMLElement).closest('[data-radix-collection-item]');
+    if (sheet) {
+      const closeTrigger = sheet.querySelector('[aria-label="Close"]');
+      if (closeTrigger && closeTrigger instanceof HTMLElement) {
+        setIsAnimating(true);
+        setTimeout(() => {
+          closeTrigger.click();
+          setIsAnimating(false);
+        }, 500);
       }
-      setIsAnimating(false);
-    }, 500);
+    }
   };
 
   return (
@@ -81,15 +82,17 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close
-        className={cn(
-          "group absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-background transition-all duration-500 ease-in-out hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary",
-          isAnimating && 'animate-zoom-spin-out'
-        )}
-        onClick={handleClose}
-      >
-        <X className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))] active:text-cyan-400" />
-        <span className="sr-only">Close</span>
+      <SheetPrimitive.Close asChild>
+        <button
+          className={cn(
+            "group absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-background transition-all duration-500 ease-in-out hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-secondary",
+            isAnimating && 'animate-zoom-spin-out'
+          )}
+          onClick={handleClose}
+        >
+          <X className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))] active:text-cyan-400" />
+          <span className="sr-only">Close</span>
+        </button>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>

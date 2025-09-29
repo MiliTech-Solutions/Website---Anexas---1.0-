@@ -43,8 +43,6 @@ const Logo = () => (
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,17 +52,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  const handleMenuClick = (e: React.MouseEvent) => {
-    if (!isMenuOpen) {
-      e.preventDefault();
-      setIsAnimating(true);
-      setTimeout(() => {
-        setMenuOpen(true);
-        setIsAnimating(false);
-      }, 500); 
-    }
-  };
-
   return (
     <header
       className={cn(
@@ -105,16 +92,14 @@ export default function Header() {
         </div>
         <div className="md:hidden">
             <ClientOnly>
-              <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
+              <Sheet>
                 <SheetTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="icon" 
                     className={cn(
-                      "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0",
-                      isAnimating && 'animate-zoom-spin-in'
+                      "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 animate-zoom-spin-in"
                     )}
-                    onClick={handleMenuClick}
                   >
                     <Menu className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]" />
                     <span className="sr-only">Open menu</span>
