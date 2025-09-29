@@ -82,7 +82,7 @@ const allProjects = [
         title: 'Travel Website',
         category: 'Travel',
         image: {
-          src: 'https://picsum.photos/seed/work9/600/400',
+          src: 'https://i.postimg.cc/MKr0cm6X/7534c3c3a56603158a516a3475125329.jpg',
           alt: 'A scenic travel destination with booking options on a screen.',
           hint: 'travel website'
         }
