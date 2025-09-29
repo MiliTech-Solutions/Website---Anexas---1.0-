@@ -109,8 +109,8 @@ const allProjects = [
         title: 'Educational Platform',
         category: 'EdTech',
         image: {
-          src: 'https://picsum.photos/seed/work12/600/400',
-          alt: 'An online learning platform with video courses.',
+          src: 'https://i.postimg.cc/Ss3BgMqc/cc45d2cb3b8d798e6829a8f0d5b0f218.jpg',
+          alt: 'A student studying on a laptop, representing an educational platform.',
           hint: 'online learning'
         }
       },
