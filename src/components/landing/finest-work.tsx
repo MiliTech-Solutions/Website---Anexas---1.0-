@@ -75,8 +75,8 @@ const finestWork = [
     title: 'Real Estate Portal',
     category: 'Real Estate',
     image: {
-      src: 'https://picsum.photos/seed/work8/600/400',
-      alt: 'A modern house with a for sale sign.',
+      src: 'https://i.postimg.cc/hvLwD3W9/wizard-banner-1-1.jpg',
+      alt: 'A wizard-themed banner for a real estate portal.',
       hint: 'real estate'
     }
   },
