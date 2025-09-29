@@ -39,7 +39,7 @@ const services = [
 
 export default function ServiceCatalog() {
   return (
-    <section id="services" className="relative py-20 md:py-28 bg-background overflow-hidden mt-12 md:mt-0">
+    <section id="services" className="relative py-20 md:py-28 bg-background overflow-hidden mt-20 md:mt-0">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <ClientOnly>
