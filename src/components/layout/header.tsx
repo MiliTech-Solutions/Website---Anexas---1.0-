@@ -43,6 +43,7 @@ const Logo = () => (
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,13 +93,14 @@ export default function Header() {
         </div>
         <div className="md:hidden">
             <ClientOnly>
-              <Sheet>
+              <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                 <SheetTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="icon" 
                     className={cn(
-                      "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 animate-zoom-spin-in"
+                      "group transition-all duration-500 ease-in-out hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0",
+                      isMenuOpen && "animate-zoom-spin-in"
                     )}
                   >
                     <Menu className="h-6 w-6 text-muted-foreground transition-all group-hover:text-cyan-400 group-hover:[filter:drop-shadow(0_0_3px_theme(colors.cyan.400))]" />
