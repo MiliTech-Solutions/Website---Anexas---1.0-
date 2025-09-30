@@ -136,8 +136,8 @@ const allProjects = [
         title: 'Online Gaming Platform',
         category: 'Gaming',
         image: {
-          src: 'https://picsum.photos/seed/work15/600/400',
-          alt: 'A person playing a video game on a high-end PC setup.',
+          src: 'https://i.postimg.cc/mgZNtXfh/original-1b4c9cfeed922f8c4a2eaa64b20a417f.png',
+          alt: 'A fantasy warrior in a dynamic pose for an online gaming platform.',
           hint: 'gaming platform'
         }
       },
