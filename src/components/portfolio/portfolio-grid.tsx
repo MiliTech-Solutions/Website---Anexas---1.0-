@@ -91,8 +91,8 @@ const allProjects = [
         title: 'AI-Powered Chatbot',
         category: 'Artificial Intelligence',
         image: {
-          src: 'https://picsum.photos/seed/work10/600/400',
-          alt: 'A conversation with an AI chatbot on a laptop screen.',
+          src: 'https://i.postimg.cc/gk5jPyw8/09e7bdbcf6c74d8fc9f1005da84e1112.jpg',
+          alt: 'Abstract image representing an AI-powered chatbot.',
           hint: 'ai chatbot'
         }
       },
