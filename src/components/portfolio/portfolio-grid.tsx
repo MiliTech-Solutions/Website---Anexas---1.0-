@@ -127,8 +127,8 @@ const allProjects = [
         title: 'Music Streaming Service',
         category: 'Entertainment',
         image: {
-          src: 'https://picsum.photos/seed/work14/600/400',
-          alt: 'A music streaming app on a tablet with headphones.',
+          src: 'https://i.postimg.cc/MpZNqm9w/5b549a439b29a7b1171b397a1f6cbfff.jpg',
+          alt: 'Abstract musical background for a streaming service.',
           hint: 'music streaming'
         }
       },
