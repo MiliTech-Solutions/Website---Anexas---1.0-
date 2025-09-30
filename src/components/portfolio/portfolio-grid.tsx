@@ -100,8 +100,8 @@ const allProjects = [
         title: 'Social Media Platform',
         category: 'Social',
         image: {
-          src: 'https://picsum.photos/seed/work11/600/400',
-          alt: 'A social media feed on a smartphone.',
+          src: 'https://i.postimg.cc/TwYwrLRb/a13884dd4c518000aabaece74a2b2742.jpg',
+          alt: 'Abstract representation of a social media network.',
           hint: 'social media'
         }
       },
