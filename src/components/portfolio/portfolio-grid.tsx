@@ -118,7 +118,7 @@ const allProjects = [
         title: 'Food Delivery App',
         category: 'Mobile App',
         image: {
-          src: 'https://picsum.photos/seed/work13/600/400',
+          src: 'https://i.postimg.cc/66z0Vx9D/Screenshot-2025-09-30-14-49-14-100-com-android-chrome-edit.jpg',
           alt: 'A food delivery app interface on a smartphone.',
           hint: 'food delivery'
         }
