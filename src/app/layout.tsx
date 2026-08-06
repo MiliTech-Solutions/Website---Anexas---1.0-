@@ -1,4 +1,5 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -23,11 +24,14 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Audiowide&family=Orbitron:wght@400;700&family=Kanit:wght@400;700&family=Space+Mono&family=Electrolize&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased")}>
-        {children}
-        <Toaster />
-        <ScrollButtons />
-        <ScrollRestoration />
-      </body>
+           {children}
+          <Toaster />
+          <ScrollButtons />
+
+          <Suspense fallback={null}>
+          <ScrollRestoration />
+          </Suspense>
+        </body>
     </html>
   );
 }
