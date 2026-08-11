@@ -78,11 +78,21 @@ export default function GetAQuote() {
                           <div className="grid grid-cols-2 gap-4">
                               <div className="space-y-2">
                                   <Label htmlFor="first-name">First Name</Label>
-                                  <Input id="first-name" placeholder="John" />
+                                  <Input
+                                    id="first-name"
+                                    name="first-name"
+                                    autoComplete="given-name"
+                                    placeholder="John"
+                                  />
                               </div>
                               <div className="space-y-2">
                                   <Label htmlFor="last-name">Last Name</Label>
-                                  <Input id="last-name" placeholder="Doe" />
+                                   <Input
+                                    id="last-name"
+                                    name="last-name"
+                                    autoComplete="given-name"
+                                    placeholder="Doe"
+                                  />
                               </div>
                           </div>
                         </Fade>
@@ -91,7 +101,12 @@ export default function GetAQuote() {
                         <Fade triggerOnce cascade damping={0.1} delay={200}>
                           <div className="space-y-2">
                               <Label htmlFor="email">Email</Label>
-                              <Input id="email" type="email" placeholder="john@example.com" />
+                                    <Input
+                                    id="email"
+                                    name="email"
+                                    autoComplete="email"
+                                    placeholder="john@example.com"
+                                  />
                           </div>
                         </Fade>
                       </ClientOnly>
@@ -99,7 +114,13 @@ export default function GetAQuote() {
                         <Fade triggerOnce cascade damping={0.1} delay={300}>
                           <div className="space-y-2">
                               <Label htmlFor="phone">Phone</Label>
-                              <Input id="phone" type="tel" placeholder="(+92) 370 977 5882" />
+                              <Input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    autoComplete="tel"
+                                    placeholder="(+92) 370 977 5882"
+                                  />
                           </div>
                         </Fade>
                       </ClientOnly>
@@ -107,7 +128,12 @@ export default function GetAQuote() {
                         <Fade triggerOnce cascade damping={0.1} delay={400}>
                           <div className="space-y-2">
                               <Label htmlFor="project-details">Project Details</Label>
-                              <Textarea id="project-details" placeholder="Tell us about your project requirements..." />
+                              <Input
+                                    id="project-details"
+                                    name="project-details"
+                                    autoComplete="OFF"
+                                    placeholder="Tell us about your project requirements..."
+                                  />
                           </div>
                           </Fade>
                       </ClientOnly>

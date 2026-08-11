@@ -74,7 +74,13 @@ export default function ContactForm() {
                       <Fade triggerOnce cascade damping={0.1} delay={100}>
                         <div className="space-y-2">
                           <Label htmlFor="name">Name</Label>
-                          <Input id="name" name="name" placeholder="Your Name" aria-describedby="name-error" />
+                          <Input
+                              id="name"
+                              name="name"
+                              autoComplete="name"
+                              placeholder="Your Name"
+                              aria-describedby="name-error"
+                          />
                           {state.errors?.name && <p id="name-error" className="text-sm text-destructive">{state.errors.name[0]}</p>}
                         </div>
                       </Fade>
@@ -83,7 +89,14 @@ export default function ContactForm() {
                       <Fade triggerOnce cascade damping={0.1} delay={200}>
                         <div className="space-y-2">
                           <Label htmlFor="email">Email</Label>
-                          <Input id="email" name="email" type="email" placeholder="your@email.com" aria-describedby="email-error" />
+                          <Input
+                              id="email"
+                              name="email"
+                              type="email"
+                              autoComplete="email"
+                              placeholder="your@email.com"
+                              aria-describedby="email-error"
+                            />
                           {state.errors?.email && <p id="email-error" className="text-sm text-destructive">{state.errors.email[0]}</p>}
                         </div>
                       </Fade>
@@ -92,7 +105,13 @@ export default function ContactForm() {
                       <Fade triggerOnce cascade damping={0.1} delay={300}>
                         <div className="space-y-2">
                           <Label htmlFor="subject">Subject</Label>
-                          <Input id="subject" name="subject" placeholder="What's this about?" aria-describedby="subject-error" />
+                          <Input
+                              id="subject"
+                              name="subject"
+                              autoComplete="off"
+                              placeholder="What's this about?"
+                              aria-describedby="subject-error"
+                            />
                           {state.errors?.subject && <p id="subject-error" className="text-sm text-destructive">{state.errors.subject[0]}</p>}
                         </div>
                       </Fade>
@@ -101,7 +120,14 @@ export default function ContactForm() {
                       <Fade triggerOnce cascade damping={0.1} delay={400}>
                         <div className="space-y-2">
                           <Label htmlFor="message">Message</Label>
-                          <Textarea id="message" name="message" placeholder="Tell us about your project..." className="min-h-[120px]" aria-describedby="message-error" />
+                          <Textarea
+                              id="message"
+                              name="message"
+                              autoComplete="off"
+                              placeholder="Tell us about your project..."
+                              className="min-h-[120px]"
+                              aria-describedby="message-error"
+                          />
                           {state.errors?.message && <p id="message-error" className="text-sm text-destructive">{state.errors.message[0]}</p>}
                         </div>
                       </Fade>
