@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   title: 'Anexas | Digital Solutions Agency',
   description:
     'Anexas Digital is a digital agency specializing in brand identity, digital experiences, creative content, marketing, and transformative technology solutions.',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       {
@@ -30,10 +44,7 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
-  
-    manifest: '/manifest.webmanifest',
-
-
+  manifest: '/manifest.webmanifest',
   openGraph: {
     title: 'Anexas | Digital Solutions Agency',
     description:
@@ -51,7 +62,6 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-
   twitter: {
     card: 'summary_large_image',
     title: 'Anexas | Digital Solutions Agency',
@@ -59,7 +69,6 @@ export const metadata: Metadata = {
       'Anexas Digital is a digital agency specializing in brand identity, digital experiences, creative content, marketing, and transformative technology solutions.',
     images: ['/images/og-image-1200x630.png'],
   },
-
 };
 
 export const viewport: Viewport = {
