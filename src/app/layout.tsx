@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://website-anexas-1.vercel.app'),
   title: 'Anexas | Digital Solutions Agency',
   description:
-    'Anexas Digital is a digital agency specializing in brand identity, digital experiences, creative content, marketing, and transformative technology solutions.',
-  alternates: {
+    'Anexas Digital is a digital agency specializing in brand identity, digital experiences, creative content, marketing, and transformative technology solutions.',  
+  
+  verification: {
+    other: {
+      'facebook-domain-verification': 'ey7ilcgo6jj93g5jjrnixntnj9jggh',
+    },
+  },
+
+    alternates: {
     canonical: '/',
   },
+
   robots: {
     index: true,
     follow: true,
